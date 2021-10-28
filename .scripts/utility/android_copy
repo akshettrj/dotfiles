@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+src_path=$1
+destination_path=$2
+
+
+echo "Copying $src_path"
+
+last_dir="$(pwd)"
+
+cd "$src_path"
+
+IFS=$'\n' ds=($(find . -mindepth 0 -type d))
+
+for d in $(echo "${ds[*]}")
+do
+	echo "Making $destination_path/$d"
+	adb shell mkdir -p \"sdcard/"$destination_path"/"$d"\"
+done
+
+IFS=$'\n' fs=($(find . -mindepth 0 -type f))
+for f in $(echo "${fs[*]}")
+do
+	adb push "$f" "sdcard/"$destination_path"/"$f""
+done
+
+cd "$last_dir"
+
+# find media/books -mindepth 1 -type d

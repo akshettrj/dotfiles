@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# set -o errexit
+# set -o nounset
+#
+# keystroke="F5"
+#
+# # set to whatever's given as argument, defaults to firefox
+# # BROWSER="${1:-firefox}"
+#
+# current_window_id="$(xdotool getactivewindow)"
+#
+# # find all visible browser windows
+# browser_windows="$(xdotool search --sync --all --onlyvisible --classname 'Brave-browser')"
+#
+# sleep 0.5
+# # Send keystroke
+# for bw in $browser_windows; do
+#     xdotool windowactivate "$bw" key "$keystroke"
+#     # sleep 0.2
+#     # xdotool windowactivate "$bw" key "End"
+# done
+#
+# xdotool windowactivate "$current_window_id"

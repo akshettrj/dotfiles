@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+if [ $1 = "connect" ]; then
+	notify-send "Bluetooth" "Attempting connection with Beoplay 4"
+	sudo rfkill unblock bluetooth && bluetoothctl power on && bluetoothctl scan on && bluetoothctl connect 00:09:A7:32:84:23 && notify-send "BLUETOOTH" "Connencted to Beoplay 4"
+elif [ $1 = "disconnect" ]; then
+	notify-send "Bluetooth" "Attempting to disconnect from Beoplay 4"
+	sudo rfkill block bluetooth && notify-send "Bluetooth" "Disconnencted from Beoplay 4"
+fi
+
+updatePulseAudioSink

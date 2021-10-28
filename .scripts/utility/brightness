@@ -1,0 +1,4 @@
+#!/bin/sh
+
+brightness=$(echo "$(echo "scale=2; 100 * $(cat /sys/class/backlight/intel*/brightness) / $(cat /sys/class/backlight/intel*/max_brightness)" | bc )%")
+echo $brightness

@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+while true
+do
+	free | grep ":" | awk '{print $1,"\t"(100*($3/$2))"% used"}'
+	echo "==============================="
+	sleep 2
+done

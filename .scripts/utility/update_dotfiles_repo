@@ -1,0 +1,49 @@
+#!/bin/zsh
+
+HomeFolder=/home/akshettrj
+ConfigFolder=$HomeFolder/.config
+
+declare -A FilesToAdd
+
+FilesToAdd=(
+    [alacritty]="$ConfigFolder/alacritty"
+    [picom]="$ConfigFolder/picom.conf"
+    [dunst]="$ConfigFolder/dunst"
+    [zsh]="$ConfigFolder/zsh"
+    [nvidia-drivers]="$ConfigFolder/10-nvidia-drm-outputclass.conf"
+    [scripts]="$HomeFolder/.scripts"
+    [lf]="$ConfigFolder/lf"
+    [mpd]="$ConfigFolder/mpd"
+    [mpDris2]="$ConfigFolder/mpDris2"
+    [mpv]="$ConfigFolder/mpv"
+    [ncmpcpp]="$ConfigFolder/ncmpcpp"
+    [neovim]="$ConfigFolder/nvim"
+    [paru]="$ConfigFolder/paru"
+    [zsh-plugins]="$ConfigFolder/pluginsZsh"
+    [polybar]="$ConfigFolder/polybar"
+    [shellconfig]="$ConfigFolder/shellconfig"
+    [sxhkd]="$ConfigFolder/sxhkd"
+    [x11]="$ConfigFolder/X11"
+    [zathura]="$ConfigFolder/zathura"
+    [mimelist]="$ConfigFolder/mimeapps.list"
+    [xdg-dirs]="$ConfigFolder/user-dirs.dirs"
+)
+
+# echo "Updating Pre-existing files"
+# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add -u
+# echo "Adding Alacritty Config"
+# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/alacritty
+# echo "Adding Dunst Config"
+# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/dunst
+# echo "Adding Nvidia Driver File"
+# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/10-nvidia-drm-outputclass.conf
+# echo "Adding ZSH Config"
+# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/zsh
+
+for key value in ${(kv)FilesToAdd}; do
+    # echo "$key -> $value"
+    echo "Adding $key"
+    git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add "$value"
+done
+
+git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj status

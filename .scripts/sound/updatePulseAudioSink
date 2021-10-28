@@ -1,0 +1,5 @@
+#!/bin/sh
+# notify-send "Pulseaudio" "Updating Sink"
+currentSink=$(pactl info | grep "Default Sink: " | awk -F": " '{print $2}')
+echo $currentSink > ~/.cache/currentSink.txt
+pactl info | grep \"Default Sink: \" | awk -F\": \" '{print $2}'

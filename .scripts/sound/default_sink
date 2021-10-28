@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+pacmd set-default-sink $(pacmd list-sinks | grep "^\s*name" | sed 's/.*<\(.*\)>/\1/' | dmenu -l 10 -p "Select Default Device")

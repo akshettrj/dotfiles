@@ -1,0 +1,37 @@
+#!/bin/sh
+
+alias clg="cd $clg";
+
+export nlp="$clg/nlp"
+export itl="$clg/itl"
+export osn="$clg/osn"
+export sc1="$clg/sc1"
+export smai="$clg/smai"
+export rec="$clg/recordings"
+
+alias nlp="cd $nlp"
+alias itl="cd $itl"
+alias osn="cd $osn"
+alias sc1="cd $sc1"
+alias smai="cd $smai"
+alias rec="cd $rec"
+
+# export dass="$clg/dass";
+# export ihs="$clg/ihs";
+# export ltu="$clg/ltu";
+# export mdl="$clg/mdl";
+# export nlp="$clg/nlp";
+# export lec="$clg/lectures";
+# export ve="$clg/ve";
+# export dsa="$clg/dsa";
+# export at="$clg/at";
+#
+# alias dass="cd $dass";
+# alias ihs="cd $ihs";
+# alias ltu="cd $ltu";
+# alias mdl="cd $mdl";
+# alias nlp="cd $nlp";
+# alias lec="cd $lec";
+# alias ve="cd $ve";
+# alias dsa="cd $dsa";
+# alias at="cd $at";

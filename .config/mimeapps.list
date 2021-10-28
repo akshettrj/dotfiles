@@ -1,0 +1,33 @@
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+image/png=sxiv.desktop
+text/plain=nvim.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+x-scheme-handler/msteams=teams.desktop
+image/jpeg=sxiv.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+application/octet-stream=mpv.desktop
+video/MP2T=mpv.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/ferdi=ferdi.desktop
+audio/mpegapplication/octet-stream=mpv.desktop
+image/gif=mpv.desktop
+video.x-matroska=mpv.desktop
+video/webmapplication/octet-stream=mpv.desktop
+application/x-www-form-urlencoded=brave.desktop
+inode/directory=lf.desktop
+x-scheme-handler/mailto=brave-browser.desktop
+x-scheme-handler/tg=userapp-Kotatogram Desktop-GHJIB1.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-FRO7V0.desktop;userapp-Telegram Desktop-20FI50.desktop;userapp-Telegram Desktop-I8PZ50.desktop;userapp-Kotatogram Desktop-P5XP60.desktop;userapp-Telegram Desktop-I35K60.desktop;userapp-Telegram Desktop-FTTF90.desktop;userapp-Kotatogram Desktop-PV4KA1.desktop;userapp-Telegram Desktop-9HJHA1.desktop;userapp-Kotatogram Desktop-GHJIB1.desktop;
+x-scheme-handler/mpv=mpv.desktop
+image/png=google-chrome.desktop;
+x-scheme-handler/vscode=code.desktop;
+video/mp4=mpv.desktop;
+video/x-matroska=mpv.desktop;

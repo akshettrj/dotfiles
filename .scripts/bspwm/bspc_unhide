@@ -1,0 +1,6 @@
+#!/bin/sh
+nodeSelected=$(for i in $(bspc query -N -n .hidden --desktop .focused)
+do
+	echo $i - $(xdotool getwindowname $i)
+done | dmenu -p "Unhide" | sed "s/\(\S*\) \-.*/\1/")
+bspc node $nodeSelected --flag hidden=off

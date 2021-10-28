@@ -1,0 +1,5 @@
+#!/bin/sh
+emoji=$(cat ~/.scripts/dmenu/emojiList.txt | dmenu -l 10 -fn "JetBrainsMono NF:size=20" | awk '{print $1}' | tr "\n" " ")
+[ "$emoji" != "" ] || exit
+echo $emoji | tr "\n" " " | sed "s/\ //g" | copyq add -
+copyq select 0 && notify-send "Success" "$emoji copied to clipboard"

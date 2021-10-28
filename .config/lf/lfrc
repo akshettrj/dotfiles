@@ -1,0 +1,46 @@
+set drawbox on
+set hidden on
+set number on
+set relativenumber on
+# set preview on
+set icons on
+
+cmd mkdir %{{
+	printf " Enter Directory Name: "
+	read ans
+	mkdir "$ans"
+	clear
+}}
+
+cmd mkfile %{{
+	printf " Enter File Name: "
+	read ans
+	touch "$ans"
+	clear
+}}
+
+cmd mark-watched %{{
+	file_name=$(basename "$f")
+	mv "$PWD/$file_name" "$PWD/ $file_name"
+}}
+
+
+# Modify things
+map md mkdir
+map mf mkfile
+map DD delete
+map W mark-watched
+
+# Movements
+map gmm cd /run/media/akshettrj
+map gmd cd /home/akshettrj/media
+map gcc cd /home/akshettrj/iiith
+map gch cd /home/akshettrj/iiith/3.1
+map gci cd /home/akshettrj/iiith/3.1/itl
+map gcsc cd /home/akshettrj/iiith/3.1/sc1
+map gcsm cd /home/akshettrj/iiith/3.1/smai
+map gco cd /home/akshettrj/iiith/3.1/osn
+map gcn cd /home/akshettrj/iiith/3.1/nlp
+map gcr cd /home/akshettrj/iiith/3.1/recordings
+map gv cd /home/akshettrj/media/videos
+map gp cd /home/akshettrj/media/photos

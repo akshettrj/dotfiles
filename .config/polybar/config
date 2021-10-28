@@ -1,0 +1,259 @@
+; vim: filetype=dosini: set syntax=dosini
+
+include-file = ~/.config/polybar/colors.ini
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+format-foreground =
+format-underline = ${colors.primary}
+format-padding = 0
+format-overline =
+format-margin = 0
+format-offset =
+screenchange-reload = true
+
+[bar/main]
+
+[bar/bar]
+monitor = eDP-1-1
+monitor-fallback =
+monitor-strict = false
+monitor-exact = true
+override-redirect = false
+wm-restack = bspwm
+enable-ipc = true
+fixed-center = true
+bottom = false
+separator = |
+
+; width = 99%
+height = 40
+; offset-x = 0.5%
+; offset-y = 3
+; radius = 15
+
+underline-size = 4
+overline-size = 0
+
+; background = ${colors.background}
+background = #2E2A2F
+foreground = ${colors.foreground}
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "JetBrainsMono NF:size=11:antialias=true;hinting=false"
+font-1 = "Noto Color Emoji:scale=8:antialias=true;hinting=false"
+font-2 = "JetBrainsMono NF:size=17:antialias=true;hinting=false;3"
+font-3 = "JetBrainsMono NF:size=25:antialias=true;hinting=false;3"
+
+modules-left = date bspwm xwindow
+modules-right = mpd wifi ethernet mic volume battery
+
+tray-position = right
+tray-padding = 1
+; tray-background = ${colors.background}
+; tray-background = #E01d1f21
+tray-offset-x = 0
+tray-offset-y = 0
+tray-scale = 1.0
+
+cursor-click = pointer
+cursor-scroll = default
+
+[bar/bar2]
+monitor = HDMI-0
+monitor-fallback =
+monitor-strict = false
+monitor-exact = true
+override-redirect = false
+wm-restack = bspwm
+enable-ipc = true
+fixed-center = true
+bottom = false
+separator = |
+
+; width = 99%
+height = 40
+; offset-x = 0.5%
+; offset-y = 3
+; radius = 15
+
+underline-size = 4
+overline-size = 0
+
+; background = ${colors.background}
+background = #2E2A2F
+foreground = ${colors.foreground}
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "JetBrainsMono NF:size=11:antialias=true;hinting=false"
+font-1 = "Noto Color Emoji:scale=8:antialias=true;hinting=false"
+font-2 = "JetBrainsMono NF:size=17:antialias=true;hinting=false;3"
+font-3 = "JetBrainsMono NF:size=25:antialias=true;hinting=false;3"
+
+modules-left = date bspwm xwindow
+modules-right = mpd wifi ethernet mic volume battery
+
+cursor-click = pointer
+cursor-scroll = default
+
+[module/battery]
+type = custom/script
+exec = polybar_battery
+label = "%output%"
+scroll-up = sudo increaseBrightness
+scroll-down = sudo decreaseBrightness
+interval = 5
+format-underline = #216408
+
+[module/volume]
+type = internal/pulseaudio
+use-ui-max = true
+interval = 2
+format-volume = <ramp-volume> <label-volume>
+label-muted = 🔇 muted
+label-muted-foreground = #666
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+click-middle = beoplay connect
+click-right = beoplay disconnect
+
+[module/mic]
+type = custom/script
+exec = ~/.scripts/polybar/polybar_mic
+tail = true
+click-left = ~/.scripts/polybar/polybar_mic --toggle &
+scroll-up = ~/.scripts/polybar/polybar_mic --increase &
+scroll-down = ~/.scripts/polybar/polybar_mic --decrease &
+label = "🎙️ %output% "
+
+[module/cpu]
+type = custom/script
+exec = polybar_cpu_temp
+label = %output%
+interval = 2
+format-underline = #E69B43
+
+[module/ethernet]
+type = internal/network
+interface = eno1
+interval = 1
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-underline = #141AD3
+
+label-connected = 🧵🔺 %upspeed% 🔻 %downspeed%
+label-disconnected =
+
+[module/wifi]
+type = internal/network
+interface = wlo1
+interval = 1
+format-connected = <ramp-signal><label-connected>
+format-disconnected = <label-disconnected>
+format-connected-underline = #141AD3
+
+label-connected = 🔺%upspeed%🔻%downspeed%
+label-disconnected =
+
+ramp-signal-0 = 😭
+ramp-signal-1 = 😢
+ramp-signal-2 = 🙂
+ramp-signal-3 = 😄
+ramp-signal-4 = 😁
+ramp-signal-5 = 😈
+
+[module/mpd]
+type = internal/mpd
+interval = 1
+
+; format-online = 🎶 <label-time> <icon-prev> <icon-pause> <icon-play> <icon-next>
+format-online = 🎶 <icon-play> <icon-pause> <label-time>
+format-online-underline = #A90A16
+; format-online-foreground = #0ABE09
+
+label-offline =
+
+icon-play = ▶️
+icon-pause = ⏸
+; icon-prev = ⏮
+; icon-next = ⏭
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:40:...%
+
+format-underline =
+; format-background = ${colors.background}
+format-padding =
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-scroll = true
+label-focused = %name%
+label-focused-background = ${colors.background-wm}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 0
+
+label-occupied = %name%
+label-occupied-padding = 0
+
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 0
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 0
+
+format-underline = ${colors.background}
+; format-background = ${colors.background}
+format-padding =
+format-prefix = [
+format-suffix = ]
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+; Separator in between workspaces
+label-separator = ][
+
+[module/date]
+type = custom/script
+exec = date "+%d/%m | %r"
+interval = 1
+label = 🗓 %output%
+format-underline = #2E57FF
+
+[module/amazon]
+type = custom/script
+interval = 1800
+exec = cd ~/.scripts/polybar/amazon && node index.js
+label = 💰 %output%
+
+; Misc
+
+; [module/speakers]
+; type = custom/ipc
+; hook-0 = polybar_volume $(< /home/akshettrj/.cache/currentSink.txt)
+; click-left = beoplay "connect"
+; click-right = beoplay "disconnect"
+; click-middle = polybar_volume_control "output-mute" $(< /home/akshettrj/.cache/currentSink.txt)
+; scroll-up = polybar_volume_control "output-vol" $(< /home/akshettrj/.cache/currentSink.txt) +2%
+; scroll-down = polybar_volume_control "output-vol" $(< /home/akshettrj/.cache/currentSink.txt) -2%
+; label = "%output%"
+; initial = 1
+
+[module/cfdns]
+type = custom/script
+interval = 5
+exec = warp-cli status | grep "Status" | sed 's/^Status update: //'
+label =   %output%

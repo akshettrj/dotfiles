@@ -1,0 +1,14 @@
+#!/bin/sh
+
+currentBrightness=$(cat /sys/class/backlight/intel_backlight/brightness)
+maxBrightness=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+newBrightness=`expr $currentBrightness + 5000`
+if [ $maxBrightness -lt $newBrightness ];
+then
+	newBrightness=$maxBrightness;
+fi
+echo $newBrightness > /sys/class/backlight/intel_backlight/brightness
+
+brightness=$(echo "$(echo "scale=2; 100 * $(cat /sys/class/backlight/intel*/brightness) / $(cat /sys/class/backlight/intel*/max_brightness)" | bc )%")
+
+polybar-msg hook brightness 1

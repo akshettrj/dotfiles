@@ -1,0 +1,7 @@
+#!/bin/sh
+
+reallyRun=$(cat ~/.scripts/options | dmenu -p $1)
+
+if [ $reallyRun = "Yes" ]; then
+	exec $2;
+fi

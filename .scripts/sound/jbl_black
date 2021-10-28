@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+rfkill unblock bluetooth
+bluetoothctl power on
+
+bluetoothctl connect F8:DF:15:AC:98:65

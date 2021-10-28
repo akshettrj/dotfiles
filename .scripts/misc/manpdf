@@ -1,0 +1,1 @@
+man -k . | dmenu -l 30 -fn "JetBrainsMono NF" | awk '{print $1}' | xargs -r man -Tpdf | zathura - 

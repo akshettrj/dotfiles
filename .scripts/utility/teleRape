@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+for ((i=0; i<$1; i++))
+do
+	xdotool key shift+v
+	xdotool key quotedbl
+	xdotool key plus
+	xdotool key y
+	xdotool key j
+	xdotool key super+l
+	xdotool key ctrl+v
+	xdotool key BackSpace
+	xdotool key Return
+	xdotool key super+h
+	sleep 1
+done

@@ -1,0 +1,58 @@
+#!/bin/zsh
+
+DownloadLink=
+LinksFile=
+Course=
+
+HelpPage() {
+	echo "Help Page"
+}
+
+DestreamLink() {
+	echo "Link: $1"
+	echo "Course: $2"
+	echo "==========================\n\n"
+
+	cd /home/akshettrj/coding/repos/destreamer
+	numLectures="$(ls -1 /home/akshettrj/iiithStuff/3.1/recordings/$2 | wc -l)"
+	currentLecNum=$(printf "%02d" $(echo "$numLectures + 1" | bc))
+	./destreamer.sh -k -i "$1" -o "/home/akshettrj/iiithStuff/3.1/recordings/$2" -t "Lec $currentLecNum - {publishDate}"
+}
+
+DestreamFile() {
+	echo "Taking the links and courses from the file"
+}
+
+# Get the arguments
+for Arg in "$@"; do
+	# echo $Arg
+	# Check Options
+	case "$Arg" in
+		-l|-f|-c|--link|--file|--course) ArgOption=$Arg ;;
+		-h|--help) HelpPage; exit 0 ;;
+	esac
+
+	# Handle Arguments
+	if [[ "$ArgOption" ]]; then
+		case "$ArgOption" in
+			-l|--link) DownloadLink=$Arg ;;
+			-f|--file) LinksFile=$Arg ;;
+			-c|--course) Course=$Arg ;;
+		esac
+	fi
+done
+
+if [[ "$DownloadLink" ]] && [[ "$LinksFile" ]]; then
+	echo "Please either use Download Link or Links File, not both."
+	exit -1;
+elif [[ "$DownloadLink" ]] && [[ "$Course" ]]; then
+	DestreamLink "$DownloadLink" "$Course"
+elif [[ "$DownloadLink" ]] && ! [[ "$Course" ]]; then
+	echo "Specify the course name along with the download link"
+	exit -1;
+elif [[ "$LinksFile" ]]; then
+	DestreamFile "$LinksFile"
+else
+	echo "Specify atleast a Download Link or A Links File."
+	exit -1;
+fi

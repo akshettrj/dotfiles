@@ -1,0 +1,2 @@
+#!/bin/sh
+echo $(free -hb | grep Mem | awk '{print "🧠 "$3}' | sed 's/i/B/g') "|" $(free -hb | grep Swap | awk '{print "🔄 "$3}' | sed 's/i/B/g')
