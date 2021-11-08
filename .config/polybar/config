@@ -1,6 +1,7 @@
 ; vim: filetype=dosini: set syntax=dosini
 
 include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/bar1.ini
 
 [global/wm]
 margin-top = 0
@@ -15,8 +16,6 @@ format-margin = 0
 format-offset =
 screenchange-reload = true
 
-[bar/main]
-
 [bar/bar]
 monitor = eDP-1-1
 monitor-fallback =
@@ -27,7 +26,7 @@ wm-restack = bspwm
 enable-ipc = true
 fixed-center = true
 bottom = false
-separator = |
+; separator = |
 
 ; width = 99%
 height = 40
@@ -35,15 +34,15 @@ height = 40
 ; offset-y = 3
 ; radius = 15
 
-underline-size = 4
+; underline-size = 4
 overline-size = 0
 
 ; background = ${colors.background}
 background = #2E2A2F
 foreground = ${colors.foreground}
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = "JetBrainsMono NF:size=11:antialias=true;hinting=false"
 font-1 = "Noto Color Emoji:scale=8:antialias=true;hinting=false"
@@ -52,14 +51,6 @@ font-3 = "JetBrainsMono NF:size=25:antialias=true;hinting=false;3"
 
 modules-left = date bspwm xwindow
 modules-right = mpd wifi ethernet mic volume battery
-
-tray-position = right
-tray-padding = 1
-; tray-background = ${colors.background}
-; tray-background = #E01d1f21
-tray-offset-x = 0
-tray-offset-y = 0
-tray-scale = 1.0
 
 cursor-click = pointer
 cursor-scroll = default
@@ -74,7 +65,7 @@ wm-restack = bspwm
 enable-ipc = true
 fixed-center = true
 bottom = false
-separator = |
+; separator = |
 
 ; width = 99%
 height = 40
@@ -82,15 +73,24 @@ height = 40
 ; offset-y = 3
 ; radius = 15
 
-underline-size = 4
+tray-position = right
+tray-padding = 1
+; tray-background = ${colors.background}
+; tray-background = #E01d1f21
+tray-offset-x = 0
+tray-offset-y = 0
+tray-scale = 1.0
+
+
+; underline-size = 4
 overline-size = 0
 
 ; background = ${colors.background}
 background = #2E2A2F
 foreground = ${colors.foreground}
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = "JetBrainsMono NF:size=11:antialias=true;hinting=false"
 font-1 = "Noto Color Emoji:scale=8:antialias=true;hinting=false"

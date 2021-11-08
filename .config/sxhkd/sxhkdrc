@@ -6,10 +6,10 @@
 ctrl + shift + o
 	dunstctl context
 
-ctrl + shift + space
+shift + alt + @space
 	dunstctl close-all
 
-ctrl + @space
+alt + @space
 	dunstctl close
 
 # Media Control

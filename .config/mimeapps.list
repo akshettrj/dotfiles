@@ -22,11 +22,11 @@ video/webmapplication/octet-stream=mpv.desktop
 application/x-www-form-urlencoded=brave.desktop
 inode/directory=lf.desktop
 x-scheme-handler/mailto=brave-browser.desktop
-x-scheme-handler/tg=userapp-Kotatogram Desktop-GHJIB1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-14SCC1.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-FRO7V0.desktop;userapp-Telegram Desktop-20FI50.desktop;userapp-Telegram Desktop-I8PZ50.desktop;userapp-Kotatogram Desktop-P5XP60.desktop;userapp-Telegram Desktop-I35K60.desktop;userapp-Telegram Desktop-FTTF90.desktop;userapp-Kotatogram Desktop-PV4KA1.desktop;userapp-Telegram Desktop-9HJHA1.desktop;userapp-Kotatogram Desktop-GHJIB1.desktop;
-x-scheme-handler/mpv=mpv.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-FRO7V0.desktop;userapp-Telegram Desktop-20FI50.desktop;userapp-Telegram Desktop-I8PZ50.desktop;userapp-Kotatogram Desktop-P5XP60.desktop;userapp-Telegram Desktop-I35K60.desktop;userapp-Kotatogram Desktop-PV4KA1.desktop;userapp-Kotatogram Desktop-GHJIB1.desktop;userapp-Telegram Desktop-NM0PC1.desktop;userapp-Telegram Desktop-14SCC1.desktop;
+x-scheme-handler/mpv=mpv.desktop;
 image/png=google-chrome.desktop;
 x-scheme-handler/vscode=code.desktop;
 video/mp4=mpv.desktop;

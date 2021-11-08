@@ -17,7 +17,6 @@ FilesToAdd=(
     [mpDris2]="$ConfigFolder/mpDris2"
     [mpv]="$ConfigFolder/mpv"
     [ncmpcpp]="$ConfigFolder/ncmpcpp"
-    [neovim]="$ConfigFolder/nvim"
     [paru]="$ConfigFolder/paru"
     [zsh-plugins]="$ConfigFolder/pluginsZsh"
     [polybar]="$ConfigFolder/polybar"
@@ -28,17 +27,6 @@ FilesToAdd=(
     [mimelist]="$ConfigFolder/mimeapps.list"
     [xdg-dirs]="$ConfigFolder/user-dirs.dirs"
 )
-
-# echo "Updating Pre-existing files"
-# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add -u
-# echo "Adding Alacritty Config"
-# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/alacritty
-# echo "Adding Dunst Config"
-# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/dunst
-# echo "Adding Nvidia Driver File"
-# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/10-nvidia-drm-outputclass.conf
-# echo "Adding ZSH Config"
-# git --git-dir=/home/akshettrj/work/dotfiles --work-tree=/home/akshettrj add $ConfigFolder/zsh
 
 for key value in ${(kv)FilesToAdd}; do
     # echo "$key -> $value"
