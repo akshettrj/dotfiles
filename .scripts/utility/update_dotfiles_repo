@@ -26,6 +26,7 @@ FilesToAdd=(
     [zathura]="$ConfigFolder/zathura"
     [mimelist]="$ConfigFolder/mimeapps.list"
     [xdg-dirs]="$ConfigFolder/user-dirs.dirs"
+    [readme]="$HomeFolder/.github"
 )
 
 for key value in ${(kv)FilesToAdd}; do
