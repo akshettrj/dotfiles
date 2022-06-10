@@ -1,0 +1,52 @@
+#!/bin/bash
+
+( xrandr | grep "HDMI-0 connected" ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
+
+( pidof dunst || dunst 2>/dev/null >/dev/null ) &
+( pidof polybar || polybar bar 2>/dev/null >/dev/null ) &
+( pidof -x sxhkd || sxhkd 2>/dev/null >/dev/null ) &
+( pidof flameshot || flameshot 2>/dev/null >/dev/null ) &
+# ( pidof mpd || mpd 2>/dev/null >/dev/null ) &
+# ( pidof mpDris2 || mpDris2 2>/dev/null >/dev/null ) &
+( killall nm-applet; nm-applet 2>/dev/null >/dev/null ) &
+( killall blueman-applet; blueman-applet 2>/dev/null >/dev/null ) &
+# ( pidof picom || picom 2>/dev/null >/dev/null ) &
+( killall copyq; copyq 2>/dev/null >/dev/null ) &
+( pidof -x bspswallow || bspswallow 2>/dev/null >/dev/null ) &
+
+xwallpaper --zoom "$HOME/media/wallpapers/1132043.jpg" &
+
+if $HDMI_CONNECTED; then
+    bspc monitor DP1 -d 11 12 13 14 15 16 17 18 19 20
+    bspc monitor HDMI1 -d 1 2 3 4 5 6 7 8 9 10
+else
+    bspc monitor DP1 -d 1 2 3 4 5 6 7 8 9 10
+fi
+
+wmname LG3D &
+
+bspc config border_width 2
+bspc config window_gap 2
+
+bspc config split_ratio 0.50
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config pointer_follows_monitor true
+bspc config pointer_motion_interval 120
+
+bspc config normal_border_color	"#4c566a"
+bspc config active_border_color	"#1e1e1e"
+bspc config focused_border_color "#406ea5"
+bspc config presel_feedback_color "#5e81ac"
+bspc config urgent_border_color "#dd2727"
+
+bspc rule -a mpv state=fullscreen
+bspc rule -a Zathura state=tiled
+bspc rule -a Screenkey manage=off
+bspc rule -a Sxiv state=fullscreen
+bspc rule -a Yad state=floating
+bspc rule -a MEGAsync state=floating
+bspc rule -a "Microsoft Teams - Preview" desktop=10
+bspc rule -a "Dragon-drop" sticky=on
+bspc rule -a scrcpy state=floating

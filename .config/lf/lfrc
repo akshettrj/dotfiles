@@ -1,0 +1,80 @@
+set shell zsh
+set shellopts '-eu'
+
+set hidden on
+
+set ifs "\n"
+
+set number on
+set relativenumber on
+
+set icons on
+set preview on
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
+set drawbox on
+set hidden on
+
+cmd mkdir %mkdir "$@"
+cmd touch %touch "$@"
+
+cmd bulkrename ${{
+    vimv --git -- "$fx"
+    
+    lf -remote "send $id load"
+}}
+map br bulkrename
+
+map <enter> shell
+
+# Executing current file
+map x $"$f"
+map X !"$f"
+
+
+# Dynamic window title
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $(pwd | sed "s|$HOME|~|") - lf\007" > /dev/tty
+}}
+## also run at startup
+on-cd
+
+# Warn if in nested instance
+%[ $LF_LEVEL -eq 1 ] || echo "Warning: You're in a nested lf instance!"
+
+map DD delete
+
+cmd extract !{{
+    set -f
+    case "$f" in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf "$f";;
+        *.tar.gz|*.tgz) tar xzvf "$f";;
+        *.tar.xz|*.txz) tar xJvf "$f";;
+        *.zip) unzip "$f";;
+        *.rar) unrar x "$f";;
+        *.7z) 7z x "$f";;
+    esac
+}}
+
+cmd tar !{{
+    set -f
+    mkdir "$1"
+    cp -r "$fx" "$1"
+    tar -czf "$1".tar.gz "$1"
+    rm -rf "$1"
+}}
+
+cmd zip !{{
+    set -f
+    mkdir "$1"
+    cp -r "$fx" "$1"
+    zip -r "$1".zip "$1"
+    rm -rf "$1"
+}}
+
+map ae extract
+map at push :tar<space>
+map az push :zip<space>

@@ -1,0 +1,305 @@
+#!/bin/sh
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+
+export PATH=$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$PATH
+
+for script_dir in $HOME/.scripts/*
+do
+    export PATH=$script_dir:$PATH
+done
+
+export VISUAL=nvim
+export EDITOR=nvim
+export LS_COLORS='rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=38;5;12;42:st=37;44:ex=01;38;5;10:'
+
+export TERMINAL=alacritty
+export BROWSER=brave
+export CHROME_EXECUTABLE=google-chrome-stable
+
+# Xsecurelock
+export XSECURELOCK_BLANK_DPMS_STATE="on"
+export XSECURELOCK_BLANK_TIMEOUT=-1
+export XSECURELOCK_FONT="JetBrainsMono Nerd Font:size=15"
+export XSECURELOCK_PASSWORD_PROMPT="emoticon"
+export XSECURELOCK_SHOW_DATETIME=1
+
+# Rust
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+
+# Python
+export PYTHONSTARTUP=$XDG_CONFIG_HOME/python_startup.py
+export PYTHONHISTFILE=$XDG_CACHE_HOME/python_history
+
+# Go
+export GOPATH=$HOME/work/go
+for gp in `echo $GOPATH | tr ':' '\n'`
+do
+    export PATH=$gp/bin:$PATH
+done
+
+# NLP
+export NLTK_DATA=$XDG_DATA_HOME/nltk_data
+
+# Heroku
+export HEROKU_AC_ANALYTICS_DIR=$XDG_CACHE_HOME/heroku/autocomplete/completion_analytics
+export HEROKU_AC_COMMANDS_PATH=$XDG_CACHE_HOME/heroku/autocomplete/commands
+
+# Colored Man Pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# LF File Explorer
+export LF_ICONS="\
+di=:\
+fi=:\
+ln=:\
+or=:\
+*.txt=:\
+*.wiki=:\
+*.vimrc=:\
+*.viminfo=:\
+*.gitignore=:\
+*.c=:\
+*.cc=:\
+*.clj=:\
+*.coffee=:\
+*.cpp=:\
+*.css=:\
+*.d=:\
+*.dart=:\
+*.erl=:\
+*.exs=:\
+*.fs=:\
+*.go=:\
+*.h=:\
+*.hh=:\
+*.hpp=:\
+*.hs=:\
+*.html=:\
+*.java=:\
+*.jl=:\
+*.js=:\
+*.jsx=ﰆ: \
+*.json=:\
+*.lua=:\
+*.md=:\
+*.php=:\
+*.pl=:\
+*.pro=:\
+*.py=:\
+*.rb=:\
+*.rs=:\
+*.scala=:\
+*.ts=:\
+*.vim=:\
+*.cmd=:\
+*.ps1=:\
+*.sh=:\
+*.bash=:\
+*.zsh=:\
+*.fish=:\
+*.tar=:\
+*.tgz=:\
+*.arc=:\
+*.arj=:\
+*.taz=:\
+*.lha=:\
+*.lz4=:\
+*.lzh=:\
+*.lzma=:\
+*.tlz=:\
+*.txz=:\
+*.tzo=:\
+*.t7z=:\
+*.zip=:\
+*.z=:\
+*.dz=:\
+*.gz=:\
+*.lrz=:\
+*.lz=:\
+*.lzo=:\
+*.xz=:\
+*.zst=:\
+*.tzst=:\
+*.bz2=:\
+*.bz=:\
+*.tbz=:\
+*.tbz2=:\
+*.tz=:\
+*.deb=:\
+*.rpm=:\
+*.jar=:\
+*.war=:\
+*.ear=:\
+*.sar=:\
+*.rar=:\
+*.alz=:\
+*.ace=:\
+*.zoo=:\
+*.cpio=:\
+*.7z=:\
+*.rz=:\
+*.cab=:\
+*.wim=:\
+*.swm=:\
+*.dwm=:\
+*.esd=:\
+*.jpg=:\
+*.jpeg=:\
+*.mjpg=:\
+*.mjpeg=:\
+*.gif=:\
+*.bmp=:\
+*.pbm=:\
+*.pgm=:\
+*.ppm=:\
+*.tga=:\
+*.xbm=:\
+*.xpm=:\
+*.tif=:\
+*.tiff=:\
+*.png=:\
+*.svg=:\
+*.svgz=:\
+*.mng=:\
+*.pcx=:\
+*.mov=:\
+*.mpg=:\
+*.mpeg=:\
+*.m2v=:\
+*.mkv=:\
+*.webm=:\
+*.ogm=:\
+*.mp4=:\
+*.m4v=:\
+*.mp4v=:\
+*.vob=:\
+*.qt=:\
+*.nuv=:\
+*.wmv=:\
+*.asf=:\
+*.rm=:\
+*.rmvb=:\
+*.flc=:\
+*.avi=:\
+*.fli=:\
+*.flv=:\
+*.gl=:\
+*.dl=:\
+*.xcf=:\
+*.xwd=:\
+*.yuv=:\
+*.cgm=:\
+*.emf=:\
+*.ogv=:\
+*.ogx=:\
+*.aac=:\
+*.au=:\
+*.flac=:\
+*.m4a=:\
+*.mid=:\
+*.midi=:\
+*.mka=:\
+*.mp3=:\
+*.mpc=:\
+*.ogg=:\
+*.ra=:\
+*.wav=:\
+*.oga=:\
+*.opus=:\
+*.spx=:\
+*.xspf=:\
+*.pdf=:\
+*.epub=:\
+*.nix=:\
+*.torrent=:\
+*.ovpn=🌐:\
+*.iso=📀:\
+di=📁:\
+fi=📃:\
+tw=🤝:\
+ow=📂:\
+ln=⛓:\
+or=❌:\
+ex=🎯:\
+*.txt=✍:\
+*.mom=✍:\
+*.me=✍:\
+*.ms=✍:\
+*.png=🖼:\
+*.webp=🖼:\
+*.ico=🖼:\
+*.jpg=📸:\
+*.jpe=📸:\
+*.jpeg=📸:\
+*.gif=🖼:\
+*.svg=🗺:\
+*.tif=🖼:\
+*.tiff=🖼:\
+*.xcf=🖌:\
+*.html=🌎:\
+*.xml=📰:\
+*.gpg=🔒:\
+*.css=🎨:\
+*.pdf=📚:\
+*.djvu=📚:\
+*.epub=📚:\
+*.csv=📓:\
+*.xlsx=📓:\
+*.tex=📜:\
+*.md=📘:\
+*.r=📊:\
+*.R=📊:\
+*.rmd=📊:\
+*.Rmd=📊:\
+*.m=📊:\
+*.mp3=🎵:\
+*.opus=🎵:\
+*.ogg=🎵:\
+*.m4a=🎵:\
+*.flac=🎼:\
+*.wav=🎼:\
+*.mkv=🎥:\
+*.mp4=🎥:\
+*.webm=🎥:\
+*.mpeg=🎥:\
+*.avi=🎥:\
+*.mov=🎥:\
+*.mpg=🎥:\
+*.wmv=🎥:\
+*.m4b=🎥:\
+*.flv=🎥:\
+*.zip=📦:\
+*.rar=📦:\
+*.7z=📦:\
+*.tar.gz=📦:\
+*.z64=🎮:\
+*.v64=🎮:\
+*.n64=🎮:\
+*.gba=🎮:\
+*.nes=🎮:\
+*.gdi=🎮:\
+*.1=ℹ:\
+*.nfo=ℹ:\
+*.info=ℹ:\
+*.log=📙:\
+*.iso=📀:\
+*.img=📀:\
+*.bib=🎓:\
+*.ged=👪:\
+*.part=💔:\
+*.torrent=🔽:\
+*.jar=♨:\
+*.java=♨:\
+*rc=漣:\
+*.conf=漣:\
+"

@@ -1,0 +1,288 @@
+# Terminals
+super + Return
+    alacritty
+
+super + shift + Return
+    st
+
+# Browsers
+super + F1
+    brave
+
+super + shift + F1
+    google-chrome-stable
+
+# File explorers
+super + e
+    alacritty -e lf
+
+super + shift + e
+    alacritty -e ranger
+
+# Dmenu
+super + @space
+    dmenu_run -p "Run: "
+
+super + shift + b
+    bookmenu_launch
+
+# Dunst
+ctrl + shift + o
+    dunstctl context
+
+shift + alt + @space
+    dunstctl close-all
+
+alt + @space
+    dunstctl close
+
+# Flameshot
+super + shift + s
+    flameshot gui &
+
+super + Print
+    flameshot full --path ~/media/screenshots/flameshot
+
+# Lockscreen
+super + Escape
+    xsecurelock
+
+# Media
+XF86AudioPlay
+    playerctl -a --ignore-player mpd play-pause
+
+super + F11
+    playerctl --player mpd play-pause
+
+XF86AudioNext
+    playerctl -a --ignore-player mpd next
+
+super + F12
+    playerctl --player mpd next
+
+XF86AudioPrev
+    playerctl -a --ignore-player mpd previous
+
+super + F10
+    playerctl --player mpd previous
+
+# Pulseaudio
+XF86AudioRaiseVolume
+    polybar_volume_control "output-vol" $(pactl info | grep "Default Sink: " | sed 's/.*: //') +2%
+
+super + F8
+    polybar_volume_control "output-vol" $(pactl info | grep "Default Sink: " | sed 's/.*: //') +2%
+
+XF86AudioLowerVolume
+    polybar_volume_control "output-vol" $(pactl info | grep "Default Sink: " | sed 's/.*: //') -2%
+
+super + F7
+    polybar_volume_control "output-vol" $(pactl info | grep "Default Sink: " | sed 's/.*: //') -2%
+
+XF86AudioMute
+    polybar_volume_control "output-mute" "alsa_output.pci-0000_00_1f.3.analog-stereo"
+
+super + F6
+    polybar_volume_control "output-mute" "bluez_sink.00_09_A7_32_84_23.a2dp_sink"
+
+super + d
+    default_sink
+
+super + alt + i
+	fix_mic && notify-send "Mic" "The Mic is unmuted 🎤"
+
+super + alt + shift + i
+	mute_mic && notify-send "Mic" "The Mic is off now 🛑"
+
+# Utilities
+super + alt + d
+    notify-send "Current Time" "$(date_time)"
+
+super + alt + @w
+    xwallpaper --zoom "$(random_wallpaper)"
+
+super + F2
+    brightnessctl set -- '-10%'
+
+super + F3
+    brightnessctl set -- '+10%'
+
+# BSPWM
+
+## utilities
+super + minus
+    bspc_hide
+
+super + u
+    bspc_unhide
+
+## quit/restart
+super + alt + {q,r}
+    bspc {quit,wm -r} && notify-send "SUCCESS" "bspwm restarted successfully"
+
+## close and kill apps
+super + {_,shift + }w
+    bspc node -{c,k}
+
+## alternate between the tiled and monocle layout
+super + m
+    bspc desktop -l next
+
+## swap the current node and the biggest window
+super + g
+    bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+## set the window state
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+## set the node flags
+super + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private}
+
+## send the newest marked node to the newest preselected node
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local
+
+#
+# focus/swap
+#
+
+## focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+## focus the node for the given path jump
+super + {p,b,comma,period}
+    bspc node -f @{parent,brother,first,second}
+
+## focus the next/previous window in the current desktop
+super + {_,shift + }c
+    bspc node -f {next,prev}.local.!hidden.window
+
+## focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+# super + shift + {comma, period}
+    bspc desktop -f {prev,next}.local
+
+## focus the last node/desktop
+# super + {grave,Tab}
+# 	bspc {node,desktop} -f last
+
+## focus the older or newer node in the focus history
+super + {i,o}
+    bspc wm -h off; \
+    bspc node {older,newer} -f; \
+    bspc wm -h on
+
+## focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + alt + {_,shift + }{1,2,3,4,5,6,7,8,9,0}
+    bspc {desktop -f,node -d} '^{11,12,13,14,15,16,17,18,19,20}'
+#
+# preselect
+#
+
+## Recepticles
+super + ctrl + shift + {h,j,k,l}
+    bspc node -p {west,south,north,east} -i
+
+## Move focused node to the recepticle
+super + r
+    bspc node $(bspc query -N -n focused) -n $(bspc query -N -n .leaf.\!window -d focused)
+
+## Kill the recepticles
+super + shift + r
+    for win in `bspc query -N -n .leaf.\!window`; do bspc node $win -k; done;
+
+## preselect the direction
+super + ctrl + {h,j,k,l}
+    bspc node -p {west,south,north,east}
+
+## preselect the ratio
+super + ctrl + {1-9}
+    bspc node -o 0.{1-9}
+
+## cancel the preselection for the focused node
+super + ctrl + space
+    bspc node -p cancel
+
+## cancel the preselection for the focused desktop
+super + ctrl + shift + space
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+## expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+## contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+## move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+############################################################
+
+super + alt + i
+	fixInput && notify-send "Mic" "The Mic is unmuted 🎤"
+
+super + alt + shift + i
+	micMute && notify-send "Mic" "The Mic is off now 🛑"
+
+
+# Restart things
+super + alt + c
+	killall picom ; picom & notify-send "SUCCESS" "picom restarted successfully"
+
+super + alt + x
+	killall sxhkd ; sxhkd & notify-send "SUCCESS" "sxhkd restart ho gaya successfully"
+
+super + alt + p
+	polybar-msg cmd restart
+
+super + alt + s
+	killall bspswallow ; bspswallow 2>/dev/null & notify-send "SUCCESS" "bspswallow restarted successfully"
+
+# super + alt + shift + x
+# 	killall sxhkd && notify-send "SUCCESS" "sxhkd killed successfully"
+
+super + alt + shift + p
+	killall polybar && notify-send "SUCCESS" "polybar killed successfully"
+
+super + alt + shift + s
+	killall bspswallow && notify-send "SUCCESS" "bspswallow killed successfully"
+
+super + alt + shift + c
+	killall picom && notify-send "SUCCESS" "picom killed successfully"
+
+super + v
+	bash vimAnywhere.sh
+
+# brave-browser
+
+
+#
+# bspwm hotkeys
+#
+
+
+
+
+#
+# state/flags
+#
+
+

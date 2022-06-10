@@ -1,0 +1,28 @@
+#!/bin/sh
+
+open() {
+    for var in "$@"
+    do
+        xdg-open "$var" 2>/dev/null & disown
+    done
+}
+
+alias p3='python3'
+
+alias ls='lsd'
+alias la='lsd -A'
+alias ll='lsd -l'
+alias lla='lsd -lA'
+alias lt='lsd --tree'
+alias ltl='lsd --tree -l'
+alias lta='lsd --tree -A'
+alias ltla='lsd --tree -Al'
+
+alias cp='cp -rvi'
+alias rm='rm -vi'
+
+alias lf='lfub'
+
+alias rclone_copy='rclone --drive-server-side-across-configs -vv --transfers 3 --stats=15s --drive-chunk-size 128M copy'
+
+alias dotfiles="git --git-dir=$HOME/work/repos/dotfiles --work-tree=$HOME"

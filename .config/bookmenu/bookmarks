@@ -1,0 +1,48 @@
+Github::https://github.com/akshettrj
+Gitlab::https://gitlab.com/akshettrj
+
+
+# Configurations
+BookMenu Config::~/.config/bookmenu
+Polybar Config::~/.config/polybar
+NVim (neovim) Config::~/.config/nvim
+Vim Config::~/.config/vim
+Zathura Config::~/.config/zathura/
+LF File Manager Config::~/.config/lf/
+Alacrirtty Config::~/.config/alacritty
+BSPWM Config::~/.config/bspwm
+ZSH Config::~/.config/zsh
+
+Global Notes::~/work/notes/vimWiki/index.wiki
+
+# IIITH
+
+## General
+Courses - AAALLL::https://courses.iiit.ac.in/my
+IMS::https://ims.iiit.ac.in
+IIIT Mail - Outlook::https://outlook.office.com/mail/inbox
+OneDrive::https://iiitaphyd-my.sharepoint.com/personal/akshett_jindal_research_iiit_ac_in/_layouts/15/onedrive.aspx
+Notes HTML - IIIT::~/iiith/notes/html/index.html
+Notes NVIM - IIIT::~/iiith/notes/index.wiki
+Manish Research Notebook::https://iiitaphyd-my.sharepoint.com/personal/m_shrivastava_iiit_ac_in/_layouts/15/Doc.aspx?sourcedoc={fbde0bfb-d1a0-412c-a61d-3a38c892f9e1}&action=edit&wd=target%28Akshett.one%7C847c0461-ae87-274d-9803-4ee5a3fe5a9c%2FUntitled%20Page%7Cf74b5438-02c4-c748-9000-dd7178b7b638%2F%29
+
+## Courses
+
+## Website
+CoursesWeb - Science 1 | sc1::https://courses.iiit.ac.in/course/view.php?id=2851
+CoursesWeb - Statistical Methods in AI | SMAI::https://courses.iiit.ac.in/course/view.php?id=2758
+CoursesWeb - Operating Systems & Networks | OSN::https://courses.iiit.ac.in/course/view.php?id=2833
+CoursesWeb - Advanced NLP::https://courses.iiit.ac.in/course/view.php?id=2877
+CoursesWeb - Introduction To Literature | ITL::https://courses.iiit.ac.in/course/view.php?id=2913
+CoursesWeb - Comp. Social Sciences | css::https://courses.iiit.ac.in/course/view.php?id=3147
+CoursesWeb - Data Foundation Systems | dfs::https://courses.iiit.ac.in/course/view.php?id=3153
+CoursesWeb - Internals of App. Servers | ias::https://courses.iiit.ac.in/course/view.php?id=3181
+CoursesWeb - Principles of Info. Sec | pois::https://courses.iiit.ac.in/course/view.php?id=3220
+CoursesWeb - Science 2 | sc2::https://courses.iiit.ac.in/course/view.php?id=3230
+
+### Local
+CoursesLocal - Science 1 | sc1::~/iiith/3.1/sc1
+CoursesLocal - Statistical Methods in AI | SMAI::~/iiith/3.1/smai
+CoursesLocal - Operating Systems & Networks | OSN::~/iiith/3.1/osn
+CoursesLocal - Advanced NLP::~/iiith/3.1/nlp
+CoursesLocal - Introduction To Literature | ITL::~/iiith/3.1/itl
