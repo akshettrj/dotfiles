@@ -1,0 +1,5 @@
+#!/bin/sh
+letter=$(cat ~/.scripts/greekLetters.txt | dmenu -l 10 -fn "Noto Color Emoji:pixelsize=15" | awk '{print $1}' | tr "\n" " ")
+[ "$letter" != "" ] || exit
+echo $letter | tr "\n" " " | sed "s/\ //g" | copyq add -
+copyq select 0 && notify-send "Success" "$letter copied to clipboard"

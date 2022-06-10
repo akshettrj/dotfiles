@@ -1,0 +1,8 @@
+#!/bin/sh
+cpu_temp=$(echo "scale=2; (" $(sudo sensors | grep Core | awk '{print $3}' | sed "s/°C//g" | sed "s/+//g" | tr "\n" "\ " | sed "s/\ /\ +\ /g; s/+\ $/\n/g") ") / 6" | bc)
+
+if [ 1 -eq "$(echo "scale=2; ${cpu_temp} > 60.0" | bc)" ];then
+	printf "%%{F#f2e421}";
+fi
+
+echo ﬙ $cpu_temp°C 

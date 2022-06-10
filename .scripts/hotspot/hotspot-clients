@@ -1,0 +1,10 @@
+#!/bin/bash
+
+running="$(sudo create_ap --list-running | awk '{print $1}')"
+
+if [ -z "$running" ]; then
+    echo "Hotspot not running"
+    exit
+fi
+
+sudo create_ap --list-clients 
