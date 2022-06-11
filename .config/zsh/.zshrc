@@ -50,3 +50,14 @@ bindkey -s '^f' "^u fzf\n"
 bindkey -s '^o' "^u lfcd\n"
 
 WORDCHARS=''
+
+
+# Xorg Server
+
+_NVIDIA_CONF_SRC="$HOME/.config/X11/10-nvidia-drm-outputclass.conf"
+_NVIDIA_CONF_DST="/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
+
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
+    pgrep bspwm || startx "$HOME/.config/X11/Xinitrc_bspwm"
+fi

@@ -7,11 +7,12 @@ zstyle ':completion:*' special-dirs false
 zstyle ':completion::complete:*' gain-privileges 1
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:descriptions' format "%F{yellow}%B--- %d%f%b"
+zstyle ':completion:*:descriptions' format "%F{yellow}%B-- %d --%f%b"
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format "%F{red}%BNo matches for:%b%f %d"
 zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' squeeze-slashes true
 
 # Shift + Tab to go back
 bindkey -M menuselect '^[[Z' reverse-menu-complete
