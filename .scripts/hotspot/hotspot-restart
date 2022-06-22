@@ -1,5 +1,3 @@
 #!/bin/bash
 
-set -x
 sudo systemctl restart create_ap.service
-set +x

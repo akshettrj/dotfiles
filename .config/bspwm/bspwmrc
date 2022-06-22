@@ -2,25 +2,31 @@
 
 ( xrandr | grep "HDMI-0 connected" ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
 
+if $HDMI_CONNECTED; then
+    _layout_samsung_main.sh
+fi
+
 ( pidof dunst || dunst 2>/dev/null >/dev/null ) &
-( pidof polybar || polybar bar 2>/dev/null >/dev/null ) &
+( pidof polybar || polybar bar-dp-base 2>/dev/null >/dev/null ) &
+( polybar bar-hdmi-base 2>/dev/null >/dev/null ) &
 ( pidof -x sxhkd || sxhkd 2>/dev/null >/dev/null ) &
 ( pidof flameshot || flameshot 2>/dev/null >/dev/null ) &
-# ( pidof mpd || mpd 2>/dev/null >/dev/null ) &
-# ( pidof mpDris2 || mpDris2 2>/dev/null >/dev/null ) &
+( pidof mpd || mpd 2>/dev/null >/dev/null ) &
+( pidof mpDris2 || mpDris2 2>/dev/null >/dev/null ) &
 ( killall nm-applet; nm-applet 2>/dev/null >/dev/null ) &
 ( killall blueman-applet; blueman-applet 2>/dev/null >/dev/null ) &
-# ( pidof picom || picom 2>/dev/null >/dev/null ) &
+( pidof picom || picom 2>/dev/null >/dev/null ) &
 ( killall copyq; copyq 2>/dev/null >/dev/null ) &
 ( pidof -x bspswallow || bspswallow 2>/dev/null >/dev/null ) &
 
-xwallpaper --zoom "$HOME/media/wallpapers/1132043.jpg" &
+
+xwallpaper --zoom "$HOME/media/wallpapers/power_red.jpg" &
 
 if $HDMI_CONNECTED; then
-    bspc monitor DP1 -d 11 12 13 14 15 16 17 18 19 20
-    bspc monitor HDMI1 -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$(_xorg_dp_screen.sh)" -d 11 12 13 14 15 16 17 18 19 20
+    bspc monitor "$(_xorg_hdmi_screen.sh)" -d 1 2 3 4 5 6 7 8 9 10
 else
-    bspc monitor DP1 -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$(_xorg_dp_screen.sh)" -d 1 2 3 4 5 6 7 8 9 10
 fi
 
 wmname LG3D &

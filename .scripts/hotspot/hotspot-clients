@@ -7,4 +7,4 @@ if [ -z "$running" ]; then
     exit
 fi
 
-sudo create_ap --list-clients 
+sudo create_ap --list-clients "$running"
