@@ -57,7 +57,11 @@ WORDCHARS=''
 _NVIDIA_CONF_SRC="$HOME/.config/X11/10-nvidia-drm-outputclass.conf"
 _NVIDIA_CONF_DST="/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
 
+_MONITOR_CONF_SRC="$HOME/.config/X11/10-monitor.conf"
+_MONITOR_CONF_DST="/usr/share/X11/xorg.conf.d/10-monitor.conf"
+
 if [[ "$(tty)" == "/dev/tty1" ]]; then
-    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
+    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
+    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
     pgrep bspwm || startx "$HOME/.config/X11/Xinitrc_bspwm"
 fi
