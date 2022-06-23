@@ -2,7 +2,7 @@ import atexit
 import os
 import readline
 
-histfile = os.path.join(os.environ.get("PYTHONHISTFILE", ""))
+histfile = os.environ.get("PYTHONHISTFILE", "")
 if histfile == "":
     histfile = os.path.join(os.path.expanduser("~"), ".python_history")
 

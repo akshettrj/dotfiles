@@ -4,6 +4,7 @@
 
 if $HDMI_CONNECTED; then
     _layout_samsung_main.sh
+    _xorg_nvidia_force_composition.sh
 fi
 
 ( pidof dunst || dunst 2>/dev/null >/dev/null ) &
