@@ -251,7 +251,7 @@ super + alt + x
 	killall sxhkd ; sxhkd & notify-send "SUCCESS" "sxhkd restart ho gaya successfully"
 
 super + alt + p
-	polybar-msg cmd restart
+	bash ~/.config/polybar/launch_polybar.sh
 
 super + alt + s
 	killall bspswallow ; bspswallow 2>/dev/null & notify-send "SUCCESS" "bspswallow restarted successfully"
@@ -284,5 +284,3 @@ super + v
 #
 # state/flags
 #
-
-

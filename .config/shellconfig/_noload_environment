@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export TGDESKTOP_USE_GTK_FILE_DIALOG=1
+
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share

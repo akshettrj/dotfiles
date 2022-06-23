@@ -3,7 +3,7 @@
 
 include "/home/akshettrj/.gtkrc-2.0.mine"
 gtk-theme-name="Materia-dark"
-gtk-icon-theme-name="Papirus-Dark"
+gtk-icon-theme-name="ePapirus-Dark"
 gtk-font-name="JetBrainsMono Nerd Font 13"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
@@ -15,4 +15,5 @@ gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-hintstyle="hintmedium"
+gtk-xft-rgba="rgb"

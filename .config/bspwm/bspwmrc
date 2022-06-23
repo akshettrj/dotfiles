@@ -8,8 +8,7 @@ if $HDMI_CONNECTED; then
 fi
 
 ( pidof dunst || dunst 2>/dev/null >/dev/null ) &
-( pidof polybar || polybar bar-dp-base 2>/dev/null >/dev/null ) &
-( polybar bar-hdmi-base 2>/dev/null >/dev/null ) &
+( bash "$HOME/.config/polybar/launch_polybar.sh" ) &
 ( pidof -x sxhkd || sxhkd 2>/dev/null >/dev/null ) &
 ( pidof flameshot || flameshot 2>/dev/null >/dev/null ) &
 ( pidof mpd || mpd 2>/dev/null >/dev/null ) &

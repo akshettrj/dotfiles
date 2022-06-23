@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ip addr | grep -P '^\d+: w\S*: <.*' | sed -E 's/^\S*: //;s/: <.*$//'
