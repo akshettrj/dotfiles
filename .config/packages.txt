@@ -498,7 +498,7 @@ pam
 pambase
 pango
 papirus-icon-theme
-paru-bin
+paru-git
 patch
 pciutils
 pcmanfm
@@ -606,6 +606,7 @@ ranger
 raptor
 rasqal
 rav1e
+rclone
 readline
 redland
 rest

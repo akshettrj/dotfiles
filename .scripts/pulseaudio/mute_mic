@@ -3,5 +3,3 @@
 pactl set-card-profile bluez_card.00_09_A7_32_84_23 a2dp_sink;
 pactl set-card-profile bluez_card.E4_41_22_48_CE_8D a2dp_sink;
 pactl set-source-volume alsa_input.pci-0000_00_1f.3.analog-stereo 0%;
-
-updatePulseAudioSink

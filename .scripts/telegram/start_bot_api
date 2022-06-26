@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec tg-bot-api --api-id 8755581 --api-hash 42d409023e37d062b236cee4ad769261 --local -p 8082 -d ~/.local/share/telegram-bot-api -t ~/.local/share/telegram-bot-api/temp --log ~/.local/share/telegram-bot-api/logs.txt

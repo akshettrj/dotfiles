@@ -14,7 +14,7 @@ super + shift + F1
 
 # File explorers
 super + e
-    alacritty -e lf
+    alacritty -e lfub
 
 super + shift + e
     alacritty -e ranger
@@ -51,19 +51,19 @@ super + Escape
 XF86AudioPlay
     playerctl -a --ignore-player mpd play-pause
 
-super + F11
+super + F10
     playerctl --player mpd play-pause
 
 XF86AudioNext
     playerctl -a --ignore-player mpd next
 
-super + F12
+super + F11
     playerctl --player mpd next
 
 XF86AudioPrev
     playerctl -a --ignore-player mpd previous
 
-super + F10
+super + F9
     playerctl --player mpd previous
 
 # Pulseaudio
@@ -89,10 +89,10 @@ super + d
     default_sink
 
 super + alt + i
-	fix_mic && notify-send "Mic" "The Mic is unmuted 🎤"
+    fix_mic && notify-send "Mic" "The Mic is unmuted 🎤"
 
 super + alt + shift + i
-	mute_mic && notify-send "Mic" "The Mic is off now 🛑"
+    mute_mic && notify-send "Mic" "The Mic is off now 🛑"
 
 # Utilities
 super + alt + d

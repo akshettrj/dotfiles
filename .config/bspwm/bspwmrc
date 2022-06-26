@@ -17,7 +17,7 @@ fi
 ( killall blueman-applet; blueman-applet 2>/dev/null >/dev/null ) &
 ( pidof picom || picom 2>/dev/null >/dev/null ) &
 ( killall copyq; copyq 2>/dev/null >/dev/null ) &
-( pidof -x bspswallow || bspswallow 2>/dev/null >/dev/null ) &
+# ( pidof -x bspswallow || bspswallow 2>/dev/null >/dev/null ) &
 
 
 xwallpaper --zoom "$HOME/media/wallpapers/power_red.jpg" &

@@ -4,12 +4,18 @@
 autoload -U colors && colors
 
 # History file config
-HISTSIZE=100000
-SAVESIZE=100000
+export HISTFILE=$XDG_CACHE_HOME/zsh_history
+export HISTSIZE=10000
+export SAVESIZE=1000
+setopt APPENDHISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
 
 # Files from ~/.config/shellconfig directory
 for to_source in $HOME/.config/shellconfig/*
