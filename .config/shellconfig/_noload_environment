@@ -12,7 +12,7 @@ export PATH=$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$PATH
 
 for script_dir in $HOME/.scripts/*
 do
-    export PATH=$script_dir:$PATH
+    [ -d "$script_dir" ] && export PATH="$script_dir":$PATH
 done
 
 export VISUAL=nvim
@@ -21,7 +21,7 @@ export LS_COLORS='rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do=01
 
 export TERMINAL=alacritty
 export BROWSER=brave
-export CHROME_EXECUTABLE=google-chrome-stable
+export CHROME_EXECUTABLE=google-chrome
 
 # Xsecurelock
 export XSECURELOCK_BLANK_DPMS_STATE="on"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$#" -neq 2 ]
+if (( $# < 2 ))
 then
     echo "Two arguments required: Input file and Output file"
     exit
