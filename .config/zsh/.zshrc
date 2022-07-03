@@ -6,7 +6,7 @@ autoload -U colors && colors
 # History file config
 export HISTFILE=$XDG_CACHE_HOME/zsh_history
 export HISTSIZE=10000
-export SAVESIZE=1000
+export SAVEHIST=1000
 setopt APPENDHISTORY
 setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
