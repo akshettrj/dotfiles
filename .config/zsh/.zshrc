@@ -44,7 +44,7 @@ do
     source "$to_source/main.zsh"
 done
 
-fpath=($ZDOTDIR/fpath $fpath)
+fpath=($ZDOTDIR/my_fpath $fpath)
 
 # Misc
 setopt COMPLETE_ALIASES

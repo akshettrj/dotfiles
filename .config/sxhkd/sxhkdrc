@@ -40,6 +40,10 @@ alt + @space
 super + shift + s
     flameshot gui &
 
+# OCR
+super + shift + o
+    ocr &
+
 super + Print
     flameshot full --path ~/media/screenshots/flameshot
 
