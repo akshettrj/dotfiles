@@ -33,6 +33,7 @@ bash
 bat
 bc
 bdf-unifont
+beekeeper-studio-appimage
 binutils
 bison
 blueman
@@ -63,6 +64,7 @@ cmake
 compiler-rt
 copyq
 coreutils
+corkscrew
 cryptsetup
 curl
 dav1d
@@ -127,6 +129,7 @@ glib2
 glibc
 glslang
 gmp
+gnome-keyring
 gnome-themes-extra
 gnupg
 gnutls
@@ -158,6 +161,7 @@ gumbo-parser
 gzip
 harfbuzz
 harfbuzz-icu
+heroku-cli-bin
 hicolor-icon-theme
 hidapi
 hostapd
@@ -452,6 +456,7 @@ mediainfo
 menu-cache
 mercurial
 mesa
+microsoft-edge-dev-bin
 miniupnpc
 mkinitcpio
 mkinitcpio-busybox
@@ -474,6 +479,7 @@ netpbm
 nettle
 network-manager-applet
 networkmanager
+networkmanager-openvpn
 nftables
 nm-connection-editor
 nodejs
@@ -497,6 +503,7 @@ openmpi
 openpmix
 openssh
 openssl
+openvpn
 opus
 orc
 os-prober
@@ -541,6 +548,7 @@ picom-jonaburg-git
 pinentry
 pipewire
 pixman
+pkcs11-helper
 pkgconf
 playerctl
 polkit
