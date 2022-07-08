@@ -8,6 +8,8 @@ alsa-lib
 alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
+android-tools
+android-udev
 aom
 apr
 apr-util
@@ -298,6 +300,7 @@ libmpc
 libmpcdec
 libmpdclient
 libmspub
+libmtp
 libmwaw
 libnatpmp
 libndp
@@ -379,6 +382,7 @@ libvisio
 libvisual
 libvorbis
 libvpx
+libvterm-0.1
 libvterm01
 libwacom
 libwebp
@@ -474,7 +478,7 @@ ncmpcpp
 ncurses
 neofetch
 neon
-neovim
+neovim-git
 netpbm
 nettle
 network-manager-applet
@@ -556,7 +560,10 @@ polybar
 poppler
 popt
 portaudio
+postgresql
+postgresql-libs
 procps-ng
+protobuf
 psmisc
 pulseaudio
 pulseaudio-alsa
