@@ -1,0 +1,1 @@
+sshfs brodie@123.123.1334:/home/brodie ~/remote -C -o idmap=user

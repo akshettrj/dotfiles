@@ -113,6 +113,7 @@ freetype2
 fribidi
 fuse-common
 fuse2
+fzf
 gawk
 gc
 gcc
@@ -494,6 +495,7 @@ noto-fonts-emoji
 npth
 nspr
 nss
+ntfs-3g
 nvidia-open
 nvidia-settings
 nvidia-utils
@@ -513,6 +515,7 @@ orc
 os-prober
 otf-gfs
 p11-kit
+p7zip
 pacman
 pacman-mirrorlist
 pahole

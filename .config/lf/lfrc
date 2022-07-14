@@ -20,7 +20,7 @@ cmd touch %touch "$@"
 
 cmd bulkrename ${{
     vimv --git -- "$fx"
-    
+
     lf -remote "send $id load"
 }}
 map br bulkrename
@@ -75,6 +75,15 @@ cmd zip !{{
     rm -rf "$1"
 }}
 
+cmd mark-watched ${{
+    set -f
+    fName="$(basename "$fx")"
+    fPath="$(dirname "$fx")"
+    mv "$fx" "$fPath"/" $fName"
+}}
+
 map ae extract
 map at push :tar<space>
 map az push :zip<space>
+
+map W mark-watched
