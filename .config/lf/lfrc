@@ -82,8 +82,27 @@ cmd mark-watched ${{
     mv "$fx" "$fPath"/" $fName"
 }}
 
+cmd drag-and-drop ${{
+    set -f
+    dragon-drop "$fx"
+}}
+
+cmd drag-and-drop-and-exit ${{
+    set -f
+    dragon-drop --and-exit "$fx"
+}}
+
+cmd drag-and-drop-all ${{
+    set -f
+    dragon-drop --all "$fx"
+}}
+
 map ae extract
 map at push :tar<space>
 map az push :zip<space>
 
 map W mark-watched
+
+map Dd. drag-and-drop
+map Dde drag-and-drop-and-exit
+map Dda drag-and-drop-all
