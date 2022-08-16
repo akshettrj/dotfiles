@@ -74,4 +74,8 @@ elif [[ "$(tty)" == "/dev/tty2" ]]; then
     diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
     diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
     pgrep awesome || startx "$HOME/.config/X11/Xinitrc_awesome"
+elif [[ "$(tty)" == "/dev/tty3" ]]; then
+    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
+    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
+    pgrep awesome || startx "$HOME/.config/X11/Xinitrc_xfce4"
 fi

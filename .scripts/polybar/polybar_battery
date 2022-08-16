@@ -5,7 +5,7 @@ bat_number=$(acpi | awk '{print $2}' | sed 's/://')
 acpi=$(acpi -b 2>/dev/null| grep "Battery $bat_number")
 ac_adapt=$(acpi -a | awk '{print $2}')
 mode=$(echo "$acpi" | awk '{print $3}')
-percent=$(echo "$acpi" | awk '{print $4}'| grep -Eo '[0-9]*')
+percent=$(echo "$acpi" | grep -Eo '[0-9]*%' | sed 's/%//')
 remaining=$(echo "$acpi" | awk '{print $5}')
 symbol=""
 

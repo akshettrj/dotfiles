@@ -1,0 +1,7 @@
+#!/bin/sh
+
+clg_dir="$HOME/iiith"
+
+alias ire="cd $clg_dir/4.1/ire"
+alias acn="cd $clg_dir/4.1/acn"
+alias tao="cd $clg_dir/4.1/tao"
