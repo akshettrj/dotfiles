@@ -1,6 +1,10 @@
 #!/bin/zsh
 # Simple script to output battery level formatted for polybar
 
+if [ "$(acpi 2>&1)" = "No support for device type: power_supply" ]; then
+	exit 0
+fi
+
 bat_number=$(acpi | awk '{print $2}' | sed 's/://')
 acpi=$(acpi -b 2>/dev/null| grep "Battery $bat_number")
 ac_adapt=$(acpi -a | awk '{print $2}')

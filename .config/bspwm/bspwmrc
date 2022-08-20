@@ -1,6 +1,6 @@
 #!/bin/bash
 
-( xrandr | grep "HDMI-0 connected" ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
+( xrandr | grep --perl-regexp 'HDMI-\d connected' ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
 
 if $HDMI_CONNECTED; then
     _layout_samsung_main.sh

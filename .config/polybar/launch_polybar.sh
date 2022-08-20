@@ -2,7 +2,7 @@
 
 killall -9 polybar
 
-( xrandr | grep "HDMI-0 connected" ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
+( xrandr | grep --perl-regexp 'HDMI-\d connected' ) && HDMI_CONNECTED=true || HDMI_CONNECTED=false
 
 _WIFI_INTERFACE="$(polybar_wifi_interface)"
 _LAN_INTERFACE="$(polybar_lan_interface)"
