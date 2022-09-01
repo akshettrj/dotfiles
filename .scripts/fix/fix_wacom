@@ -13,8 +13,8 @@ ids=$(xinput --list | awk -v search="stylus" \
 for i in $ids
 do
 	xinput set-prop $i 'Device Accel Velocity Scaling' 1.0
-	# xsetwacom set $i MapToOutput 1920x1080+0+0		# Left Most Monitor
-	xsetwacom set $i MapToOutput 1920x1080+1920+0		# Second to Left Most Monitor
+	xsetwacom set $i MapToOutput 1920x1080+0+0		# Left Most Monitor
+	# xsetwacom set $i MapToOutput 1920x1080+1920+0		# Second to Left Most Monitor
 	# Now to make the things less skewed (use 16:9 ratio)
 	xsetwacom set $i Area 0 0 15200 8550		# X Y TabletWidth TabletHeight
 	echo "changed for id: $i"
