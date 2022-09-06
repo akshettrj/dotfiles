@@ -113,6 +113,7 @@ expat
 faad2
 fakeroot
 fd
+ffcall
 ffmpeg
 ffmpegthumbnailer
 fftw
@@ -396,6 +397,7 @@ libseccomp
 libsecret
 libshout
 libsidplayfp
+libsigsegv
 libslirp
 libsm
 libsndfile
@@ -508,6 +510,7 @@ lmdb
 lohit-fonts
 lpsolve
 lsd
+lua
 lua51
 lua51-lpeg
 lua51-mpack
@@ -562,11 +565,14 @@ networkmanager
 networkmanager-openvpn
 nftables
 nm-connection-editor
+node-gyp
 nodejs
+nodejs-nopt
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 npth
 nspr
 nss
@@ -644,10 +650,12 @@ polkit
 polkit-gnome
 polybar
 poppler
+poppler-glib
 popt
 portaudio
 postgresql
 postgresql-libs
+potrace
 procps-ng
 protobuf
 psmisc
@@ -682,6 +690,7 @@ python-distlib
 python-distro
 python-docopt
 python-docutils
+python-dulwich
 python-entrypoints
 python-executing
 python-fastbencode
@@ -724,6 +733,7 @@ python-platformdirs
 python-ply
 python-poetry
 python-poetry-core
+python-poetry-plugin-export
 python-prompt_toolkit
 python-ptyprocess
 python-pure-eval
@@ -859,6 +869,7 @@ sdl2
 sdl2_image
 seabios
 sed
+semver
 serd
 serf
 shaderc
@@ -871,7 +882,7 @@ snappy
 sndio
 sord
 sound-theme-freedesktop
-spaceship-prompt
+spaceship-prompt-git
 speex
 speexdsp
 spice
@@ -880,6 +891,7 @@ spirv-tools
 sqlite
 sratom
 srt
+starship
 startup-notification
 subversion
 sudo
@@ -891,6 +903,7 @@ systemd
 systemd-libs
 systemd-sysvcompat
 systeroid
+t1lib
 taglib
 talloc
 taplo-cli
@@ -903,6 +916,7 @@ tesseract-data-eng
 tesseract-git
 tevent
 texinfo
+texlive-bin
 thunar
 thunar-volman
 tinyxml2
@@ -914,6 +928,7 @@ transmission-cli
 tree-sitter
 tslib
 ttf-indic-otf
+ttf-iosevka-nerd
 ttf-liberation
 ttf-ms-win10-auto
 ttf-sil-lateef
@@ -972,6 +987,7 @@ xclip
 xdg-dbus-proxy
 xdg-utils
 xf86-input-libinput
+xf86-input-wacom
 xf86-video-intel
 xf86-video-vesa
 xfce4-appfinder
@@ -1040,6 +1056,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xorgproto
+xournalpp
 xsecurelock
 xvidcore
 xwallpaper
