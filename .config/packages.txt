@@ -115,7 +115,6 @@ efivar
 efm-langserver
 egl-wayland
 eglexternalplatform
-electron
 electron17
 electron18
 enchant
