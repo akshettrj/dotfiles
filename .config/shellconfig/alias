@@ -20,6 +20,7 @@ alias ltla='lsd --tree -Al'
 
 alias cp='cp -rvi'
 alias rm='rm -vi'
+alias rsync='rsync -urvP'
 
 alias lf='lfub'
 
