@@ -106,3 +106,13 @@ map W mark-watched
 map Dd. drag-and-drop
 map Dde drag-and-drop-and-exit
 map Dda drag-and-drop-all
+
+# Easy navigation
+map gv cd "~/media/videos"
+
+# Easy navigation ( college )
+map gcd cd "~/iiith/"
+map gcc cd "~/iiith/4.1"
+map gcr cd "~/iiith/4.1/recordings"
+map gct cd "~/iiith/4.1/tao"
+map gci cd "~/iiith/4.1/ire"

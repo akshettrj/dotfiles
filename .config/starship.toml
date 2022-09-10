@@ -67,7 +67,7 @@ disabled = false
 truncation_length = 3
 truncate_to_repo = false
 read_only = "🔒"
-truncation_symbol = ".../"
+truncation_symbol = ""
 
 [docker_context]
 disabled = true
