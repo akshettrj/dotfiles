@@ -97,6 +97,11 @@ cmd drag-and-drop-all ${{
     dragon-drop --all "$fx"
 }}
 
+cmd set-wallpaper ${{
+    set -f
+    xwallpaper --zoom "$fx"
+}}
+
 map ae extract
 map at push :tar<space>
 map az push :zip<space>
@@ -114,5 +119,6 @@ map gv cd "~/media/videos"
 map gcd cd "~/iiith/"
 map gcc cd "~/iiith/4.1"
 map gcr cd "~/iiith/4.1/recordings"
+map gca cd "~/iiith/4.1/acn"
 map gct cd "~/iiith/4.1/tao"
 map gci cd "~/iiith/4.1/ire"
