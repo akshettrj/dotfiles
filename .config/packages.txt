@@ -64,7 +64,6 @@ cairo
 cantarell-fonts
 capstone
 cdparanoia
-ceph-libs
 chromaprint
 chromium
 cifs-utils
