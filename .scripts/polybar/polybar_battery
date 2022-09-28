@@ -33,7 +33,7 @@ if [ "$percent" -lt 20 ]; then
 	if [ "$mode" = "Discharging," ]; then
 		espeak "Batter Low" > /dev/null 2>/dev/null
 		notify-send -u "critical" "Battery Critical" "Plug in the charger"
-		tgme "Battery" "Laptop battery is critical: $percent"
+		# tgme "Battery" "Laptop battery is critical: $percent"
 	fi
 elif [ "$percent" -lt 50 ]; then
 	printf "%%{F#f2e421}";
