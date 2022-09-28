@@ -22,9 +22,7 @@ aria2
 asciidoc
 asp
 aspell
-at-spi2-atk
 at-spi2-core
-atk
 atool
 attr
 audiofile
@@ -64,12 +62,14 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
+capstone
 cdparanoia
 ceph-libs
 chromaprint
 chromium
 cifs-utils
 clang
+cloudflared
 clucene
 cmake
 colord
@@ -115,8 +115,11 @@ efivar
 efm-langserver
 egl-wayland
 eglexternalplatform
+electron
 electron17
 electron18
+element-desktop
+element-web
 enchant
 exfat-utils
 exiv2
@@ -214,6 +217,7 @@ harfbuzz-icu
 heroku-cli-bin
 hicolor-icon-theme
 hidapi
+highway
 hostapd
 http-parser
 hunspell
@@ -237,8 +241,10 @@ iw
 jack2
 jansson
 jasper
+java-runtime-common
 jbig2dec
 jq
+jre11-openjdk-headless
 js78
 json-c
 json-glib
@@ -273,10 +279,12 @@ libatasmart
 libatomic_ops
 libavc1394
 libavif
+libb2
 libb64
 libblockdev
 libbluray
 libbpf
+libbs2b
 libbsd
 libburn
 libbytesize
@@ -381,6 +389,7 @@ libmwaw
 libmypaint
 libnatpmp
 libndp
+libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink
@@ -498,7 +507,7 @@ libxfce4ui
 libxfce4util
 libxfixes
 libxfont2
-libxft-bgra
+libxft-bgra-git
 libxi
 libxinerama
 libxkbcommon
@@ -541,6 +550,7 @@ lmdb
 lohit-fonts
 lpsolve
 lsd
+lsof
 lua
 lua51
 lua51-lpeg
@@ -622,6 +632,7 @@ nvidia-utils
 oath-toolkit
 obs-studio
 obsidian
+ocl-icd
 odt2txt
 oniguruma
 openal
@@ -638,7 +649,6 @@ opus
 orc
 os-prober
 osinfo-db
-otf-gfs
 p11-kit
 p7zip
 pacman
@@ -655,6 +665,7 @@ pciutils
 pcmanfm
 pcre
 pcre2
+pdftk
 perl
 perl-cgi
 perl-clone
@@ -742,6 +753,7 @@ python-html5lib
 python-idna
 python-importlib-metadata
 python-inflect
+python-jaraco.classes
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
@@ -821,7 +833,6 @@ qemu-block-dmg
 qemu-block-gluster
 qemu-block-iscsi
 qemu-block-nfs
-qemu-block-rbd
 qemu-block-ssh
 qemu-chardev-baum
 qemu-chardev-spice
@@ -847,6 +858,7 @@ qemu-system-arm
 qemu-system-avr
 qemu-system-cris
 qemu-system-hppa
+qemu-system-loongarch64
 qemu-system-m68k
 qemu-system-microblaze
 qemu-system-mips
@@ -885,6 +897,9 @@ qt5-translations
 qt5-wayland
 qt5-x11extras
 qt5ct
+qt6-base
+qt6-svg
+qt6-translations
 ranger
 raptor
 rasqal
@@ -923,7 +938,6 @@ snappy
 sndio
 sord
 sound-theme-freedesktop
-spaceship-prompt-git
 speex
 speexdsp
 spice
@@ -977,11 +991,13 @@ ttf-fira-sans
 ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
-ttf-ms-win10-auto
+ttf-merriweather
+ttf-merriweather-sans
 ttf-opensans
+ttf-oswald
+ttf-quintessential
 ttf-roboto
-ttf-sil-lateef
-ttf-ubraille
+ttf-signika
 ttf-ubuntu-font-family
 tumbler
 twolame
@@ -996,6 +1012,7 @@ unixodbc
 unrar
 unzip
 upower
+upscayl-bin
 usbmuxd
 usbredir
 uthash
@@ -1009,10 +1026,12 @@ vim-runtime
 virglrenderer
 virt-install
 virt-manager
+visual-studio-code-bin
 vmaf
 volume_key
 vte-common
 vte3
+vulkan-headers
 vulkan-icd-loader
 wavpack
 wayland
@@ -1040,6 +1059,7 @@ xcb-util-xrm
 xclip
 xdg-dbus-proxy
 xdg-utils
+xdotool
 xf86-input-libinput
 xf86-input-wacom
 xf86-video-intel
