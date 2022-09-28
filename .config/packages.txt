@@ -507,7 +507,7 @@ libxfce4ui
 libxfce4util
 libxfixes
 libxfont2
-libxft-bgra-git
+libxft
 libxi
 libxinerama
 libxkbcommon
