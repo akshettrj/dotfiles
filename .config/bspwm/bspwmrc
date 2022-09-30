@@ -20,7 +20,7 @@ fi
 # ( pidof -x bspswallow || bspswallow 2>/dev/null >/dev/null ) & disown
 
 
-xwallpaper --zoom "$HOME/media/wallpapers/power_red.jpg" &
+xwallpaper --zoom "$HOME/media/wallpapers/panda-2-1920×1080.jpg" &
 
 if $HDMI_CONNECTED; then
     bspc monitor "$(_xorg_dp_screen.sh)" -d 11 12 13 14 15 16 17 18 19 20
