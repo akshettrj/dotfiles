@@ -19,7 +19,7 @@ cmd mkdir %mkdir "$@"
 cmd touch %touch "$@"
 
 cmd bulkrename ${{
-    vimv --git -- "$fx"
+    bash -c "vimv --git -- $(echo -e "$fx" | xargs -i echo "\\'{}\\'" | xargs echo)"
 
     lf -remote "send $id load"
 }}
