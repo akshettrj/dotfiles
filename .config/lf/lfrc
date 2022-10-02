@@ -114,6 +114,8 @@ map Dda drag-and-drop-all
 
 # Easy navigation
 map gv cd "~/media/videos"
+map gnv cd "~/work/vimwiki_notes"
+map gno cd "~/work/obsidian_notes"
 
 # Easy navigation ( college )
 map gcd cd "~/iiith/"
