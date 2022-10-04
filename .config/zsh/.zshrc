@@ -45,6 +45,11 @@ do
 done
 
 fpath=($ZDOTDIR/my_fpath $fpath)
+for to_source in $ZDOTDIR/my_fpath/*
+do
+    [ -d "$to_source" ] || continue
+    autoload -U "$to_source"
+done
 
 # Misc
 setopt COMPLETE_ALIASES
