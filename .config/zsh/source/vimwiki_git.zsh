@@ -2,10 +2,10 @@ vimwiki () {
     if [[ $# == 0 ]]
     then
         nvim +'VimwikiUISelect'
-    elif [[ $1 == 'git' ]]
+    elif [[ $1 == 'cd' ]]
     then
-        git -C ~/work/vimwiki_notes ${@:2}
+        cd ~/work/vimwiki_notes
     else
-        echo 'Usage: vimwiki [git] [args ...]'
+        git -C ~/work/vimwiki_notes ${@:1}
     fi
 }
