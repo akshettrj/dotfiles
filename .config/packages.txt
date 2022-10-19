@@ -19,6 +19,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
+asciidoc
 asp
 aspell
 at-spi2-core
@@ -53,6 +54,7 @@ brltty
 brotli
 bspwm
 btop
+btrfs-progs
 bubblewrap
 bzip2
 c-ares
@@ -95,11 +97,15 @@ diffutils
 discord
 djvulibre
 dkms
+dmraid
 dnsmasq
 dnssec-anchors
+docbook-xml
+docbook-xsl
 docker
 dosfstools
 double-conversion
+dpkg
 dragon-drop
 dtc
 duktape
@@ -113,6 +119,7 @@ efm-langserver
 egl-wayland
 eglexternalplatform
 electron
+electron17
 electron18
 element-desktop
 element-web
@@ -166,6 +173,7 @@ giflib
 gimp
 girara
 git
+git-delta
 git-filter-repo
 glib-networking
 glib2
@@ -186,6 +194,7 @@ gperf
 gperftools
 gpgme
 gpm
+gptfdisk
 graphene
 graphite
 graphviz
@@ -231,6 +240,7 @@ imath
 imlib2
 iniparser
 intel-ucode
+intltool
 iproute2
 iptables
 iputils
@@ -276,16 +286,19 @@ libarchive
 libass
 libassuan
 libasyncns
+libatasmart
 libatomic_ops
 libavc1394
 libavif
 libb2
 libb64
+libblockdev
 libbluray
 libbpf
 libbs2b
 libbsd
 libburn
+libbytesize
 libc++
 libc++abi
 libcaca
@@ -350,6 +363,7 @@ libiec61883
 libimagequant
 libimobiledevice
 libindicator-gtk3
+libinih
 libinput
 libinstpatch
 libiscsi
@@ -557,6 +571,7 @@ lua53
 lua53-lgi
 luajit
 lv2
+lvm2
 lxappearance-gtk3
 lxmenu-data
 lynx
@@ -570,10 +585,12 @@ man-pages
 materia-gtk-theme
 mbedtls
 md4c
+mdadm
 mediainfo
 menu-cache
 mercurial
 mesa
+meson
 metis
 miniupnpc
 minizip
@@ -607,6 +624,7 @@ network-manager-applet
 networkmanager
 networkmanager-openvpn
 nftables
+ninja
 nm-connection-editor
 node-gyp
 nodejs
@@ -688,6 +706,7 @@ perl-timedate
 perl-try-tiny
 perl-uri
 perl-www-robotrules
+perl-xml-parser
 phodav
 picom-jonaburg-git
 pinentry
@@ -1006,6 +1025,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+thin-provisioning-tools
 thunar
 thunar-volman
 tinyxml2
@@ -1018,14 +1038,26 @@ tree
 tree-sitter
 tslib
 ttf-croscore
+ttf-fira-mono
+ttf-fira-sans
+ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
+ttf-merriweather
+ttf-merriweather-sans
+ttf-opensans
+ttf-oswald
+ttf-quintessential
+ttf-roboto
+ttf-signika
+ttf-ubuntu-font-family
 tumbler
 twolame
 typescript
 typescript-language-server
 tzdata
 uchardet
+udisks2
 ueberzug
 unibilium
 unixodbc
@@ -1036,6 +1068,7 @@ upscayl-bin
 urlview
 usbmuxd
 usbredir
+uthash
 util-linux
 util-linux-libs
 v4l-utils
@@ -1048,6 +1081,7 @@ virt-install
 virt-manager
 visual-studio-code-bin
 vmaf
+volume_key
 vte-common
 vte3
 vulkan-headers
@@ -1093,6 +1127,7 @@ xfce4-settings
 xfce4-terminal
 xfconf
 xfdesktop
+xfsprogs
 xfwm4
 xfwm4-themes
 xkeyboard-config
