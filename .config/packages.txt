@@ -78,6 +78,7 @@ coreutils
 corkscrew
 cowsay
 cpio
+cronie
 cryptsetup
 curl
 cython
@@ -172,6 +173,7 @@ glibc
 glslang
 glu
 glusterfs
+gmime3
 gmp
 gnome-keyring
 gnome-themes-extra
@@ -190,6 +192,7 @@ graphviz
 grep
 groff
 grub
+gsasl
 gsettings-desktop-schemas
 gsfonts
 gsm
@@ -233,6 +236,7 @@ iptables
 iputils
 ipython
 iso-codes
+isync
 iw
 jack2
 jansson
@@ -254,6 +258,7 @@ kmod
 knotifications
 krb5
 kwindowsystem
+kyotocabinet
 l-smash
 lame
 lapack
@@ -582,17 +587,20 @@ mpfr
 mpg123
 mpv
 msgpack-c
+msmtp
 mtdev
 mtools
 mujs
 multipath-tools
+mutt-wizard-git
 mypaint-brushes1
 ncmpcpp
 ncurses
 ndctl
 neofetch
+neomutt
 neon
-neovim-git
+neovim-akki
 netpbm
 nettle
 network-manager-applet
@@ -603,6 +611,8 @@ nm-connection-editor
 node-gyp
 nodejs
 nodejs-nopt
+notmuch
+notmuch-runtime
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
@@ -648,6 +658,7 @@ pango
 papirus-icon-theme
 parted
 paru-git
+pass
 patch
 pciutils
 pcmanfm
@@ -660,6 +671,7 @@ perl-clone
 perl-encode-locale
 perl-error
 perl-file-listing
+perl-file-which
 perl-html-parser
 perl-html-tagset
 perl-http-cookies
@@ -752,6 +764,7 @@ python-keyring
 python-lark-parser
 python-lockfile
 python-matplotlib-inline
+python-merge3
 python-more-itertools
 python-mpd2
 python-msgpack
@@ -806,7 +819,9 @@ python-virtualenv
 python-wcwidth
 python-webcolors
 python-webencodings
+python-wheel
 python-xlib
+python-yaml
 python-zipp
 qemu-audio-alsa
 qemu-audio-dbus
@@ -925,6 +940,7 @@ sed
 semver
 serd
 serf
+sfsexp
 shaderc
 shadow
 shared-mime-info
@@ -971,7 +987,25 @@ tesseract-data-eng
 tesseract-data-osd
 tevent
 texinfo
+texlive-bibtexextra
 texlive-bin
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-langchinese
+texlive-langcyrillic
+texlive-langextra
+texlive-langgreek
+texlive-langjapanese
+texlive-langkorean
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 thunar
 thunar-volman
 tinyxml2
@@ -980,6 +1014,7 @@ tmux
 tpm2-tss
 tracker3
 transmission-cli
+tree
 tree-sitter
 tslib
 ttf-croscore
@@ -998,6 +1033,7 @@ unrar
 unzip
 upower
 upscayl-bin
+urlview
 usbmuxd
 usbredir
 util-linux
@@ -1031,6 +1067,7 @@ wpa_supplicant
 wpebackend-fdo
 x264
 x265
+xapian-core
 xcb-proto
 xcb-util
 xcb-util-cursor
