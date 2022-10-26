@@ -3,6 +3,7 @@ alacritty
 android-tools
 android-udev
 arandr
+archlinux-keyring
 aria2
 asciidoc
 asp
@@ -51,16 +52,13 @@ fakeroot
 fd
 ffmpegthumbnailer
 file
-findutils
 firefox
 fish
 flameshot
 flex
 fzf
 garcon
-gawk
 gcc
-gettext
 gimp
 git
 git-delta
@@ -70,7 +68,6 @@ go
 google-chrome
 gperf
 gptfdisk
-grep
 groff
 grub
 gzip
@@ -148,7 +145,6 @@ openldap
 openvpn
 os-prober
 p7zip
-pacman
 papirus-icon-theme
 paru-git
 pass
