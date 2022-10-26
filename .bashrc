@@ -14,4 +14,13 @@ do
     source "$to_source"
 done
 
+# Files from ~/.config/bash/source
+for to_source in $HOME/.config/bash/source/*
+do
+    [ -f "$to_source" ] || continue
+    to_source_bn="$(basename "$to_source")"
+    [[ "$to_source_bn" == _noload_* ]] && continue
+    source "$to_source"
+done
+
 set -o vi
