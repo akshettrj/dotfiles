@@ -65,6 +65,7 @@ git-delta
 git-filter-repo
 gnome-keyring
 go
+golangci-lint-langserver-bin
 google-chrome
 gperf
 gptfdisk
@@ -121,7 +122,7 @@ mypaint-brushes1
 ncmpcpp
 neofetch
 neomutt
-neovim-akki
+neovim-git
 network-manager-applet
 networkmanager
 networkmanager-openvpn
