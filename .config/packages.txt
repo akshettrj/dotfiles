@@ -148,7 +148,7 @@ openvpn
 os-prober
 p7zip
 papirus-icon-theme
-paru-git
+paru-bin
 pass
 patch
 pcmanfm
