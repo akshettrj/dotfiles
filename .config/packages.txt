@@ -59,6 +59,7 @@ flex
 fzf
 garcon
 gcc
+gdb
 gimp
 git
 git-delta
