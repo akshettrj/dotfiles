@@ -261,7 +261,6 @@ visual-studio-code-bin
 volume_key
 wget
 which
-windscribe-v2-bin
 wmname
 xclip
 xdotool
