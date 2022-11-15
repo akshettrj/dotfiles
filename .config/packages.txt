@@ -31,6 +31,7 @@ copyq
 corkscrew
 cowsay
 cronie
+debugedit
 devtools
 discord
 dkms
@@ -52,14 +53,17 @@ fakeroot
 fd
 ffmpegthumbnailer
 file
+findutils
 firefox
 fish
 flameshot
 flex
 fzf
 garcon
+gawk
 gcc
 gdb
+gettext
 gimp
 git
 git-delta
@@ -70,6 +74,7 @@ golangci-lint-langserver-bin
 google-chrome
 gperf
 gptfdisk
+grep
 groff
 grub
 gzip
@@ -148,6 +153,7 @@ openldap
 openvpn
 os-prober
 p7zip
+pacman
 papirus-icon-theme
 paru-bin
 pass
