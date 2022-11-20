@@ -18,47 +18,39 @@ set sandbox "none"
 
 set font "JetBrainsMono NF 12"
 
-set notification-error-bg       "#ff5555" # Red
-set notification-error-fg       "#f8f8f2" # Foreground
-set notification-warning-bg     "#ffb86c" # Orange
-set notification-warning-fg     "#44475a" # Selection
-set notification-bg             "#282a36" # Background
-set notification-fg             "#f8f8f2" # Foreground
 
-set completion-bg               "#282a36" # Background
-set completion-fg               "#6272a4" # Comment
-set completion-group-bg         "#282a36" # Background
-set completion-group-fg         "#6272a4" # Comment
-set completion-highlight-bg     "#44475a" # Selection
-set completion-highlight-fg     "#f8f8f2" # Foreground
+set default-bg                  "#282828"
+set default-fg                  "#3c3836"
 
-set index-bg                    "#282a36" # Background
-set index-fg                    "#f8f8f2" # Foreground
-set index-active-bg             "#44475a" # Current Line
-set index-active-fg             "#f8f8f2" # Foreground
+set statusbar-fg                "#bdae93"
+set statusbar-bg                "#504945"
 
-set inputbar-bg                 "#282a36" # Background
-set inputbar-fg                 "#f8f8f2" # Foreground
-set statusbar-bg                "#282a36" # Background
-set statusbar-fg                "#f8f8f2" # Foreground
+set inputbar-bg                 "#282828"
+set inputbar-fg                 "#fbf1c7"
 
-set highlight-color             "#ffb86c" # Orange
-set highlight-active-color      "#ff79c6" # Pink
+set notification-bg             "#282828"
+set notification-fg             "#fbf1c7"
 
-set default-bg                  "#282a36" # Background
-set default-fg                  "#f8f8f2" # Foreground
+set notification-error-bg       "#282828"
+set notification-error-fg       "#fb4934"
 
-set render-loading              true
-set render-loading-fg           "#282a36" # Background
-set render-loading-bg           "#f8f8f2" # Foreground
+set notification-warning-bg     "#282828"
+set notification-warning-fg     "#fb4934"
 
-#
-# Recolor mode settings
-#
+set highlight-color             "#fabd2f"
+set highlight-active-color      "#83a598"
 
-set recolor-lightcolor          "#282a36" # Background
-set recolor-darkcolor           "#f8f8f2" # Foreground
+set completion-bg               "#3c3836"
+set completion-fg               "#83a598"
 
+set completion-highlight-fg     "#fbf1c7"
+set completion-highlight-bg     "#83a598"
+
+set recolor-lightcolor          "#282828"
+set recolor-darkcolor           "#ebdbb2"
+
+set recolor                     "false"
+set recolor-keephue             "false"
 #
 # Startup options
 #
