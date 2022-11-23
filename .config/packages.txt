@@ -27,10 +27,12 @@ chromium
 clang
 cloudflared
 cmake
+codelldb-bin
 copyq
 corkscrew
 cowsay
 cronie
+debugedit
 devtools
 discord
 dkms
@@ -78,6 +80,7 @@ heroku-cli-bin
 intel-ucode
 intltool
 ipython
+isync-git
 js78
 kguiaddons
 libatasmart
@@ -192,6 +195,7 @@ rclone
 redshift
 rest
 ripgrep
+rlottie-git
 rust-analyzer
 rustup
 sed
@@ -230,6 +234,7 @@ texlive-science
 thin-provisioning-tools
 thunar
 thunar-volman
+tidy
 tmux
 transmission-cli
 tree-sitter
