@@ -23,7 +23,7 @@ video/webmapplication/octet-stream=mpv.desktop
 application/x-www-form-urlencoded=brave.desktop
 inode/directory=lf.desktop
 x-scheme-handler/mailto=brave-browser.desktop
-x-scheme-handler/tg=userapp-64Gram Desktop-NO7LR1.desktop
+x-scheme-handler/tg=userapp-64Gram Desktop-QN4KV1.desktop
 text/x-python=nvim.desktop
 text/*=nvim.desktop
 audio/flac=mpv.desktop
@@ -32,7 +32,7 @@ application/vnd.comicbook-rar=evince.desktop
 image/jepg=sxiv.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-FRO7V0.desktop;userapp-Telegram Desktop-20FI50.desktop;userapp-Telegram Desktop-I8PZ50.desktop;userapp-Kotatogram Desktop-P5XP60.desktop;userapp-Telegram Desktop-I35K60.desktop;userapp-Kotatogram Desktop-PV4KA1.desktop;userapp-Telegram Desktop-NM0PC1.desktop;userapp-Kotatogram Desktop-GY70D1.desktop;userapp-Kotatogram Desktop-OSM6D1.desktop;userapp-Telegram Desktop-KB7TG1.desktop;userapp-Telegram Desktop-CWLXH1.desktop;userapp-Telegram Desktop-NTSSI1.desktop;userapp-64Gram Desktop-UVAII1.desktop;userapp-64Gram Desktop-CWTKI1.desktop;userapp-Kotatogram Desktop-RRICJ1.desktop;userapp-64Gram Desktop-36FYJ1.desktop;userapp-64Gram Desktop-D2OAN1.desktop;userapp-Telegram Desktop-HK8WM1.desktop;userapp-64Gram Desktop-SO3HN1.desktop;userapp-64Gram Desktop-97XAO1.desktop;userapp-64Gram Desktop-NO7LR1.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-FRO7V0.desktop;userapp-Telegram Desktop-20FI50.desktop;userapp-Telegram Desktop-I8PZ50.desktop;userapp-Kotatogram Desktop-P5XP60.desktop;userapp-Telegram Desktop-I35K60.desktop;userapp-Kotatogram Desktop-PV4KA1.desktop;userapp-Telegram Desktop-NM0PC1.desktop;userapp-Kotatogram Desktop-GY70D1.desktop;userapp-Kotatogram Desktop-OSM6D1.desktop;userapp-Telegram Desktop-KB7TG1.desktop;userapp-Telegram Desktop-CWLXH1.desktop;userapp-Telegram Desktop-NTSSI1.desktop;userapp-64Gram Desktop-UVAII1.desktop;userapp-64Gram Desktop-CWTKI1.desktop;userapp-Kotatogram Desktop-RRICJ1.desktop;userapp-64Gram Desktop-36FYJ1.desktop;userapp-64Gram Desktop-D2OAN1.desktop;userapp-Telegram Desktop-HK8WM1.desktop;userapp-64Gram Desktop-SO3HN1.desktop;userapp-64Gram Desktop-97XAO1.desktop;userapp-64Gram Desktop-NO7LR1.desktop;userapp-64Gram Desktop-QN4KV1.desktop;
 x-scheme-handler/mpv=mpv.desktop;
 image/png=google-chrome.desktop;
 x-scheme-handler/vscode=code.desktop;

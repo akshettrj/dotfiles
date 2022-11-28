@@ -8,7 +8,7 @@ set scroll-full-overlap 0.01
 set scroll-step 100
 set zoom-min 10
 set sandbox "none"
-# set guioptions ""
+set guioptions ""
 # Dracula color theme for Zathura
 # Swaps Foreground for Background to get a light version if the user prefers
 

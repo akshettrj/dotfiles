@@ -106,10 +106,10 @@ super + alt + @w
     xwallpaper --zoom "$(random_wallpaper)"
 
 super + F2
-    brightnessctl set -- '-10%'
+    brightnessctl --min-value=12000 set -- '-10%'
 
 super + F3
-    brightnessctl set -- '+10%'
+    brightnessctl --min-value=12000 set -- '+10%'
 
 # BSPWM
 
