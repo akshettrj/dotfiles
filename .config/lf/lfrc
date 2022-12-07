@@ -119,8 +119,4 @@ map gno cd "~/work/obsidian_notes"
 
 # Easy navigation ( college )
 map gcd cd "~/iiith/"
-map gcc cd "~/iiith/4.1"
-map gcr cd "~/iiith/4.1/recordings"
-map gca cd "~/iiith/4.1/acn"
-map gct cd "~/iiith/4.1/tao"
-map gci cd "~/iiith/4.1/ire"
+map gcc cd "~/iiith/4.2"

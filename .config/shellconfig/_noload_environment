@@ -38,7 +38,7 @@ export PYTHONSTARTUP=$XDG_CONFIG_HOME/python_startup.py
 export PYTHONHISTFILE=$XDG_CACHE_HOME/python_history
 
 # Go
-export GOPATH=$HOME/work/go:$HOME/work/youtube/go
+export GOPATH=$HOME/work/go
 for gp in `echo $GOPATH | tr ':' '\n'`
 do
     export PATH=$gp/bin:$PATH
