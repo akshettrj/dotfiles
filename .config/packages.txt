@@ -32,14 +32,15 @@ copyq
 corkscrew
 cowsay
 cronie
-debugedit
 devtools
+diffpdf
 discord
 dkms
 dmraid
 docbook-xml
 docbook-xsl
 docker
+dosbox
 dosfstools
 dpkg
 dragon-drop
@@ -196,8 +197,10 @@ redshift
 rest
 ripgrep
 rlottie-git
+rnote
 rust-analyzer
 rustup
+scrcpy
 sed
 slack-desktop
 sndio
@@ -209,6 +212,7 @@ systeroid
 tailscale
 taplo-cli
 teams
+tensorflow-cuda
 terminus-font
 tesseract
 tesseract-data-eng
@@ -234,7 +238,6 @@ texlive-science
 thin-provisioning-tools
 thunar
 thunar-volman
-tidy
 tmux
 transmission-cli
 tree-sitter
