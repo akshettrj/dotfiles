@@ -4,5 +4,4 @@ randomNumber=$RANDOM
 wallpaperNumber=$(echo $randomNumber % $totalWallpapers | bc)
 # wallpaperNumber=$(awk -v min=0 -v max=$(echo $(ls /home/akshettrj/media/wallpapers | wc -l) - 1 | bc) 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
 IFS=$'\n' wallpapers=($(ls /home/akshettrj/media/wallpapers/ | tr ' ' '\n'));
-ln -sf "/home/akshettrj/media/wallpapers/${wallpapers[$wallpaperNumber]}" "/home/akshettrj/media/wallpapers/current"
 echo /home/akshettrj/media/wallpapers/${wallpapers[$wallpaperNumber]}

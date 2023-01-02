@@ -71,6 +71,7 @@ gnome-keyring
 go
 golangci-lint-langserver-bin
 google-chrome
+goreleaser
 gperf
 gptfdisk
 groff
@@ -78,11 +79,13 @@ grub
 gzip
 haveged
 heroku-cli-bin
+imagemagick
 intel-ucode
 intltool
 ipython
 isync-git
 js78
+kernel-modules-hook
 kguiaddons
 libatasmart
 libblockdev
