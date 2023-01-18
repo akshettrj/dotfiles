@@ -23,8 +23,8 @@ fi
 xwallpaper --zoom "$HOME/media/wallpapers/panda-2-1920×1080.jpg" &
 
 if $HDMI_CONNECTED; then
-    bspc monitor "$(_xorg_dp_screen.sh)" -d 11 12 13 14 15 16 17 18 19 20
     bspc monitor "$(_xorg_hdmi_screen.sh)" -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$(_xorg_dp_screen.sh)" -d 11 12 13 14 15 16 17 18 19 20
 else
     bspc monitor "$(_xorg_dp_screen.sh)" -d 1 2 3 4 5 6 7 8 9 10
 fi

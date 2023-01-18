@@ -1,7 +1,6 @@
 key_bindings:
   # - { key: K,       mods: Control,  action: ScrollLineUp }
   # - { key: J,       mods: Control,  action: ScrollLineDown }
-  - { key: 25,      mods: Alt,      action: Paste }                 # Alt + P → Paste
   - { key: Y,       mods: Alt,      action: Copy }                  # Alt + Y → Copy
   - { key: 28,      mods: Alt,      action: SpawnNewInstance }      # Alt + Enter → New instance
   - { key: 13,      mods: Alt,      action: IncreaseFontSize }      # Alt + = → Increase Font

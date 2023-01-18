@@ -78,7 +78,6 @@ groff
 grub
 gzip
 haveged
-heroku-cli-bin
 imagemagick
 intel-ucode
 intltool
@@ -182,7 +181,6 @@ python-entrypoints
 python-future
 python-jsonpointer
 python-pastel
-python-pep517
 python-pip
 python-poetry
 python-resolvelib
@@ -199,7 +197,6 @@ rclone
 redshift
 rest
 ripgrep
-rlottie-git
 rnote
 rust-analyzer
 rustup
@@ -277,7 +274,6 @@ wmname
 xclip
 xdotool
 xf86-input-wacom
-xf86-video-intel
 xf86-video-vesa
 xfce4-appfinder
 xfce4-panel
