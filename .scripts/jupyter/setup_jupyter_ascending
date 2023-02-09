@@ -1,7 +1,6 @@
 #! /bin/bash
 
-pip install --upgrade jupyter_ascending;
-pip install --upgrade click;
+pip install --upgrade jupyter_ascending click;
 jupyter nbextension    install jupyter_ascending --sys-prefix --py;
 jupyter nbextension     enable jupyter_ascending --sys-prefix --py;
 jupyter serverextension enable jupyter_ascending --sys-prefix --py
