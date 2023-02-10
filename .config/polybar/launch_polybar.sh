@@ -8,7 +8,7 @@ _WIFI_INTERFACE="$(polybar_wifi_interface)"
 _LAN_INTERFACE="$(polybar_lan_interface)"
 _HOSTNAME="$(hostnamectl --static)"
 
-_FONT_0="JetBrainsMono NF:size=12:antialias=true;hinting=true"
+_FONT_0="JetBrainsMono NF:size=10:antialias=true;hinting=true"
 _FONT_1="Noto Color Emoji:scale=10:antialias=true;hinting=false"
 
 if [ "${_HOSTNAME}" = "ltrcakki" ]; then
