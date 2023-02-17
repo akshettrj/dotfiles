@@ -12,6 +12,7 @@ autoconf
 automake
 awesome
 base
+base-devel
 bat
 bc
 bdf-unifont
