@@ -189,6 +189,7 @@ python-rfc3987
 python-rich
 python-setuptools
 python-tenacity
+python-tqdm
 python-webcolors
 qemu-full
 qt5-styleplugins
@@ -239,6 +240,7 @@ texlive-science
 thin-provisioning-tools
 thunar
 thunar-volman
+tidy
 tmux
 transmission-cli
 tree-sitter
