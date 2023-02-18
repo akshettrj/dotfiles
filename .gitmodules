@@ -1,0 +1,5 @@
+[submodule "net_widgets/"]
+	url = https://github.com/pltanton/net_widgets.git
+[submodule ".config/awesome/net_widgets"]
+	path = .config/awesome/net_widgets
+	url = https://github.com/pltanton/net_widgets.git
