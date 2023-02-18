@@ -1,22 +1,12 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
--- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
 local wibox = require("wibox")
--- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
-local net_widgets = require("net_widgets")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
 if awesome.startup_errors then
@@ -44,6 +34,9 @@ do
 end
 
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
+if awesome.hostname == "ltrcakki" then
+    beautiful.font = "JetBrainsMono NF 9"
+end
 
 awesome.set_preferred_icon_size(32)
 
@@ -51,32 +44,6 @@ terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 browser = os.getenv("BROWSER") or "brave"
--- wireless_interface = ""
--- awful.spawn.with_line_callback("bash -c ~/.scripts/polybar/polybar_wifi_interface", {
---     stdout = function(line)
---         wireless_interface = line
---     end,
---     stderr = function(line)
---         naughty.notify({
---             preset = naughty.config.presets.warn,
---             title = "Error while getting wireless interface",
---             text = line,
---         })
---     end,
--- })
--- lan_interface = ""
--- awful.spawn.with_line_callback("bash -c ~/.scripts/polybar/polybar_lan_interface", {
---     stdout = function(line)
---         lan_interface = line
---     end,
---     stderr = function(line)
---         naughty.notify({
---             preset = naughty.config.presets.warn,
---             title = "Error while getting lan interface",
---             text = line,
---         })
---     end,
--- })
 
 modkey = "Mod4"
 
@@ -94,11 +61,9 @@ awful.layout.layouts = {
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
 mytextclock = wibox.widget.textclock()
-mytextclock.format = [[<u>%b %d, <b>%H:%M:%S</b></u> (%a) ]]
+mytextclock.format = [[ <u>%b %d, <b>%H:%M:%S</b></u> (%a) ]]
+mytextclock.format = [[ <u>%d/%I/%G, <b>%H:%M:%S</b></u> ]]
 mytextclock.refresh = 1
--- mytextclock:setup({
---     format = "",
--- })
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -120,58 +85,50 @@ local taglist_buttons = gears.table.join(
 
 local tasklist_buttons = gears.table.join(
     awful.button({}, 1, function(c)
-        if c == client.focus then
-            c.minimized = true
-        else
-            c:emit_signal(
-                "request::activate",
-                "tasklist",
-                { raise = true }
-            )
-        end
+        c:emit_signal(
+            "request::activate",
+            "tasklist",
+            { raise = true }
+        )
     end),
-    awful.button({}, 3, function()
-        awful.menu.client_list({ theme = { width = 250 } })
-    end),
-    awful.button({}, 4, function()
-        awful.client.focus.byidx(1)
-    end),
-    awful.button({}, 5, function()
-        awful.client.focus.byidx(-1)
-    end))
+    awful.button({}, 3, function() awful.menu.client_list({ theme = { width = 250 } }) end),
+    awful.button({}, 4, function() awful.client.focus.byidx(1) end),
+    awful.button({}, 5, function() awful.client.focus.byidx(-1) end))
 
 
 awful.screen.connect_for_each_screen(function(s)
-    -- Each screen has its own tag table.
+
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-    -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
+
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(gears.table.join(
         awful.button({}, 1, function() awful.layout.inc(1) end),
         awful.button({}, 3, function() awful.layout.inc(-1) end),
         awful.button({}, 4, function() awful.layout.inc(1) end),
-        awful.button({}, 5, function() awful.layout.inc(-1) end)))
-    -- Create a taglist widget
+        awful.button({}, 5, function() awful.layout.inc(-1) end))
+    )
+
     s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons
     }
 
-    -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons
     }
 
-    -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
+    s.mysystray = wibox.widget.systray()
+    if awesome.hostname == "ltrcakki" then
+        s.mysystray:set_base_size(20)
+        s.mysystray = wibox.layout.margin(s.mysystray, 3, 0, 3, 0)
+    end
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -184,14 +141,13 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist,
         {
             layout = wibox.layout.fixed.horizontal,
-            net_widgets.indicator({
-                ignore_interfaces = { "lo", "tailscale0", "ap0" },
-                hidedisconnected = false,
-                onclick = terminal .. " -e nmtui",
-                timeout = 5,
-            }),
-            wibox.widget.textbox(" | "),
-            wibox.widget.systray(),
+            require("akshettrj_widgets.mpd"),
+            wibox.widget.textbox("|"),
+            require("akshettrj_widgets.network_wifi"),
+            require("akshettrj_widgets.network_lan"),
+            wibox.widget.textbox("|"),
+            s.mysystray,
+            wibox.widget.textbox("|"),
             mytextclock,
             s.mylayoutbox,
         },
@@ -201,20 +157,16 @@ end)
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
-    awful.button({}, 4, awful.tag.viewnext),
-    awful.button({}, 5, awful.tag.viewprev)
 ))
 -- }}}
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 
-    awful.key({}, "F1", hotkeys_popup.show_help,
-        { description = "show help", group = "awesome" }),
-
-    awful.key({ modkey, }, "Left", awful.tag.viewprev,
+-- Change tags
+    awful.key({ modkey, }, "[", awful.tag.viewprev,
         { description = "view previous", group = "tag" }),
-    awful.key({ modkey, }, "Right", awful.tag.viewnext,
+    awful.key({ modkey, }, "]", awful.tag.viewnext,
         { description = "view next", group = "tag" }),
 
 
@@ -253,9 +205,9 @@ globalkeys = gears.table.join(
         { description = "increase the number of columns", group = "layout" }),
     awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
         { description = "decrease the number of columns", group = "layout" }),
-    awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
+    awful.key({ modkey, "Control" }, "space", function() awful.layout.inc(1) end,
         { description = "select next", group = "layout" }),
-    awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
+    awful.key({ modkey, "Control", "Shift" }, "space", function() awful.layout.inc(-1) end,
         { description = "select previous", group = "layout" }),
 
     awful.key({ modkey, "Control" }, "n",
@@ -270,13 +222,7 @@ globalkeys = gears.table.join(
         end,
         { description = "restore minimized", group = "client" }),
 
-    -- Prompt
-    -- awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-    --     { description = "run prompt", group = "launcher" }),
-    awful.key({ modkey }, "r", function() awful.util.spawn([[dmenu_run -p "Run: "]]) end,
-        { description = "run prompt", group = "launcher" }),
-
-    awful.key({ modkey }, "p",
+    awful.key({ modkey }, "r",
         function()
             awful.prompt.run {
                 prompt       = "Run Lua code: ",
@@ -292,6 +238,8 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "f",
         function(c)
             c.fullscreen = not c.fullscreen
+            myscreen = awful.screen.focused()
+            myscreen.mywibox.visible = not c.fullscreen
             c:raise()
         end,
         { description = "toggle fullscreen", group = "client" }),
@@ -327,7 +275,7 @@ clientkeys = gears.table.join(
 
     awful.key({ modkey, "Shift" }, "c", function(c) c:kill() end,
         { description = "close", group = "client" }),
-    awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
+    awful.key({ modkey, }, "s", awful.client.floating.toggle,
         { description = "toggle floating", group = "client" }),
     awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
         { description = "move to master", group = "client" }),

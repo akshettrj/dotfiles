@@ -2,9 +2,6 @@
 super + Return
     alacritty
 
-super + shift + Return
-    st
-
 # Browsers
 super + F1
     brave
@@ -20,7 +17,7 @@ super + shift + e
     alacritty -e ranger
 
 # Dmenu
-super + space
+super + @space
     dmenu_run -p "Run: "
 
 super + shift + b

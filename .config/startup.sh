@@ -16,7 +16,7 @@ fi
 ( killall nm-applet; nm-applet 2>/dev/null >/dev/null ) & disown
 ( killall blueman-applet; blueman-applet 2>/dev/null >/dev/null ) & disown
 ( pidof picom || picom 2>/dev/null >/dev/null ) & disown
-( killall copyq; sleep 10 && copyq 2>/dev/null >/dev/null ) & disown
+( killall copyq; sleep 7 && copyq 2>/dev/null >/dev/null ) & disown
 
 xwallpaper --zoom "$HOME/media/wallpapers/panda-2-1920×1080.jpg" &
 
