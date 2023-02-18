@@ -267,12 +267,14 @@ unzip
 upscayl-bin
 urlview
 uthash
+vicious
 vim
 virt-manager
 visual-studio-code-bin
 volume_key
 wget
 which
+wireless_tools
 wmname
 xclip
 xdotool
