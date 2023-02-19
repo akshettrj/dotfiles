@@ -130,6 +130,8 @@ awful.screen.connect_for_each_screen(function(s)
     mytextclock.format = [[ <u>%d/%I/%G, <b>%H:%M:%S</b></u> ]]
     mytextclock.refresh = 1
 
+    mybatterywidget = require("akshettrj_widgets.battery")
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -147,12 +149,13 @@ awful.screen.connect_for_each_screen(function(s)
             -- wibox.widget.textbox("|"),
             -- require("akshettrj_widgets.network_lan"),
             wibox.widget.textbox("|"),
-            awful.widget.watch("bash -c ~/.scripts/polybar/polybar_battery"),
-            wibox.widget.textbox("|"),
             mytextclock,
+            mybatterywidget.battery_sep,
+            mybatterywidget.battery_widget,
             wibox.widget.textbox("|"),
             s.mysystray,
             s.mylayoutbox,
+
         },
     }
 end)
