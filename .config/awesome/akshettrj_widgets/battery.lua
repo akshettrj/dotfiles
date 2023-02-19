@@ -3,7 +3,7 @@ local naughty = require("naughty")
 local wibox = require("wibox")
 
 local M = {}
-M.battery_widget = awful.widget.watch("bash -c ~/.scripts/polybar/polybar_battery")
+M.battery_widget = awful.widget.watch("bash -c ~/.scripts/polybar/polybar_battery", 5)
 M.battery_sep = wibox.widget.textbox("|")
 
 awful.spawn.with_line_callback("bash -c acpi", {
