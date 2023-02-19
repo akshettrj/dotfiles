@@ -64,8 +64,9 @@ theme.notification_margin                       = dpi(5)
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
+theme.menu_font                                 = "JetBrainsMono NF 12"
 theme.menu_submenu_icon                         = themes_path .. "default/submenu.png"
-theme.menu_height                               = dpi(13)
+theme.menu_height                               = dpi(50)
 theme.menu_width                                = dpi(100)
 
 -- You can add as many variables as

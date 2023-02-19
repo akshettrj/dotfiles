@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Check if ImageMagick is installed
+if ! command -v convert > /dev/null 2>&1; then
+  echo "Error: ImageMagick is not installed. Please install it and try again."
+  exit 1
+fi
+
+# Check if input parameters are provided
+if [ $# -lt 3 ]; then
+  echo "Usage: $0 <input_gif_path> <output_gif_path> <text_to_add>"
+  exit 1
+fi
+
+input_gif=$1
+output_gif=$2
+text=$3
+
+# Add text to the GIF image
+convert "$input_gif" -gravity South -background '#0008' -fill white -pointsize 36 -font "JetBrains-Mono-SemiBold-Nerd-Font-Complete-Mono" -annotate +0+20 "$text" "$output_gif"
+
+# Check if the conversion was successful
+if [ $? -eq 0 ]; then
+  echo "[ $input_gif ] Text was added to the GIF successfully!"
+else
+  echo "[ $input_gif ] Error: Failed to add text to the GIF."
+  exit 1
+fi

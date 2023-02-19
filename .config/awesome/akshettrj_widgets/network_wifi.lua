@@ -22,18 +22,12 @@ local wifi_widget = wibox.widget.textbox()
 
 vicious.register(
     wifi_widget,
-    vicious.widgets.wifi,
+    vicious.widgets.wifiiw,
     function(widget, args)
-        if args == nil then
-            widget.visible = false
-            return ""
-        end
-
-        widget.visible = true
-        return table.concat(args, ", ")
+        return "🗼 " .. args["{ssid}"] .. " (" .. args["{sign}"] .. ")"
     end,
     1,
-    { wifi_interface }
+    wifi_interface
 )
 
 return wifi_widget

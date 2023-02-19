@@ -1,2 +1,5 @@
 [submodule "net_widgets/"]
 	url = https://github.com/pltanton/net_widgets.git
+[submodule ".config/awesome/vicious"]
+	path = .config/awesome/vicious
+	url = https://github.com/vicious-widgets/vicious
