@@ -1,5 +1,6 @@
 acpi
 alacritty
+alsa-utils
 android-tools
 android-udev
 arandr
@@ -110,6 +111,7 @@ lsd
 lua51
 lua51-lpeg
 lua51-mpack
+luarocks
 lvm2
 lxappearance-gtk3
 lynx
@@ -120,6 +122,7 @@ materia-gtk-theme
 mdadm
 mediainfo
 meson
+mpc
 mpd
 mpdris2
 mpv
@@ -267,14 +270,12 @@ unzip
 upscayl-bin
 urlview
 uthash
-vicious
 vim
 virt-manager
 visual-studio-code-bin
 volume_key
 wget
 which
-wireless_tools
 wmname
 xclip
 xdotool
