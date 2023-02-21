@@ -8,15 +8,12 @@ local mpd_widget = wibox.widget.textbox()
 vicious.register(
     mpd_widget,
     vicious.widgets.mpd,
-    function(widget, args)
+    function(_, args)
         if args["{state}"] == "Stop" then
-            widget.visible = false
             return " 🎶 stopped "
         elseif args["{state}"] == "Pause" then
-            widget.visible = true
             return " 🎶 paused "
         else
-            widget.visible = true
             return (" 🎶 %s / %s "):format(args["{Elapsed}"], args["{Duration}"])
         end
     end,

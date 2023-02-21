@@ -7,6 +7,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
+require("micky")
 require("awful.hotkeys_popup.keys")
 
 if awesome.startup_errors then
@@ -131,6 +132,7 @@ awful.screen.connect_for_each_screen(function(s)
     mytextclock.refresh = 1
 
     mybatterywidget = require("akshettrj_widgets.battery")
+    myvolumewidget = require("akshettrj_widgets.volume")
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -138,21 +140,38 @@ awful.screen.connect_for_each_screen(function(s)
         {
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
             s.mypromptbox,
         },
         s.mytasklist,
         {
             layout = wibox.layout.fixed.horizontal,
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
+            require("akshettrj_widgets.notifications_naughty"),
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
             require("akshettrj_widgets.mpd"),
-            -- wibox.widget.textbox("|"),
-            -- require("akshettrj_widgets.network_wifi"),
-            -- wibox.widget.textbox("|"),
-            -- require("akshettrj_widgets.network_lan"),
-            wibox.widget.textbox("|"),
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
             mytextclock,
+            myvolumewidget.volume_sep,
+            myvolumewidget.volume_widget,
             mybatterywidget.battery_sep,
             mybatterywidget.battery_widget,
-            wibox.widget.textbox("|"),
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
             s.mysystray,
             s.mylayoutbox,
 
@@ -248,28 +267,28 @@ clientkeys = gears.table.join(
 
     awful.key({ modkey, }, "j",
         function(c)
-            awful.client.focus.global_bydirection("down")
+            awful.client.focus.bydirection("down")
             c:lower()
         end,
         { description = "focus next window down", group = "client" }
     ),
     awful.key({ modkey, }, "k",
         function(c)
-            awful.client.focus.global_bydirection("up")
+            awful.client.focus.bydirection("up")
             c:lower()
         end,
         { description = "focus next window up", group = "client" }
     ),
     awful.key({ modkey, }, "h",
         function(c)
-            awful.client.focus.global_bydirection("left")
+            awful.client.focus.bydirection("left")
             c:lower()
         end,
         { description = "focus next window left", group = "client" }
     ),
     awful.key({ modkey, }, "l",
         function(c)
-            awful.client.focus.global_bydirection("right")
+            awful.client.focus.bydirection("right")
             c:lower()
         end,
         { description = "focus next window right", group = "client" }

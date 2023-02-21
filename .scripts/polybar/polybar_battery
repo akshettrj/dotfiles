@@ -44,8 +44,8 @@ else
 	# printf "%%{F#0ABE09}";
 fi
 
-printf "$symbol$percent%%"
+printf "$symbol$percent%% "
 
 if [ "$mode" = "Discharging," ] || [ "$mode" = "Charging," ] || [ "$ac_adapt" = "off-line," ]; then
-	echo " ($remaining)" | sed 's/charging/ch./g'
+	printf "($remaining) " | sed 's/charging/ch./g'
 fi
