@@ -99,6 +99,12 @@ local tasklist_buttons = gears.table.join(
 awful.screen.connect_for_each_screen(function(s)
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
+    -- naughty.notify({
+    --     preset = naughty.config.presets.critical,
+    --     title = ("Screen number %s"):format(s.index),
+    --     text = ("%sx%s+%s+%s"):format(s.workarea.width, s.workarea.height, s.workarea.x, s.workarea.y),
+    -- })
+
     s.mypromptbox = awful.widget.prompt()
 
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -316,6 +322,9 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "m",
         function(c)
             c.maximized = not c.maximized
+            if c.maximized then
+                c.floating = false
+            end
             c:raise()
         end,
         { description = "(un)maximize", group = "client" }),
@@ -438,7 +447,7 @@ awful.rules.rules = {
         role = {
             "AlarmWindow", -- Thunderbird's calendar.
             "ConfigManager", -- Thunderbird's about:config.
-            "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
+            -- "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
         }
     }, properties = { floating = true, raise = true } },
 
@@ -511,6 +520,8 @@ end)
 
 client.connect_signal("focus", function(c)
     c.border_color = beautiful.border_focus
+    myscreen = awful.screen.focused()
+    myscreen.mywibox.visible = not c.fullscreen
 end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal

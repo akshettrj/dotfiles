@@ -7,17 +7,19 @@ if ! command -v convert > /dev/null 2>&1; then
 fi
 
 # Check if input parameters are provided
-if [ $# -lt 3 ]; then
-  echo "Usage: $0 <input_gif_path> <output_gif_path> <text_to_add>"
+if [ $# -lt 5 ]; then
+  echo "Usage: $0 <input_gif_path> <output_gif_path> <text_to_add> <gravity> <pointsize>"
   exit 1
 fi
 
 input_gif=$1
 output_gif=$2
 text=$3
+gravity=$4
+pointsize=$5
 
 # Add text to the GIF image
-convert "$input_gif" -gravity South -background '#0008' -fill white -pointsize 36 -font "JetBrains-Mono-SemiBold-Nerd-Font-Complete-Mono" -annotate +0+20 "$text" "$output_gif"
+convert "$input_gif" -gravity "$gravity" -background '#0008' -fill white -pointsize "$pointsize" -font "JetBrains-Mono-SemiBold-Nerd-Font-Complete-Mono" -annotate +5+7 "$text" "$output_gif"
 
 # Check if the conversion was successful
 if [ $? -eq 0 ]; then
