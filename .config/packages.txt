@@ -154,6 +154,7 @@ obs-studio
 obsidian
 odt2txt
 openldap
+openssl-1.1
 openvpn
 os-prober
 p7zip
