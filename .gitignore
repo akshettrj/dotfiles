@@ -93,3 +93,9 @@ media/
 security-key.txt
 tcp_open_ports.txt
 work/
+.bash_history
+.cmake/
+.config/tailscale/
+.icons/
+.mdtest_history
+.mozilla/

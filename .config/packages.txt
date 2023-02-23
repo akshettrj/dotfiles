@@ -49,7 +49,6 @@ dragon-drop
 dunst
 efibootmgr
 efm-langserver
-electron17
 element-desktop
 exfat-utils
 exo
@@ -154,6 +153,7 @@ oath-toolkit
 obs-studio
 obsidian
 odt2txt
+opencv
 openldap
 openvpn
 os-prober
