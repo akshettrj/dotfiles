@@ -153,7 +153,6 @@ oath-toolkit
 obs-studio
 obsidian
 odt2txt
-opencv
 openldap
 openvpn
 os-prober
