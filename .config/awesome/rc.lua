@@ -237,6 +237,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control", "Shift" }, "space", function() awful.layout.inc(-1) end,
         { description = "select previous", group = "layout" }),
 
+    -- Number of master windows
+    awful.key({ modkey }, "n", function() awful.tag.incnmaster(1) end,
+        { description = "increase number of master windows", group = "layout" }),
+    awful.key({ modkey, "Shift" }, "n", function() awful.tag.incnmaster(-1) end,
+        { description = "decrease number of master columns", group = "layout" }),
+
+    -- unminimize apps
     awful.key({ modkey, "Shift" }, "-",
         function()
             local c = awful.client.restore()
@@ -458,7 +465,7 @@ awful.rules.rules = {
     },
 
     { rule = { class = "mpv" },
-        properties = { screen = 1, fullscreen = true, }
+        properties = { screen = awful.screen.preferred, fullscreen = true, }
     },
 
     { rule = { class = "Alacritty" },
