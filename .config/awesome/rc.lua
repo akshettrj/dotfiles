@@ -324,8 +324,10 @@ clientkeys = gears.table.join(
             c.maximized = not c.maximized
             if c.maximized then
                 c.floating = false
+                c:raise()
+            else
+                c:lower()
             end
-            c:raise()
         end,
         { description = "(un)maximize", group = "client" }),
     awful.key({ modkey, "Control" }, "m",
@@ -525,6 +527,10 @@ client.connect_signal("focus", function(c)
 end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
+    myscreen = awful.screen.focused()
+    if #myscreen.clients == 0 then
+        myscreen.mywibox.visible = true
+    end
 end)
 
 client.connect_signal("property::floating", function(c)
