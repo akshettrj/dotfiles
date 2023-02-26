@@ -18,6 +18,6 @@ fi
 ( pidof picom || picom 2>/dev/null >/dev/null ) & disown
 ( killall copyq; sleep 7 && copyq 2>/dev/null >/dev/null ) & disown
 
-xwallpaper --zoom "$HOME/media/wallpapers/panda-2-1920×1080.jpg" &
+# xwallpaper --zoom "$HOME/media/wallpapers/panda-2-1920×1080.jpg" &
 
 wmname LG3D &

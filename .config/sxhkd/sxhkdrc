@@ -20,9 +20,6 @@ super + shift + e
 super + @space
     dmenu_run -p "Run: "
 
-super + shift + b
-    bookmenu_launch
-
 # Dunst
 ctrl + shift + o
     dunstctl context

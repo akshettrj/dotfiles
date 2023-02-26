@@ -95,8 +95,24 @@ local tasklist_buttons = gears.table.join(
     awful.button({}, 4, function() awful.client.focus.byidx(1) end),
     awful.button({}, 5, function() awful.client.focus.byidx(-1) end))
 
+local function set_wallpaper(s)
+    -- Wallpaper
+    if beautiful.wallpaper then
+        local wallpaper = beautiful.wallpaper
+        -- If wallpaper is a function, call it with the screen
+        if type(wallpaper) == "function" then
+            wallpaper = wallpaper(s)
+        end
+        gears.wallpaper.maximized(wallpaper, s, true)
+    end
+end
+
+-- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
+screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
+    set_wallpaper(s)
+
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- naughty.notify({
@@ -128,6 +144,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     s.mywibox = awful.wibar({ position = "top", screen = s })
+    -- s.mywibox_bottom = awful.wibar({ position = "bottom", screen = s })
 
     s.mysystray = wibox.widget.systray()
     s.mysystray:set_base_size(20)
@@ -272,8 +289,6 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "f",
         function(c)
             c.fullscreen = not c.fullscreen
-            myscreen = awful.screen.focused()
-            myscreen.mywibox.visible = not c.fullscreen
             c:raise()
         end,
         { description = "toggle fullscreen", group = "client" }),
@@ -330,7 +345,6 @@ clientkeys = gears.table.join(
         function(c)
             c.maximized = not c.maximized
             if c.maximized then
-                c.floating = false
                 c:raise()
             else
                 c:lower()
@@ -348,7 +362,15 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end,
-        { description = "(un)maximize horizontally", group = "client" })
+        { description = "(un)maximize horizontally", group = "client" }),
+    awful.key({ modkey }, "b", function(c)
+        c.opacity = math.min(c.opacity + 0.1, 1)
+    end,
+        { description = "increase background opacity", group = "client" }),
+    awful.key({ modkey, "Shift" }, "b", function(c)
+        c.opacity = math.max(c.opacity - 0.1, 0)
+    end,
+        { description = "decrease background opacity", group = "client" })
 )
 
 -- Bind all key numbers to tags.
@@ -545,6 +567,18 @@ client.connect_signal("property::floating", function(c)
         awful.titlebar.show(c)
     else
         awful.titlebar.hide(c)
+    end
+    c.ontop = c.floating and not c.fullscreen
+end)
+
+client.connect_signal("property::fullscreen", function(c)
+    myscreen = awful.screen.focused()
+    myscreen.mywibox.visible = not c.fullscreen
+end)
+
+client.connect_signal("property::maximized", function(c)
+    if c.maximized then
+        c.floating = false
     end
 end)
 -- }}}

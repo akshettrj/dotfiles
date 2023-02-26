@@ -60,6 +60,7 @@ theme.taglist_squares_unsel                     = theme_assets.taglist_squares_u
 -- notification_[border_color|border_width|shape|opacity]
 theme.notification_font                         = "JetBrainsMono NF 12"
 theme.notification_margin                       = dpi(5)
+theme.notification_icon_size                    = dpi(90)
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
@@ -101,7 +102,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path .. "default/titleb
 theme.titlebar_maximized_button_normal_active   = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper                                 = themes_path .. "default/background.png"
+theme.wallpaper                                 = os.getenv("HOME") .. "/media/wallpapers/power_red.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh                              = themes_path .. "default/layouts/fairhw.png"
