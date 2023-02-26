@@ -154,8 +154,41 @@ awful.screen.connect_for_each_screen(function(s)
     mytextclock.format = [[ <u>%d/%I/%G, <b>%H:%M:%S</b></u> ]]
     mytextclock.refresh = 1
 
-    mybatterywidget = require("akshettrj_widgets.battery")
     myvolumewidget = require("akshettrj_widgets.volume")
+
+    right_widgets = {
+        layout = wibox.layout.fixed.horizontal,
+        wibox.widget.separator({
+            orientation = "vertical",
+            forced_width = 2,
+        }),
+        require("akshettrj_widgets.notifications_naughty"),
+        wibox.widget.separator({
+            orientation = "vertical",
+            forced_width = 2,
+        }),
+        require("akshettrj_widgets.mpd"),
+        wibox.widget.separator({
+            orientation = "vertical",
+            forced_width = 2,
+        }),
+        mytextclock,
+        myvolumewidget.volume_sep,
+        myvolumewidget.volume_widget,
+    }
+
+    if awesome.hostname ~= "ltrcakki" then
+        mybatterywidget = require("akshettrj_widgets.battery")
+        right_widgets[#right_widgets + 1] = mybatterywidget.battery_sep
+        right_widgets[#right_widgets + 1] = mybatterywidget.battery_widget
+    end
+
+    right_widgets[#right_widgets + 1] = wibox.widget.separator({
+        orientation = "vertical",
+        forced_width = 2,
+    })
+    right_widgets[#right_widgets + 1] = s.mysystray
+    right_widgets[#right_widgets + 1] = s.mylayoutbox
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -170,35 +203,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.mypromptbox,
         },
         s.mytasklist,
-        {
-            layout = wibox.layout.fixed.horizontal,
-            wibox.widget.separator({
-                orientation = "vertical",
-                forced_width = 2,
-            }),
-            require("akshettrj_widgets.notifications_naughty"),
-            wibox.widget.separator({
-                orientation = "vertical",
-                forced_width = 2,
-            }),
-            require("akshettrj_widgets.mpd"),
-            wibox.widget.separator({
-                orientation = "vertical",
-                forced_width = 2,
-            }),
-            mytextclock,
-            myvolumewidget.volume_sep,
-            myvolumewidget.volume_widget,
-            mybatterywidget.battery_sep,
-            mybatterywidget.battery_widget,
-            wibox.widget.separator({
-                orientation = "vertical",
-                forced_width = 2,
-            }),
-            s.mysystray,
-            s.mylayoutbox,
-
-        },
+        right_widgets,
     }
 end)
 -- }}}
@@ -370,7 +375,11 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "b", function(c)
         c.opacity = math.max(c.opacity - 0.1, 0)
     end,
-        { description = "decrease background opacity", group = "client" })
+        { description = "decrease background opacity", group = "client" }),
+    awful.key({ modkey, "Control" }, "s", function(c)
+        c.sticky = not c.sticky
+    end,
+        { description = "make client (un)sticky", group = "client" })
 )
 
 -- Bind all key numbers to tags.
@@ -492,8 +501,15 @@ awful.rules.rules = {
 
     { rule = { class = "Alacritty" },
         properties = { opacity = 0.9 }
-    }
+    },
 
+    { rule = { class = "64Gram" },
+        properties = { screen = awful.screen.preferred, size_hints_honor = false }
+    },
+
+    { rule = { class = "discord" },
+        properties = { screen = awful.screen.preferred, size_hints_honor = false }
+    },
 }
 -- }}}
 
@@ -553,6 +569,13 @@ client.connect_signal("focus", function(c)
     c.border_color = beautiful.border_focus
     myscreen = awful.screen.focused()
     myscreen.mywibox.visible = not c.fullscreen
+
+    if not c.fullscreen then
+        for _, _c in ipairs(myscreen.clients) do
+            _c.fullscreen = false
+            _c.maximized = false
+        end
+    end
 end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
