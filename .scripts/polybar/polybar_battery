@@ -31,12 +31,12 @@ fi
 if [ "$percent" -lt 20 ]; then
 	# printf "%%{F#ed0b0b}"
 	if [ "$mode" = "Discharging," ]; then
-		espeak "Batter Low" > /dev/null 2>/dev/null
-		notify-send -u "critical" "Battery Critical" "Plug in the charger"
-		if ! command -v tgme &> /dev/null
-		then
-			tgme "Battery" "Laptop battery is critical: $percent"
-		fi
+		# espeak "Batter Low" > /dev/null 2>/dev/null
+		# notify-send -u "critical" "Battery Critical" "Plug in the charger"
+		# if ! command -v tgme &> /dev/null
+		# then
+			/home/akshettrj/.scripts/telegram/tgme "Battery" "Laptop battery is critical: $percent"
+		# fi
 	fi
 elif [ "$percent" -lt 50 ]; then
 	# printf "%%{F#f2e421}";
@@ -44,8 +44,8 @@ else
 	# printf "%%{F#0ABE09}";
 fi
 
-printf "$symbol$percent%% "
+# printf "$symbol$percent%% "
 
 if [ "$mode" = "Discharging," ] || [ "$mode" = "Charging," ] || [ "$ac_adapt" = "off-line," ]; then
-	printf "($remaining) " | sed 's/charging/ch./g'
+	# printf "($remaining) " | sed 's/charging/ch./g'
 fi

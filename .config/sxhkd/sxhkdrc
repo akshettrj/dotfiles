@@ -78,10 +78,10 @@ super + F7
     polybar_volume_control "output-vol" $(pactl info | grep "Default Sink: " | sed 's/.*: //') -2%
 
 XF86AudioMute
-    polybar_volume_control "output-mute" "alsa_output.pci-0000_00_1f.3.analog-stereo"
+    polybar_volume_control "output-mute" $(pactl info | grep "Default Sink: " | sed 's/.*: //')
 
 super + F6
-    polybar_volume_control "output-mute" "bluez_sink.00_09_A7_32_84_23.a2dp_sink"
+    polybar_volume_control "output-mute" $(pactl info | grep "Default Sink: " | sed 's/.*: //')
 
 super + d
     default_sink

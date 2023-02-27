@@ -570,7 +570,7 @@ client.connect_signal("focus", function(c)
     myscreen = awful.screen.focused()
     myscreen.mywibox.visible = not c.fullscreen
 
-    if not c.fullscreen then
+    if not c.fullscreen and not c.maximized then
         for _, _c in ipairs(myscreen.clients) do
             _c.fullscreen = false
             _c.maximized = false
