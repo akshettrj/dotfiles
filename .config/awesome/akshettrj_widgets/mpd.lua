@@ -12,9 +12,17 @@ vicious.register(
         if args["{state}"] == "Stop" then
             return " 🎶 stopped "
         elseif args["{state}"] == "Pause" then
-            return " 🎶 paused "
+            return (" 🎶 %s - paused "):format(
+                args["{Title}"]
+            -- args["{Artist}"]
+            )
         else
-            return (" 🎶 %s / %s "):format(args["{Elapsed}"], args["{Duration}"])
+            return (" 🎶 [%s / %s] - %s "):format(
+                args["{Elapsed}"],
+                args["{Duration}"],
+                args["{Title}"]
+            -- args["{Artist}"]
+            )
         end
     end,
     1,

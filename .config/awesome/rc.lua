@@ -144,14 +144,14 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     s.mywibox = awful.wibar({ position = "top", screen = s })
-    -- s.mywibox_bottom = awful.wibar({ position = "bottom", screen = s })
+    s.mywibox_bottom = awful.wibar({ position = "bottom", screen = s })
 
     s.mysystray = wibox.widget.systray()
     s.mysystray:set_base_size(20)
-    s.mysystray = wibox.layout.margin(s.mysystray, 3, 0, 3, 0)
+    s.mysystray = wibox.layout.margin(s.mysystray, 5, 3, 7, 5)
 
     mytextclock = wibox.widget.textclock()
-    mytextclock.format = [[ <u>%d/%I/%G, <b>%H:%M:%S</b></u> ]]
+    mytextclock.format = [[ <u>%d/%m/%G, <b>%H:%M:%S (%a)</b></u> ]]
     mytextclock.refresh = 1
 
     myvolumewidget = require("akshettrj_widgets.volume")
@@ -168,11 +168,6 @@ awful.screen.connect_for_each_screen(function(s)
             forced_width = 2,
         }),
         require("akshettrj_widgets.mpd"),
-        wibox.widget.separator({
-            orientation = "vertical",
-            forced_width = 2,
-        }),
-        mytextclock,
         myvolumewidget.volume_sep,
         myvolumewidget.volume_widget,
     }
@@ -188,7 +183,6 @@ awful.screen.connect_for_each_screen(function(s)
         forced_width = 2,
     })
     right_widgets[#right_widgets + 1] = s.mysystray
-    right_widgets[#right_widgets + 1] = s.mylayoutbox
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -203,8 +197,31 @@ awful.screen.connect_for_each_screen(function(s)
             s.mypromptbox,
         },
         s.mytasklist,
-        right_widgets,
+        {
+            layout = wibox.layout.fixed.horizontal,
+            s.mylayoutbox,
+        }
     }
+
+    s.mywibox_bottom:setup({
+        layout = wibox.layout.align.horizontal,
+        {
+            layout = wibox.layout.fixed.horizontal,
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
+            mytextclock,
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
+        },
+        {
+            layout = wibox.layout.fixed.horizontal,
+        },
+        right_widgets,
+    })
 end)
 -- }}}
 
@@ -569,6 +586,7 @@ client.connect_signal("focus", function(c)
     c.border_color = beautiful.border_focus
     myscreen = awful.screen.focused()
     myscreen.mywibox.visible = not c.fullscreen
+    myscreen.mywibox_bottom.visible = not c.fullscreen
 
     if not c.fullscreen and not c.maximized then
         for _, _c in ipairs(myscreen.clients) do
@@ -582,6 +600,7 @@ client.connect_signal("unfocus", function(c)
     myscreen = awful.screen.focused()
     if #myscreen.clients == 0 then
         myscreen.mywibox.visible = true
+        myscreen.mywibox_bottom.visible = true
     end
 end)
 
@@ -597,6 +616,7 @@ end)
 client.connect_signal("property::fullscreen", function(c)
     myscreen = awful.screen.focused()
     myscreen.mywibox.visible = not c.fullscreen
+    myscreen.mywibox_bottom.visible = not c.fullscreen
 end)
 
 client.connect_signal("property::maximized", function(c)
