@@ -148,7 +148,11 @@ awful.screen.connect_for_each_screen(function(s)
 
     s.mysystray = wibox.widget.systray()
     s.mysystray:set_base_size(20)
-    s.mysystray = wibox.layout.margin(s.mysystray, 5, 3, 7, 5)
+    if awesome.hostname == "ltrcakki" then
+        s.mysystray = wibox.layout.margin(s.mysystray, 5, 3, 7, 5)
+    else
+        s.mysystray = wibox.layout.margin(s.mysystray, 3, 0, 3, 0)
+    end
 
     mytextclock = wibox.widget.textclock()
     mytextclock.format = [[ <u>%d/%m/%G, <b>%H:%M:%S (%a)</b></u> ]]
