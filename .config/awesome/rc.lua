@@ -159,6 +159,7 @@ awful.screen.connect_for_each_screen(function(s)
     mytextclock.refresh = 1
 
     myvolumewidget = require("akshettrj_widgets.volume")
+    myghactwidget = require("akshettrj_widgets.github_activity")
 
     right_widgets = {
         layout = wibox.layout.fixed.horizontal,
@@ -166,12 +167,14 @@ awful.screen.connect_for_each_screen(function(s)
             orientation = "vertical",
             forced_width = 2,
         }),
-        require("akshettrj_widgets.notifications_naughty"),
+        require("akshettrj_widgets.mpd"),
         wibox.widget.separator({
             orientation = "vertical",
             forced_width = 2,
         }),
-        require("akshettrj_widgets.mpd"),
+        require("akshettrj_widgets.notifications_naughty"),
+        myghactwidget.gh_act_sep,
+        myghactwidget.gh_act_widget,
         myvolumewidget.volume_sep,
         myvolumewidget.volume_widget,
     }
@@ -203,6 +206,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist,
         {
             layout = wibox.layout.fixed.horizontal,
+            mytextclock,
             s.mylayoutbox,
         }
     }
@@ -602,7 +606,7 @@ end)
 client.connect_signal("unfocus", function(c)
     c.border_color = beautiful.border_normal
     myscreen = awful.screen.focused()
-    if #myscreen.clients == 0 then
+    if #(myscreen.clients) == 0 then
         myscreen.mywibox.visible = true
         myscreen.mywibox_bottom.visible = true
     end

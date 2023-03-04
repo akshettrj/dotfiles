@@ -3,26 +3,51 @@ local gears = require("gears")
 local vicious = require("vicious")
 local wibox = require("wibox")
 
-local mpd_widget = wibox.widget.textbox()
+local ICONS_DIR = os.getenv("HOME") .. "/.config/awesome/akshettrj_widgets/icons/"
+
+local mpd_widget = wibox.widget({
+    {
+        {
+            id = "icon",
+            widget = wibox.widget.imagebox
+        },
+        margins = 2,
+        layout = wibox.container.margin,
+    },
+    {
+        id = "txt",
+        widget = wibox.widget.textbox,
+    },
+    layout = wibox.layout.fixed.horizontal,
+    set_text = function(self, new_value)
+        self:get_children_by_id("txt")[1]:set_text(new_value)
+    end,
+    set_icon = function(self, new_value)
+        self:get_children_by_id("icon")[1]:set_image(ICONS_DIR .. new_value)
+    end,
+})
 
 vicious.register(
     mpd_widget,
     vicious.widgets.mpd,
-    function(_, args)
+    function(w, args)
         if args["{state}"] == "Stop" then
-            return " 🎶 stopped "
+            w:set_icon("music_stopped.svg")
+            w:set_text(" ")
+            return
         elseif args["{state}"] == "Pause" then
-            return (" 🎶 %s - paused "):format(
-                args["{Title}"]
-            -- args["{Artist}"]
-            )
+            w:set_icon("music_paused.svg")
+            w:set_text(" " .. args["{Title}"] .. " ")
+            return
         else
-            return (" 🎶 [%s / %s] - %s "):format(
-                args["{Elapsed}"],
-                args["{Duration}"],
-                args["{Title}"]
-            -- args["{Artist}"]
-            )
+            w:set_icon("music_playing.svg")
+            w:set_text(
+                (" [%s / %s] - %s "):format(
+                    args["{Elapsed}"],
+                    args["{Duration}"],
+                    args["{Title}"]
+                ))
+            return
         end
     end,
     1,
