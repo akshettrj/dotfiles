@@ -83,10 +83,10 @@ imagemagick
 intel-ucode
 intltool
 ipython
-isync-git
 js78
 kernel-modules-hook
 kguiaddons
+libappindicator-gtk2
 libatasmart
 libblockdev
 libbytesize
@@ -105,6 +105,7 @@ linux
 linux-firmware
 linux-headers
 linux-wifi-hotspot
+lldb
 lohit-fonts
 lsd
 lua51
@@ -126,13 +127,10 @@ mpd
 mpdris2
 mpv
 msgpack-c
-msmtp
 mtools
-mutt-wizard-git
 mypaint-brushes1
 ncmpcpp
 neofetch
-neomutt
 neovim-git
 network-manager-applet
 networkmanager
@@ -149,6 +147,7 @@ npm
 ntfs-3g
 nvidia
 nvidia-settings
+nvm
 oath-toolkit
 obs-studio
 obsidian
@@ -160,13 +159,13 @@ os-prober
 p7zip
 papirus-icon-theme
 paru-bin
-pass
 patch
 pcmanfm
 pdftk
 picom-jonaburg-git
 pkgconf
 playerctl
+pnpm-bin
 polkit
 polybar
 postgresql
@@ -203,6 +202,7 @@ redshift
 rest
 ripgrep
 rnote
+ruff
 rust-analyzer
 rustup
 scrcpy
@@ -245,6 +245,9 @@ thunar
 thunar-volman
 tidy
 tmux
+tomate-alarm-plugin
+tomate-gtk
+tomate-statusicon-plugin
 transmission-cli
 tree-sitter
 ttf-fira-mono
