@@ -8,6 +8,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 require("micky")
+local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 if awesome.startup_errors then
@@ -243,7 +244,10 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 
--- Change tags
+    awful.key({ modkey, }, "F4", hotkeys_popup.show_help,
+        { description = "show help", group = "awesome" }),
+
+    -- Change tags
     awful.key({ modkey, }, "[", awful.tag.viewprev,
         { description = "view previous", group = "tag" }),
     awful.key({ modkey, }, "]", awful.tag.viewnext,
@@ -404,7 +408,56 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "s", function(c)
         c.sticky = not c.sticky
     end,
-        { description = "make client (un)sticky", group = "client" })
+        { description = "make client (un)sticky", group = "client" }),
+
+    -- Resizing and moving
+    awful.key({ modkey, "Control" }, "Up", function(c)
+        if c.floating then
+            c:relative_move(0, 0, 0, -10)
+        else
+            awful.client.incwfact(0.025)
+        end
+    end, { description = "floating resize vertical -", group = "client" }),
+    awful.key({ modkey, "Control" }, "Down", function(c)
+        if c.floating then
+            c:relative_move(0, 0, 0, 10)
+        else
+            awful.client.incwfact(-0.025)
+        end
+    end, { description = "floating resize vertical +", group = "client" }),
+    awful.key({ modkey, "Control" }, "Left", function(c)
+        if c.floating then
+            c:relative_move(0, 0, -10, 0)
+        else
+            awful.tag.incmwfact(-0.025)
+        end
+    end, { description = "floating resize horizontal -", group = "client" }),
+    awful.key({ modkey, "Control" }, "Right", function(c)
+        if c.floating then
+            c:relative_move(0, 0, 10, 0)
+        else
+            awful.tag.incmwfact(0.025)
+        end
+    end, { description = "floating resize horizontal +", group = "client" }),
+
+    -- Moving floating windows
+    awful.key({ modkey, }, "Down", function(c)
+        c:relative_move(0, 10, 0, 0)
+    end,
+        { description = "Floating Move Down", group = "client" }),
+    awful.key({ modkey, }, "Up", function(c)
+        c:relative_move(0, -10, 0, 0)
+    end,
+        { description = "Floating Move Up", group = "client" }),
+    awful.key({ modkey, }, "Left", function(c)
+        c:relative_move(-10, 0, 0, 0)
+    end,
+        { description = "Floating Move Left", group = "client" }),
+    awful.key({ modkey, }, "Right", function(c)
+        c:relative_move(10, 0, 0, 0)
+    end,
+        { description = "Floating Move Right", group = "client" })
+
 )
 
 -- Bind all key numbers to tags.
