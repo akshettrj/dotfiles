@@ -1,3 +1,6 @@
 #!/bin/sh
 
 clg_dir="$HOME/iiith"
+sem_dir="$clg_dir/4.2"
+
+alias cdil="cd $sem_dir/cdil"
