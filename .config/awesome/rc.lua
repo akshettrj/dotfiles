@@ -207,6 +207,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist,
         {
             layout = wibox.layout.fixed.horizontal,
+            wibox.widget.separator({
+                orientation = "vertical",
+                forced_width = 2,
+            }),
             mytextclock,
             s.mylayoutbox,
         }
