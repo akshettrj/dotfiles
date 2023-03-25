@@ -592,6 +592,10 @@ awful.rules.rules = {
     { rule = { class = "discord" },
         properties = { screen = awful.screen.preferred, size_hints_honor = false }
     },
+
+    { rule = { class = "Dragon-drop" },
+        properties = { screen = awful.screen.preferred, size_hints_honor = false, floating = true, sticky = true, ontop = true, }
+    },
 }
 -- }}}
 
