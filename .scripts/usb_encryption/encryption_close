@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters: Requires <name>"
+    exit 1
+fi
+
+sudo cryptsetup close "$1"

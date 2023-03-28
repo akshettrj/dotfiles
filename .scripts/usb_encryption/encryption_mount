@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$#" -ne 3 ]; then
+    echo "Illegal number of parameters: Requires <partition> <name> <mount_point>"
+    exit 1
+fi
+
+sudo cryptsetup open "$1" "$2"
+sudo cryptsetup mount "/dev/mapper/$2" "$3"

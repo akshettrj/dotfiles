@@ -51,6 +51,9 @@ export NLTK_DATA=$XDG_DATA_HOME/nltk_data
 export HEROKU_AC_ANALYTICS_DIR=$XDG_CACHE_HOME/heroku/autocomplete/completion_analytics
 export HEROKU_AC_COMMANDS_PATH=$XDG_CACHE_HOME/heroku/autocomplete/commands
 
+# Unison
+export UNISON="$XDG_DATA_HOME"/unison
+
 # Colored Man Pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
