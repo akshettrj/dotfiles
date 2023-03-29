@@ -47,6 +47,7 @@ dosfstools
 dpkg
 dragon-drop
 dunst
+easytag
 efibootmgr
 efm-langserver
 element-desktop
