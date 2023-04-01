@@ -546,6 +546,7 @@ awful.rules.rules = {
             screen = awful.screen.preferred,
             placement = awful.placement.no_overlap + awful.placement.no_offscreen,
             opacity = 1,
+            size_hints_honor = false,
         }
     },
 
@@ -586,15 +587,15 @@ awful.rules.rules = {
     },
 
     { rule = { class = "64Gram" },
-        properties = { screen = awful.screen.preferred, size_hints_honor = false }
+        properties = { screen = awful.screen.preferred }
     },
 
     { rule = { class = "discord" },
-        properties = { screen = awful.screen.preferred, size_hints_honor = false }
+        properties = { screen = awful.screen.preferred }
     },
 
     { rule = { class = "Dragon-drop" },
-        properties = { screen = awful.screen.preferred, size_hints_honor = false, floating = true, sticky = true, ontop = true, }
+        properties = { screen = awful.screen.preferred, floating = true, sticky = true, ontop = true, }
     },
 }
 -- }}}
@@ -696,4 +697,4 @@ end)
 -- }}}
 
 -- Autostart Applications
-awful.spawn.with_shell("~/.config/startup.sh")
+awful.spawn.with_shell("~/.config/startup.sh " .. awesome.hostname)

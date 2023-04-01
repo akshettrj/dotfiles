@@ -6,4 +6,4 @@ if [ "$#" -ne 3 ]; then
 fi
 
 sudo cryptsetup open "$1" "$2"
-sudo cryptsetup mount "/dev/mapper/$2" "$3"
+sudo mount "/dev/mapper/$2" "$3"
