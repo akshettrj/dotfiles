@@ -7,6 +7,7 @@ arandr
 archlinux-keyring
 aria2
 asciidoc
+asciinema
 asp
 atool
 autoconf
@@ -129,6 +130,7 @@ mpdris2
 mpv
 msgpack-c
 mtools
+mutt-wizard-git
 mypaint-brushes1
 ncmpcpp
 neofetch
@@ -208,6 +210,7 @@ rust-analyzer
 rustup
 scrcpy
 sed
+sioyek-git
 slack-desktop
 sndio
 sshfs
