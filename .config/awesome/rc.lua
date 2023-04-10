@@ -697,4 +697,4 @@ end)
 -- }}}
 
 -- Autostart Applications
-awful.spawn.with_shell("~/.config/startup.sh " .. awesome.hostname)
+awful.spawn.with_shell("~/.config/startup.sh " .. awesome.hostname .. " 2>>/home/akshettrj/errors.txt")
