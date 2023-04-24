@@ -26,6 +26,7 @@ brightnessctl
 bspwm
 btop
 btrfs-progs
+burpsuite
 chromium
 clang
 cloudflared
@@ -43,6 +44,7 @@ dmraid
 docbook-xml
 docbook-xsl
 docker
+docker-buildx
 dosbox
 dosfstools
 dpkg
@@ -70,6 +72,7 @@ gimp
 git
 git-delta
 git-filter-repo
+gitui
 gnome-keyring
 go
 golangci-lint-langserver-bin
@@ -88,6 +91,9 @@ ipython
 js78
 kernel-modules-hook
 kguiaddons
+lib32-mesa
+lib32-vulkan-icd-loader
+lib32-vulkan-intel
 libappindicator-gtk2
 libatasmart
 libblockdev
@@ -114,6 +120,7 @@ lua51
 lua51-lpeg
 lua51-mpack
 luarocks
+lutris
 lvm2
 lxappearance-gtk3
 lynx
@@ -160,6 +167,7 @@ openssl-1.1
 openvpn
 os-prober
 p7zip
+pacman-contrib
 papirus-icon-theme
 paru-bin
 patch
@@ -248,6 +256,7 @@ thin-provisioning-tools
 thunar
 thunar-volman
 tidy
+tk
 tmux
 tomate-alarm-plugin
 tomate-gtk
@@ -282,6 +291,7 @@ vim
 virt-manager
 visual-studio-code-bin
 volume_key
+vulkan-intel
 wget
 which
 wmname
