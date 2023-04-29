@@ -91,9 +91,6 @@ ipython
 js78
 kernel-modules-hook
 kguiaddons
-lib32-mesa
-lib32-vulkan-icd-loader
-lib32-vulkan-intel
 libappindicator-gtk2
 libatasmart
 libblockdev
@@ -120,7 +117,6 @@ lua51
 lua51-lpeg
 lua51-mpack
 luarocks
-lutris
 lvm2
 lxappearance-gtk3
 lynx
@@ -212,6 +208,7 @@ rclone
 redshift
 rest
 ripgrep
+ripmime
 rnote
 ruff
 rustup
