@@ -214,7 +214,6 @@ rest
 ripgrep
 rnote
 ruff
-rust-analyzer
 rustup
 scrcpy
 sed
@@ -255,6 +254,7 @@ texlive-science
 thin-provisioning-tools
 thunar
 thunar-volman
+thunderbird
 tidy
 tk
 tmux
@@ -352,6 +352,7 @@ xournalpp
 xsecurelock
 xwallpaper
 yad
+yapf
 yarn
 yt-dlp
 zathura
