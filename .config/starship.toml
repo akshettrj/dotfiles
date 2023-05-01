@@ -280,3 +280,8 @@ disabled = true
 
 [zig]
 disabled = true
+
+[custom.lf_instance]
+command = 'echo $LF_LEVEL'
+when = ''' test "$LF_LEVEL" -gt 1 '''
+format = '\(lf_level:[$output]($style)\) '

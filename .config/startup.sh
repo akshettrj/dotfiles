@@ -20,7 +20,7 @@ fi
 ( pidof -x sxhkd || sxhkd 2>/dev/null >/dev/null ) & disown
 ( pidof flameshot || flameshot 2>/dev/null >/dev/null ) & disown
 ( pidof mpd || mpd 2>/dev/null >/dev/null ) & disown
-( pidof mpDris2 || mpDris2 2>/dev/null >/dev/null ) & disown
+( pidof mpdris2-rs || mpdris2-rs 2>/dev/null >/dev/null ) & disown
 ( killall nm-applet; nm-applet 2>/dev/null >/dev/null ) & disown
 ( killall blueman-applet; blueman-applet 2>/dev/null >/dev/null ) & disown
 # if [ "$1" != "ltrcakki" ]; then

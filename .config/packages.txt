@@ -16,6 +16,7 @@ awesome
 base
 base-devel
 bat
+bat-extras
 bc
 bdf-unifont
 binutils
@@ -129,7 +130,7 @@ mediainfo
 meson
 mpc
 mpd
-mpdris2
+mpdris2-rs
 mpv
 msgpack-c
 mtools

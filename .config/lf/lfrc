@@ -1,5 +1,5 @@
 set shell zsh
-set shellopts '-eu'
+set shellopts '-euy'
 
 set hidden on
 
@@ -18,12 +18,17 @@ set hidden on
 cmd mkdir %mkdir "$@"
 cmd touch %touch "$@"
 
+## Move to next/previous sibling directory
+map J :updir; set dironly true; down; set dironly false; open
+map K :updir; set dironly true; up; set dironly false; open
+
 cmd bulkrename ${{
-    bash -c "vimv --git -- $(echo -e "$fx" | xargs -i echo "\\'{}\\'" | xargs echo)"
+    vimv -- $fx
 
     lf -remote "send $id load"
+    lf -remote "send $id unselect"
 }}
-map br bulkrename
+map R bulkrename
 
 map <enter> shell
 
@@ -43,7 +48,7 @@ cmd on-cd &{{
 on-cd
 
 # Warn if in nested instance
-%[ $LF_LEVEL -eq 1 ] || echo "Warning: You're in a nested lf instance!"
+%[ $LF_LEVEL -eq 1 ] || echo "Warning: You're in a nested lf instance! [$LF_LEVEL]"
 
 map DD delete
 
@@ -102,6 +107,17 @@ cmd set-wallpaper ${{
     xwallpaper --zoom "$fx"
 }}
 
+## Zoxide
+cmd z %{{
+    result="$(zoxide query --exclude $PWD $@)"
+    lf -remote "send $id cd $result"
+}}
+
+cmd zi ${{
+    result="$(zoxide query -i)"
+    lf -remote "send $id cd $result"
+}}
+
 map ae extract
 map at push :tar<space>
 map az push :zip<space>
@@ -115,7 +131,6 @@ map Dda drag-and-drop-not-all
 # Easy navigation
 map gv cd "~/media/videos"
 map gnv cd "~/work/vimwiki_notes"
-map gno cd "~/work/obsidian_notes"
 
 # Easy navigation ( college )
 map gcd cd "~/iiith/"
