@@ -283,5 +283,12 @@ disabled = true
 
 [custom.lf_instance]
 command = 'echo $LF_LEVEL'
-when = ''' test "$LF_LEVEL" -gt 1 '''
+when = ''' test "$LF_LEVEL" -gt 0 '''
 format = '\(lf_level:[$output]($style)\) '
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.shell]
+command = 'echo $STARSHIP_SHELL'
+when = ''' test "$STARSHIP_SHELL" != "zsh" '''
+format = '\([$output]($style)\) '
+shell = ["bash", "--noprofile", "--norc"]

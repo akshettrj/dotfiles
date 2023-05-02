@@ -320,7 +320,14 @@ globalkeys = gears.table.join(
                 history_path = awful.util.get_cache_dir() .. "/history_eval"
             }
         end,
-        { description = "lua execute prompt", group = "awesome" })
+        { description = "lua execute prompt", group = "awesome" }),
+
+    -- Naughty (Notifications)
+    awful.key({ "Control", "Shift" }, "space", function()
+        awful.screen.connect_for_each_screen(function(s)
+            naughty.destroy_all_notifications({ s }, "closed by user")
+        end)
+    end, { description = "remove all notifications", group = "naughty" })
 )
 
 clientkeys = gears.table.join(
