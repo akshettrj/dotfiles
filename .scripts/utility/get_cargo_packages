@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cargo install --list | grep ':' | awk -F ' ' '{print $1}'

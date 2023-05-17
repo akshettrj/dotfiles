@@ -1,0 +1,9 @@
+bacon
+cargo-add
+cargo-update
+du-dust
+gitoxide
+hexyl
+nu
+protobuf-codegen
+vimv
