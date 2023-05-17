@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/colorschemes/Gruvbox_dark.yaml
+  - ~/.config/alacritty/colorschemes/Dracula.yaml
   - ~/.config/alacritty/keybindings.yml
 
 
