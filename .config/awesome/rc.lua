@@ -323,7 +323,7 @@ globalkeys = gears.table.join(
         { description = "lua execute prompt", group = "awesome" }),
 
     -- Naughty (Notifications)
-    awful.key({ "Control", "Shift" }, "space", function()
+    awful.key({ "Control", "Alt" }, "space", function()
         awful.screen.connect_for_each_screen(function(s)
             naughty.destroy_all_notifications({ s }, "closed by user")
         end)
@@ -693,7 +693,12 @@ end)
 client.connect_signal("property::maximized", function(c)
     if c.maximized then
         c.floating = false
+        c.fullscreen = false
     end
+end)
+
+client.connect_signal("property::fullscreen", function(c)
+    c.maximized = false
 end)
 -- }}}
 
