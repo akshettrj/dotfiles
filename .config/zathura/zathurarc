@@ -61,5 +61,7 @@ set scroll-step 50
 map R recolor
 map <Left> navigate previous
 map <Right> navigate next
+map <Button8> navigate previous
+map <Button9> navigate next
 # map f toggle_fullscreen
 # map [fullscreen] f toggle_fullscreen
