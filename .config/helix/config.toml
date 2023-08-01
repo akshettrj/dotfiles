@@ -1,0 +1,25 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "relative"
+mouse = true
+shell = ["zsh"]
+cursorline = true
+cursorcolumn = false
+undercurl = true
+bufferline = "always"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+follow-symlinks = true
+
+[editor.indent-guides]
+render = true
+character = '|'
+skip-levels = 0
