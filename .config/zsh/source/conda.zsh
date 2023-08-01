@@ -9,3 +9,7 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ "$HOST" = "akkihp" ]; then
+    conda deactivate
+fi

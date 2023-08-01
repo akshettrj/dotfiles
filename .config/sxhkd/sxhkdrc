@@ -1,5 +1,8 @@
 # Terminals
 super + Return
+    wezterm
+
+super + Shift + Return
     alacritty
 
 # Browsers
@@ -11,10 +14,10 @@ super + shift + F1
 
 # File explorers
 super + e
-    alacritty -e lfub
+    wezterm -e lfub
 
 super + shift + e
-    alacritty -e ranger
+    wezterm -e ranger
 
 # Dmenu
 super + @space

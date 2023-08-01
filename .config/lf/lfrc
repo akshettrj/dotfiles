@@ -84,7 +84,7 @@ cmd mark-watched ${{
     set -f
     fName="$(basename "$fx")"
     fPath="$(dirname "$fx")"
-    mv "$fx" "$fPath"/" $fName"
+    mv "$fx" "$fPath"/" $fName"
 }}
 
 cmd drag-and-drop ${{
