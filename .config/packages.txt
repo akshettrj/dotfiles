@@ -93,7 +93,6 @@ intel-ucode
 intltool
 ipython
 joshuto-bin
-js78
 jupyterlab
 jupyterlab-widgets
 kernel-modules-hook
@@ -179,7 +178,6 @@ pdftk
 picom-jonaburg-git
 pkgconf
 playerctl
-pnpm-bin
 polkit
 polybar
 postgresql
@@ -305,6 +303,7 @@ wget
 which
 wireshark-qt
 wmname
+x2x-git
 xclip
 xdotool
 xf86-input-wacom
