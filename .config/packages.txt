@@ -37,8 +37,6 @@ copyq-git
 corkscrew
 cowsay
 cronie
-cuda-11.0
-cudnn8-cuda11.0
 devtools
 diffpdf
 discord
