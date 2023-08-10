@@ -102,6 +102,7 @@ libbytesize
 libc++
 libcmis
 libinih
+libldac
 libluv
 libmpack
 libnotify
@@ -174,14 +175,13 @@ patch
 pcmanfm
 pdftk
 picom-jonaburg-git
+pipewire-pulse
 pkgconf
 playerctl
 polkit
 polybar
 postgresql
-pulseaudio
 pulseaudio-alsa
-pulseaudio-bluetooth
 pulsemixer
 pyright
 python-black
@@ -196,6 +196,7 @@ python-future
 python-jsonpointer
 python-jupyter-server-terminals
 python-jupyterlab-server
+python-lsp-server
 python-pastel
 python-pip
 python-poetry
@@ -295,6 +296,8 @@ vim
 virt-manager
 visual-studio-code-bin
 volume_key
+vscode-html-languageserver
+vscode-json-languageserver
 vulkan-intel
 wezterm
 wget

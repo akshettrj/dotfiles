@@ -19,6 +19,12 @@ if awesome.startup_errors then
     })
 end
 
+-- naughty.notify({
+--     preset = naughty.config.presets.critical,
+--     title = ("Screen number %s"):format(s.index),
+--     text = ("%sx%s+%s+%s"):format(s.workarea.width, s.workarea.height, s.workarea.x, s.workarea.y),
+-- })
+
 do
     local in_error = false
     awesome.connect_signal("debug::error", function(err)
@@ -116,11 +122,6 @@ awful.screen.connect_for_each_screen(function(s)
 
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-    -- naughty.notify({
-    --     preset = naughty.config.presets.critical,
-    --     title = ("Screen number %s"):format(s.index),
-    --     text = ("%sx%s+%s+%s"):format(s.workarea.width, s.workarea.height, s.workarea.x, s.workarea.y),
-    -- })
 
     s.mypromptbox = awful.widget.prompt()
 
