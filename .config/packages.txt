@@ -86,6 +86,7 @@ grub
 gzip
 haveged
 helix
+hyprland-nvidia
 imagemagick
 intel-ucode
 intltool
@@ -297,9 +298,11 @@ vim
 virt-manager
 visual-studio-code-bin
 volume_key
+vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
+waybar-hyprland-git
 wezterm
 wget
 which
@@ -307,6 +310,7 @@ wireshark-qt
 wmname
 x2x-git
 xclip
+xdg-desktop-portal-hyprland
 xdotool
 xf86-input-wacom
 xf86-video-vesa
