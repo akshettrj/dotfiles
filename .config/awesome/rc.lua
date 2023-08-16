@@ -43,7 +43,9 @@ end
 
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 if awesome.hostname == "ltrcakki" then
-    beautiful.font = "JetBrainsMono NF 9"
+    beautiful.font = "JetBrainsMono NF 8"
+    beautiful.notification_icon_size = 60
+    beautiful.notification_font = "JetBrainsMono NF 8"
 end
 
 awesome.set_preferred_icon_size(32)

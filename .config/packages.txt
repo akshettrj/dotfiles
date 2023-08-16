@@ -118,6 +118,7 @@ linux-wifi-hotspot
 lldb
 lohit-fonts
 lsd
+lua-language-server
 lua51
 lua51-lpeg
 lua51-mpack
