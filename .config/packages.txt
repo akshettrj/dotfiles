@@ -37,6 +37,7 @@ copyq-git
 corkscrew
 cowsay
 cronie
+deno
 devtools
 diffpdf
 discord
@@ -87,6 +88,7 @@ gzip
 haveged
 helix
 hyprland-nvidia
+hyprpaper
 imagemagick
 intel-ucode
 intltool
@@ -176,7 +178,7 @@ paru-bin
 patch
 pcmanfm
 pdftk
-picom-jonaburg-git
+picom
 pipewire-pulse
 pkgconf
 playerctl
@@ -302,7 +304,7 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
-waybar-hyprland-git
+waybar
 wezterm
 wget
 which

@@ -12,7 +12,7 @@ config.font = wezterm.font_with_fallback({
     "Lohit Hindi",
 })
 config.color_scheme = 'Gruvbox Dark (Gogh)'
--- config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
 config.window_background_opacity = 0.9
 
 return config
