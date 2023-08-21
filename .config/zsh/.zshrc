@@ -89,4 +89,6 @@ elif [[ "$(tty)" == "/dev/tty3" ]]; then
     diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
     # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
     pgrep awesome || startx "$HOME/.config/X11/Xinitrc_xfce4"
+elif [[ "$(tty)" == "/dev/tty5" ]]; then
+    pgrep Hyprland || Hyprland
 fi

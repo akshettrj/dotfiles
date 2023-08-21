@@ -13,6 +13,6 @@ config.font = wezterm.font_with_fallback({
 })
 config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.hide_tab_bar_if_only_one_tab = false
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 
 return config
