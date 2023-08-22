@@ -218,7 +218,6 @@ qt5-styleplugins
 qt5ct
 ranger
 rclone
-redshift
 rest
 ripgrep
 ripmime
