@@ -231,6 +231,7 @@ slack-desktop
 sndio
 sshfs
 sudo
+swaylock
 sxhkd
 sxiv
 systeroid
