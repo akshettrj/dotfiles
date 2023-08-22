@@ -37,6 +37,7 @@ copyq-git
 corkscrew
 cowsay
 cronie
+debtap
 deno
 devtools
 diffpdf
@@ -87,7 +88,7 @@ grub
 gzip
 haveged
 helix
-hyprland-nvidia
+hyprland
 hyprpaper
 imagemagick
 intel-ucode
@@ -267,9 +268,7 @@ tidy
 tk
 tldr
 tmux
-tomate-alarm-plugin
-tomate-gtk
-tomate-statusicon-plugin
+tofi
 transmission-cli
 tree-sitter
 ttf-fira-mono
