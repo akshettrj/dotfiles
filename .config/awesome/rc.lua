@@ -625,7 +625,11 @@ awful.rules.rules = {
     },
 
     { rule = { class = "64Gram" },
-        properties = { screen = awful.screen.preferred }
+        properties = { screen = awful.screen.preferred, tag = "8" }
+    },
+
+    { rule = { class = "Beeper" },
+        properties = { screen = awful.screen.preferred, tag = "9" }
     },
 
     { rule = { class = "discord" },

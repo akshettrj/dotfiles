@@ -24,13 +24,21 @@ follow-symlinks = true
 [editor.indent-guides]
 render = true
 character = '|'
-skip-levels = 0
+skip-levels = 1
 
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
 snippets = true
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 esc = ['collapse_selection', 'keep_primary_selection']
-
+H = "goto_first_nonwhitespace"
+L = "goto_line_end"
+A-l = "jump_view_right"
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"

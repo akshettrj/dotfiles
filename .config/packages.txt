@@ -19,6 +19,7 @@ bat
 bat-extras
 bc
 bdf-unifont
+bemenu
 binutils
 bison
 blueman
@@ -183,6 +184,7 @@ picom
 pipewire-pulse
 pkgconf
 playerctl
+plex-desktop
 polkit
 polybar
 postgresql
@@ -303,15 +305,18 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
+watershot
 waybar
-wezterm
+wdisplays-git
+wezterm-git
 wget
 which
 wireshark-qt
 wmname
+wofi
 x2x-git
 xclip
-xdg-desktop-portal-hyprland
+xdg-desktop-portal-hyprland-git
 xdotool
 xf86-input-wacom
 xf86-video-vesa

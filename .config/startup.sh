@@ -11,7 +11,7 @@ if [ "$1" != "ltrcakki" ]; then
 
 else
 
-    _layout_lab_samsung_dell.sh
+    _layout_lab_dell_lenovo.sh
 
 fi
 
