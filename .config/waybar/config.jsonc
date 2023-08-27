@@ -120,7 +120,7 @@
     "format-ethernet": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes} 󰈀",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
     "format-linked": " {ifname}",
-    "interval": 2,
+    "interval": 5,
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
