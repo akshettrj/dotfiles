@@ -270,7 +270,6 @@ tidy
 tk
 tldr
 tmux
-tofi
 transmission-cli
 tree-sitter
 ttf-fira-mono
