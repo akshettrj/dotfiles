@@ -34,6 +34,7 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
+    "interval": 10,
   },
   "hyprland/window": {
     "max-length": 200,
@@ -68,6 +69,7 @@
     "on-click": "playerctl -p mpd previous",
     "on-click-middle": "playerctl -p mpd play-pause",
     "on-click-right": "playerctl -p mpd next",
+    "interval": 1,
   },
   "tray": {
     "icon-size": 15,
@@ -77,6 +79,7 @@
     "timezone": "Asia/Kolkata",
     "format": " {:%H:%M %d-%m-%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 5,
   },
   "cpu": {
     "format": " {usage}%",
@@ -109,13 +112,15 @@
       "",
       "",
       ""
-    ]
+    ],
+    "interval": 10,
   },
   "network": {
     "format-wifi": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes} ",
     "format-ethernet": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes} 󰈀",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
-    "format-linked": " {ifname}"
+    "format-linked": " {ifname}",
+    "interval": 2,
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",

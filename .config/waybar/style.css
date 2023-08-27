@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono NF, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 window#waybar {
