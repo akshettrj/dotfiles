@@ -22,7 +22,7 @@
   "hyprland/workspaces": {
     "all-outputs": true,
     "show-special": true,
-    "format": "{icon} {id}",
+    "format": "{id}",
     "format-icons": {
       "special": "",
       "active": "",
@@ -70,6 +70,7 @@
     "on-click-middle": "playerctl -p mpd play-pause",
     "on-click-right": "playerctl -p mpd next",
     "interval": 1,
+    "max-length": 100
   },
   "tray": {
     "icon-size": 15,

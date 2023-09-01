@@ -23,7 +23,7 @@ bemenu
 binutils
 bison
 blueman
-bluetuith
+bluetuith-bin
 brave-bin
 brightnessctl
 bspwm
@@ -218,6 +218,7 @@ python-webcolors
 qemu-full
 qt5-styleplugins
 qt5ct
+qt6ct
 ranger
 rclone
 rest
@@ -369,6 +370,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xournalpp
+xplr
 xsecurelock
 xwallpaper
 yad
