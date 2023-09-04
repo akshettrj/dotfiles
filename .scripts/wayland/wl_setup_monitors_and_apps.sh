@@ -16,7 +16,7 @@ if [ "${_HOSTNAME}" = "akkihp" ]; then
   hyprctl keyword workspace "9,monitor:eDP-1"
   hyprctl keyword workspace "10,monitor:eDP-1"
 
-  _WAYBAR_FONT_SIZE=14px
+  _WAYBAR_FONT_SIZE=12px
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 
@@ -45,7 +45,7 @@ elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
   hyprctl keyword workspace "19,monitor:HDMI-A-1"
   hyprctl keyword workspace "20,monitor:HDMI-A-1"
   
-  _WAYBAR_FONT_SIZE=12px
+  _WAYBAR_FONT_SIZE=10px
 
 fi
 
