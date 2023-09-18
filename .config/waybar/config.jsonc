@@ -29,9 +29,6 @@
       "active": "",
       "default": ""
     },
-    "persistent_workspaces": {
-      "*": 9,
-    },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "on-click": "activate",
@@ -65,11 +62,13 @@
       "paused": "",
       "playing": ""
     },
-    "tooltip-format": "MPD (connected)",
+    "tooltip-format": "{stateIcon} {title} - {album} ({artist})",
     "tooltip-format-disconnected": "MPD (disconnected)",
     "on-click": "playerctl -p mpd previous",
     "on-click-middle": "playerctl -p mpd play-pause",
     "on-click-right": "playerctl -p mpd next",
+    "on-scroll-up": "playerctl -p mpd position '2+'",
+    "on-scroll-down": "playerctl -p mpd position '2-'",
     "interval": 1,
     "max-length": 100
   },
@@ -104,10 +103,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
+    "format": "{icon}  {capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
     "format-icons": [
       "",
       "",
@@ -128,7 +127,7 @@
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon}  {volume}%",
     "format-bluetooth-muted": "{icon}  󰝟",
-    "format-muted": "󰝟",
+    "format-muted": "󰝟 {volume}",
     "format-icons": {
       "headphone": "",
       "hands-free": "󰏳",
