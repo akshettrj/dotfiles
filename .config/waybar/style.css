@@ -1,7 +1,8 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono NF, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: ${_WAYBAR_FONT_SIZE};
+
+  font-size: $_WAYBAR_FONT_SIZE;
 }
 
 window#waybar {
@@ -45,7 +46,7 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-#workspaces button.special {
+#workspaces button.urgent {
   background-color: #eb4d4b;
 }
 

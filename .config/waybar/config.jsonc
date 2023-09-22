@@ -21,11 +21,11 @@
     "tray"
   ],
   "hyprland/workspaces": {
-    "all-outputs": true,
+    "all-outputs": false,
     "show-special": true,
     "format": "{id}",
     "format-icons": {
-      "special": "",
+      "urgent": "",
       "active": "",
       "default": ""
     },
