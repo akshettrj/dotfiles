@@ -42,6 +42,7 @@ pidof dunst && killall dunst
 pidof np-applet && killall nm-applet
 pidof mpdris2-rs && killall mpdris2-rs
 pidof copyq && killall copyq
+pidof flameshot && killall flameshot
 
 waybar -s "/tmp/waybar_style.css" &
 hyprpaper &
@@ -51,4 +52,5 @@ mpd &
 xdg-portal.sh &
 mpdris2-rs &
 copyq &
+(sleep 2; flameshot) &
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &

@@ -107,6 +107,11 @@ button:hover {
 }
 */
 
+#custom-separator {
+  color: white;
+  margin: 0 1px;
+}
+
 label:focus {
   background-color: #000000;
 }

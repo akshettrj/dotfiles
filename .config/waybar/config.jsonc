@@ -4,6 +4,7 @@
   "spacing": 1,
   "modules-left": [
     "hyprland/workspaces",
+    "custom/separator",
     "hyprland/window",
   ],
   "modules-center": [
@@ -12,11 +13,17 @@
   "modules-right": [
     "pulseaudio#output",
     "pulseaudio#input",
+    "custom/separator",
     "network",
+    "custom/separator",
     "backlight",
+    "custom/separator",
     "battery",
+    "custom/separator",
     "cpu",
+    "custom/separator",
     "clock",
+    "custom/separator",
     "custom/dunst",
     "tray"
   ],
@@ -79,7 +86,7 @@
   "clock": {
     "timezone": "Asia/Kolkata",
     "format": " {:%H:%M %d-%m-%Y}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "{:%d-%m-%Y, %A,\n%B}\n\n\n<tt><small>{calendar}</small></tt>",
     "interval": 5,
   },
   "cpu": {
@@ -160,5 +167,10 @@
     "exec": "~/.config/waybar/scripts/dunst.sh",
     "on-click": "dunstctl set-paused toggle",
     "restart-interval": 2,
-  }
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
 }
