@@ -1,9 +1,11 @@
-bacon
-cargo-add
 cargo-update
+diesel_cli
 du-dust
-gitoxide
-hexyl
+evcxr_jupyter
+irust
 nu
 protobuf-codegen
+sccache
 vimv
+wikinet
+yaydl

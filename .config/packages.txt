@@ -212,6 +212,7 @@ python-lsp-ruff
 python-lsp-server
 python-pastel
 python-pip
+python-pipenv
 python-poetry
 python-pylint
 python-pynvim
@@ -227,6 +228,7 @@ qemu-full
 qt5-styleplugins
 qt5ct
 qt6ct
+qt6gtk2
 ranger
 rclone
 rest
@@ -314,7 +316,7 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
-watershot
+watershot-git
 waybar-git
 wayshot-git
 wdisplays-git
