@@ -17,9 +17,9 @@
     "network",
     "custom/separator",
     "backlight",
-    "custom/separator",
+    // "custom/separator",
     "battery",
-    "custom/separator",
+    // "custom/separator",
     "cpu",
     "custom/separator",
     "clock",
@@ -94,7 +94,7 @@
     "tooltip": false
   },
   "backlight": {
-    "format": "{icon} {percent}%",
+    "format": "{icon} {percent}% | ",
     "format-icons": [
       "󰃚",
       "󰃛",
@@ -110,10 +110,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
+    "format": "{icon}  {capacity}% | ",
+    "format-charging": " {capacity}% | ",
+    "format-plugged": "  {capacity}% | ",
+    "format-alt": "{icon}  {time} | ",
     "format-icons": [
       "",
       "",

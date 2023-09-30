@@ -42,6 +42,8 @@ A-l = "jump_view_right"
 A-h = "jump_view_left"
 A-j = "jump_view_down"
 A-k = "jump_view_up"
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
 
 [keys.select]
 H = "goto_first_nonwhitespace"

@@ -1,6 +1,11 @@
 [[language]]
 name = "python"
 
+auto-format = false
+[language.formatter]
+command = "black"
+args = [ "--quiet", "--line-length=120", "-" ]
+
 [language.config.pylsp.plugins]
 flake8 = {enabled = false}
 autopep8 = {enabled = false}
