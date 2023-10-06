@@ -19,7 +19,7 @@
     "battery",
     "group/resources",
     "custom/separator",
-    "clock",
+    "group/clock",
     "custom/separator",
     "custom/dunst",
     "tray"
@@ -43,6 +43,13 @@
     "modules": [
       "cpu",
       "memory"
+    ],
+  },
+  "group/clock": {
+    "orientation": "orthogonal",
+    "modules": [
+      "clock#main",
+      "clock#secondary"
     ],
   },
   "hyprland/workspaces": {
@@ -101,10 +108,15 @@
     "icon-size": 15,
     "spacing": 8
   },
-  "clock": {
+  "clock#main": {
     "timezone": "Asia/Kolkata",
-    "format": " {:%H:%M %d-%m-%Y}",
+    "format": "  {:%H:%M:%S - %d-%m-%Y}",
     "tooltip-format": "{:%d-%m-%Y, %A,\n%B}\n\n\n<tt><small>{calendar}</small></tt>",
+    "interval": 5,
+  },
+  "clock#secondary": {
+    "timezone": "Asia/Kolkata",
+    "format": "{:%a, %b}",
     "interval": 5,
   },
   "cpu": {
@@ -142,15 +154,15 @@
     "interval": 10,
   },
   "network#download": {
-    "format-wifi": "󰇚 {bandwidthDownBytes} ",
-    "format-ethernet": "󰇚 {bandwidthDownBytes} 󰈀",
+    "format-wifi": "  {bandwidthDownBytes} 󰇚",
+    "format-ethernet": "󰈀  {bandwidthDownBytes} 󰇚",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
     "format-linked": " {ifname}",
     "interval": 5,
   },
   "network#upload": {
-    "format-wifi": "󰕒 {bandwidthUpBytes} ",
-    "format-ethernet": "󰕒 {bandwidthUpBytes} 󰈀",
+    "format-wifi": "{bandwidthUpBytes} 󰕒",
+    "format-ethernet": "{bandwidthUpBytes} 󰕒",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
     "format-linked": " {ifname}",
     "interval": 5,
