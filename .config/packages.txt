@@ -30,9 +30,9 @@ bspwm
 btop
 btrfs-progs
 bun-bin
-chromium
+cava-git
+chromedriver
 clang
-cloudflared
 cmake
 codelldb-bin
 copyq-git
@@ -74,6 +74,7 @@ garcon
 gcc
 gcc12
 gdb
+geckodriver
 gimp
 git
 git-delta
@@ -102,7 +103,7 @@ joshuto-bin
 jupyterlab
 jupyterlab-widgets
 kernel-modules-hook
-kguiaddons
+kguiaddons5
 libappindicator-gtk2
 libatasmart
 libblockdev
@@ -195,6 +196,7 @@ polybar
 postgresql
 pulseaudio-alsa
 pulsemixer
+pyenv
 pyright
 python-black
 python-clikit
@@ -225,6 +227,7 @@ python-tenacity
 python-tqdm
 python-webcolors
 qemu-full
+qpwgraph
 qt5-styleplugins
 qt5ct
 qt6ct
@@ -300,7 +303,7 @@ ttf-ubuntu-font-family
 tumbler
 typescript-language-server
 udisks2
-ueberzug
+ueberzugpp
 unibilium
 unison
 unrar
@@ -318,6 +321,7 @@ vscode-json-languageserver
 vulkan-intel
 watershot-git
 waybar-git
+waypipe
 wayshot-git
 wdisplays-git
 wezterm-git

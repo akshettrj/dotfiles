@@ -1,7 +1,7 @@
 [[language]]
 name = "python"
 
-auto-format = false
+auto-format = true
 [language.formatter]
 command = "black"
 args = [ "--quiet", "--line-length=120", "-" ]
@@ -11,7 +11,7 @@ flake8 = {enabled = false}
 autopep8 = {enabled = false}
 mccabe = {enabled = false}
 pycodestyle = {enabled = false}
-pyflakes = {enabled = false}
+pyflakes = {enabled = true}
 pylint = {enabled = false}
-yapf = {enabled = false}
+yapf = {enabled = true}
 ruff = { enabled = true, ignore = ["F401"], lineLength = 120 }

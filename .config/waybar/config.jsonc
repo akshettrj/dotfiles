@@ -11,22 +11,40 @@
     "mpd"
   ],
   "modules-right": [
-    "pulseaudio#output",
-    "pulseaudio#input",
+    "group/pulseaudio",
     "custom/separator",
-    "network",
+    "group/network",
     "custom/separator",
     "backlight",
-    // "custom/separator",
     "battery",
-    // "custom/separator",
-    "cpu",
+    "group/resources",
     "custom/separator",
     "clock",
     "custom/separator",
     "custom/dunst",
     "tray"
   ],
+  "group/network": {
+    "orientation": "orthogonal",
+    "modules": [
+      "network#download",
+      "network#upload"
+    ],
+  },
+  "group/pulseaudio": {
+    "orientation": "orthogonal",
+    "modules": [
+      "pulseaudio#output",
+      "pulseaudio#input"
+    ],
+  },
+  "group/resources": {
+    "orientation": "orthogonal",
+    "modules": [
+      "cpu",
+      "memory"
+    ],
+  },
   "hyprland/workspaces": {
     "all-outputs": false,
     "show-special": true,
@@ -123,9 +141,16 @@
     ],
     "interval": 10,
   },
-  "network": {
-    "format-wifi": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes} ",
-    "format-ethernet": "󰇚 {bandwidthDownBytes} 󰕒 {bandwidthUpBytes} 󰈀",
+  "network#download": {
+    "format-wifi": "󰇚 {bandwidthDownBytes} ",
+    "format-ethernet": "󰇚 {bandwidthDownBytes} 󰈀",
+    "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
+    "format-linked": " {ifname}",
+    "interval": 5,
+  },
+  "network#upload": {
+    "format-wifi": "󰕒 {bandwidthUpBytes} ",
+    "format-ethernet": "󰕒 {bandwidthUpBytes} 󰈀",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
     "format-linked": " {ifname}",
     "interval": 5,
@@ -171,6 +196,34 @@
   "custom/separator": {
     "format": "|",
     "interval": "once",
-    "tooltip": false
+    "tooltip": false,
+  },
+  "mpris": {
+    "ignored-players": [
+      "mpd"
+    ],
+    "interval": 2,
+    "format-playing": "{player_icon}  {status_icon} {dynamic}",
+    "format-paused": "{player_icon}  {status_icon}",
+    "format-stopped": "",
+    "player-icons": {
+      "default": " ",
+      "firefox": "󰈹",
+      "chromium": "",
+      "brave": "",
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+    "on-click": "previous track",
+    "on-middle-click": "play-pause",
+    "on-right-click": "next track",
+  },
+  "memory": {
+    "interval": 5,
+    "format": "  {}%",
+    "max-length": 10
   },
 }

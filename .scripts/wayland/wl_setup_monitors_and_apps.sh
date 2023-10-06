@@ -2,7 +2,6 @@
 
 _HOSTNAME="$(hostnamectl --static)"
 
-
 if [ "${_HOSTNAME}" = "akkihp" ]; then
   hyprctl keyword monitor "eDP-1,1920x1080,0x0,1"
   hyprctl keyword monitor "HDMI-A-2,1920x1080@60,1920x0,1"
@@ -14,8 +13,6 @@ if [ "${_HOSTNAME}" = "akkihp" ]; then
   for ws in {11..20}; do
     hyprctl keyword workspace "$ws,monitor:HDMI-A-2"
   done
-
-  _WAYBAR_FONT_SIZE=12px
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 
@@ -29,14 +26,9 @@ elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
   for ws in {11..20}; do
     hyprctl keyword workspace "$ws,monitor:HDMI-A-1"
   done
-  
-  _WAYBAR_FONT_SIZE=10px
 
 fi
 
-_WAYBAR_FONT_SIZE=${_WAYBAR_FONT_SIZE:-12px} envsubst < ~/.config/waybar/style.css > /tmp/waybar_style.css
-
-pidof waybar && killall waybar
 pidof hyprpaper && killall hyprpaper
 pidof dunst && killall dunst
 pidof np-applet && killall nm-applet
@@ -44,7 +36,7 @@ pidof mpdris2-rs && killall mpdris2-rs
 pidof copyq && killall copyq
 pidof flameshot && killall flameshot
 
-waybar -s "/tmp/waybar_style.css" &
+bash ~/.config/waybar/scripts/run_waybar.sh &
 hyprpaper &
 dunst &
 nm-applet &

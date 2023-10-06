@@ -1,6 +1,9 @@
 function cd() {
   builtin cd "$@"
+  check_and_load_venv
+}
 
+function check_and_load_venv() {
   if [[ -z "$VIRTUAL_ENV" ]] ; then
     ## If venv folder is found then activate the vitualenv
       if [[ -d ./venv ]] ; then
@@ -16,3 +19,5 @@ function cd() {
       fi
   fi
 }
+
+check_and_load_venv

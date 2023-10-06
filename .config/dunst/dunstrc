@@ -126,7 +126,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s%p</b>\n%b"
+    format = "<u><b>[ %a ]</b></u>\n<u>%s%p</u>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -149,7 +149,7 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = false
+    stack_duplicates = true
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
@@ -160,7 +160,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = right
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
