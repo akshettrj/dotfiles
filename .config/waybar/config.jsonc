@@ -11,6 +11,7 @@
     "mpd"
   ],
   "modules-right": [
+    "custom/separator",
     "group/pulseaudio",
     "custom/separator",
     "group/network",
@@ -21,10 +22,18 @@
     "custom/separator",
     "group/clock",
     "custom/separator",
-    "custom/dunst",
+    "group/buttons",
+    "custom/separator",
     "tray"
   ],
   "group/network": {
+    "orientation": "inherit",
+    "modules": [
+      "network#type",
+      "group/networkspeeds"
+    ],
+  },
+  "group/networkspeeds": {
     "orientation": "orthogonal",
     "modules": [
       "network#download",
@@ -50,6 +59,13 @@
     "modules": [
       "clock#main",
       "clock#secondary"
+    ],
+  },
+  "group/buttons": {
+    "orientation": "orthogonal",
+    "modules": [
+      "custom/dunst",
+      "custom/swaylock"
     ],
   },
   "hyprland/workspaces": {
@@ -96,11 +112,11 @@
     },
     "tooltip-format": "{stateIcon} {title} - {album} ({artist})",
     "tooltip-format-disconnected": "MPD (disconnected)",
-    "on-click": "playerctl -p mpd previous",
-    "on-click-middle": "playerctl -p mpd play-pause",
-    "on-click-right": "playerctl -p mpd next",
-    "on-scroll-up": "playerctl -p mpd position '2+'",
-    "on-scroll-down": "playerctl -p mpd position '2-'",
+    "on-click": "mpc -q prev",
+    "on-click-middle": "mpc -q toggle",
+    "on-click-right": "mpc -q next",
+    "on-scroll-up": "mpc -q seek '+00:00:02'",
+    "on-scroll-down": "mpc -q seek '-00:00:02'",
     "interval": 1,
     "max-length": 100
   },
@@ -110,7 +126,7 @@
   },
   "clock#main": {
     "timezone": "Asia/Kolkata",
-    "format": "  {:%H:%M:%S - %d-%m-%Y}",
+    "format": "{:%H:%M:%S - %d-%m-%Y}",
     "tooltip-format": "{:%d-%m-%Y, %A,\n%B}\n\n\n<tt><small>{calendar}</small></tt>",
     "interval": 5,
   },
@@ -120,7 +136,7 @@
     "interval": 5,
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "  {usage}%",
     "tooltip": false
   },
   "backlight": {
@@ -153,9 +169,16 @@
     ],
     "interval": 10,
   },
+  "network#type": {
+    "format-wifi": " ",
+    "format-ethernet": "󰈀 ",
+    "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
+    "format-linked": " {ifname}",
+    "interval": 5,
+  },
   "network#download": {
-    "format-wifi": "  {bandwidthDownBytes} 󰇚",
-    "format-ethernet": "󰈀  {bandwidthDownBytes} 󰇚",
+    "format-wifi": "{bandwidthDownBytes} 󰇚",
+    "format-ethernet": "{bandwidthDownBytes} 󰇚",
     "tooltip-format": "[{ifname}] {essid} via {ipaddr}",
     "format-linked": " {ifname}",
     "interval": 5,
@@ -203,7 +226,12 @@
   "custom/dunst": {
     "exec": "~/.config/waybar/scripts/dunst.sh",
     "on-click": "dunstctl set-paused toggle",
-    "restart-interval": 2,
+    "restart-interval": 1,
+  },
+  "custom/swaylock": {
+    "exec": "echo 󰌾",
+    "on-click": "swaylock",
+    "interval": "once",
   },
   "custom/separator": {
     "format": "|",
@@ -211,9 +239,6 @@
     "tooltip": false,
   },
   "mpris": {
-    "ignored-players": [
-      "mpd"
-    ],
     "interval": 2,
     "format-playing": "{player_icon}  {status_icon} {dynamic}",
     "format-paused": "{player_icon}  {status_icon}",
@@ -229,9 +254,9 @@
       "playing": "",
       "stopped": "",
     },
-    "on-click": "previous track",
-    "on-middle-click": "play-pause",
-    "on-right-click": "next track",
+    "on-click": "playerctl previous",
+    "on-middle-click": "playerctl play-pause",
+    "on-right-click": "playerctl next",
   },
   "memory": {
     "interval": 5,

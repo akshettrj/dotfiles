@@ -29,12 +29,12 @@ elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 
 fi
 
-pidof hyprpaper && killall hyprpaper
-pidof dunst && killall dunst
-pidof np-applet && killall nm-applet
-pidof mpdris2-rs && killall mpdris2-rs
-pidof copyq && killall copyq
-pidof flameshot && killall flameshot
+pidof hyprpaper && killall -9 hyprpaper
+pidof dunst && killall -9 dunst
+pidof np-applet && killall -9 nm-applet
+# pidof mpdris2-rs && killall mpdris2-rs
+pidof copyq && killall -9 copyq
+pidof flameshot && killall -9 flameshot
 
 bash ~/.config/waybar/scripts/run_waybar.sh &
 hyprpaper &
@@ -42,7 +42,7 @@ dunst &
 nm-applet &
 mpd &
 xdg-portal.sh &
-mpdris2-rs &
+# mpdris2-rs &
 copyq &
-(sleep 2; flameshot) &
+(sleep 5; flameshot) &
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
