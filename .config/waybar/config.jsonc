@@ -16,8 +16,7 @@
     "custom/separator",
     "group/network",
     "custom/separator",
-    "backlight",
-    "battery",
+    "group/laptop",
     "group/resources",
     "custom/separator",
     "group/clock",
@@ -26,14 +25,28 @@
     "custom/separator",
     "tray"
   ],
+  "group/laptop": {
+    "orientation": "inherit",
+    "modules": [
+      "group/laptop_modules",
+      "custom/separator"
+    ],
+  },
+  "group/laptop_modules": {
+    "orientation": "orthogonal",
+    "modules": [
+      "backlight",
+      "battery"
+    ],
+  },
   "group/network": {
     "orientation": "inherit",
     "modules": [
       "network#type",
-      "group/networkspeeds"
+      "group/network_speeds"
     ],
   },
-  "group/networkspeeds": {
+  "group/network_speeds": {
     "orientation": "orthogonal",
     "modules": [
       "network#download",
@@ -62,6 +75,21 @@
     ],
   },
   "group/buttons": {
+    "orientation": "inherit",
+    "modules": [
+      "group/buttons_misc",
+      "custom/separator",
+      "group/buttons_rfkill"
+    ],
+  },
+  "group/buttons_rfkill": {
+    "orientation": "orthogonal",
+    "modules": [
+      "custom/rfkill_wlan",
+      "custom/rfkill_bluetooth"
+    ],
+  },
+  "group/buttons_misc": {
     "orientation": "orthogonal",
     "modules": [
       "custom/dunst",
@@ -140,7 +168,9 @@
     "tooltip": false
   },
   "backlight": {
-    "format": "{icon} {percent}% | ",
+    "format": "{icon} {percent}%",
+    "on-scroll-up": "brightnessctl -q --min-value=12000 set -- '+1%'",
+    "on-scroll-down": "brightnessctl -q --min-value=12000 set -- '-1%'",
     "format-icons": [
       "󰃚",
       "󰃛",
@@ -156,10 +186,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}% | ",
-    "format-charging": " {capacity}% | ",
-    "format-plugged": "  {capacity}% | ",
-    "format-alt": "{icon}  {time} | ",
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
     "format-icons": [
       "",
       "",
@@ -226,6 +256,16 @@
   "custom/dunst": {
     "exec": "~/.config/waybar/scripts/dunst.sh",
     "on-click": "dunstctl set-paused toggle",
+    "restart-interval": 1,
+  },
+  "custom/rfkill_wlan": {
+    "exec": "~/.config/waybar/scripts/rfkill.sh wlan",
+    "on-click": "rfkill toggle wlan",
+    "restart-interval": 1,
+  },
+  "custom/rfkill_bluetooth": {
+    "exec": "~/.config/waybar/scripts/rfkill.sh bluetooth",
+    "on-click": "rfkill toggle bluetooth",
     "restart-interval": 1,
   },
   "custom/swaylock": {

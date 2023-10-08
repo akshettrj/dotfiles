@@ -60,6 +60,8 @@ button:hover {
 #mpris,
 #mpd,
 #memory,
+#custom-rfkill_wlan,
+#custom-rfkill_bluetooth,
 #custom-dunst {
   padding: 0 2px;
   color: #ffffff;
