@@ -1,19 +1,19 @@
 set shell zsh
 set shellopts '-euy'
 
-set hidden on
+set hidden true
 
 set ifs "\n"
 
-set number on
-set relativenumber on
+set number true
+set relativenumber true
 
-set icons on
-set preview on
+set icons true
+set preview true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
-set drawbox on
-set hidden on
+set drawbox true
+set hidden true
 
 cmd mkdir %mkdir "$@"
 cmd touch %touch "$@"

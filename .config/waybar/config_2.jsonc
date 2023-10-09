@@ -1,0 +1,100 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "mpris",
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "mpd",
+  ],
+  "group/clock": {
+    "orientation": "orthogonal",
+    "modules": [
+      "clock#main",
+      "clock#secondary"
+    ],
+  },
+  "clock#main": {
+    "timezone": "Asia/Kolkata",
+    "format": "{:%H:%M:%S - %d-%m-%Y}",
+    "tooltip-format": "{:%d-%m-%Y, %A,\n%B}\n\n\n<tt><small>{calendar}</small></tt>",
+    "interval": 5,
+  },
+  "clock#secondary": {
+    "timezone": "Asia/Kolkata",
+    "format": "{:%a, %b}",
+    "interval": 5,
+  },
+  "mpd": {
+    "format": "{stateIcon} {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-paused": "{stateIcon} {title}",
+    "format-disconnected": " Disconnected",
+    "format-stopped": " {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
+    "unknown-tag": "N/A",
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "{stateIcon} {title} - {album} ({artist})",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "mpc -q prev",
+    "on-click-middle": "mpc -q toggle",
+    "on-click-right": "mpc -q next",
+    "on-scroll-up": "mpc -q seek '+00:00:02'",
+    "on-scroll-down": "mpc -q seek '-00:00:02'",
+    "interval": 1,
+  },
+  "mpris": {
+    "interval": 1,
+    "format-playing": "{status_icon} {player_icon} {dynamic}",
+    "format-paused": "{status_icon} {player_icon} {dynamic}",
+    "format-stopped": "",
+    "tooltip-format": "{player} - {status} - {dynamic}",
+    "on-click": "playerctl previous",
+    "on-click-middle": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl position '2+'",
+    "on-scroll-down": "playerctl position '2-'",
+    "player-icons": {
+      "default": "",
+      "firefox": " 󰈹 ",
+      "chromium": "  ",
+      "brave": "  ",
+      "mpv": " 󰨜 ",
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+    "dynamic-len": -1,
+    "dynamic-importance-order": [
+      "position",
+      "length",
+      "title",
+      "artist",
+      "album",
+    ],
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false,
+  },
+}

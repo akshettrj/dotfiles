@@ -15,4 +15,5 @@ fi
 _WAYBAR_FONT_SIZE=${_WAYBAR_FONT_SIZE:-12px} envsubst < ~/.config/waybar/style.css > /tmp/waybar_style.css
 
 pidof waybar && killall -9 waybar
-waybar -s "/tmp/waybar_style.css" &
+waybar -c ~/.config/waybar/config.jsonc -s "/tmp/waybar_style.css" &
+waybar -c ~/.config/waybar/config_2.jsonc -s "/tmp/waybar_style.css" &

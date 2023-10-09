@@ -63,7 +63,7 @@ button:hover {
 #custom-rfkill_wlan,
 #custom-rfkill_bluetooth,
 #custom-dunst {
-  padding: 0 2px;
+  padding: 0 5px;
   color: #ffffff;
 }
 
@@ -115,7 +115,7 @@ button:hover {
 #custom-separator {
   color: white;
   margin: 0 3px;
-  font-size: 23px;
+  font-size: 18px;
 }
 
 label:focus {
