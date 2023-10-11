@@ -29,8 +29,8 @@
     "interval": 5,
   },
   "mpd": {
-    "format": "{stateIcon} {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-    "format-paused": "{stateIcon} {title}",
+    "format": "{stateIcon} [{songPosition}/{queueLength}] {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-paused": "{stateIcon} [{songPosition}/{queueLength}] {title}",
     "format-disconnected": " Disconnected",
     "format-stopped": " {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
     "unknown-tag": "N/A",

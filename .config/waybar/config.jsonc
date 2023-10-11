@@ -225,11 +225,13 @@
   "custom/rfkill_wlan": {
     "exec": "~/.config/waybar/scripts/rfkill.sh wlan",
     "on-click": "rfkill toggle wlan",
+    "on-click-right": "wezterm -e nmtui",
     "restart-interval": 1,
   },
   "custom/rfkill_bluetooth": {
     "exec": "~/.config/waybar/scripts/rfkill.sh bluetooth",
     "on-click": "rfkill toggle bluetooth",
+    "on-click-right": "wezterm -e bluetuith",
     "restart-interval": 1,
   },
   "custom/swaylock": {

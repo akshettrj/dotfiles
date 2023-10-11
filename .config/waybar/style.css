@@ -1,7 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono NF, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-
   font-size: $_WAYBAR_FONT_SIZE;
 }
 
@@ -15,6 +14,10 @@ window#waybar {
 
 window#waybar.hidden {
   opacity: 0.2;
+}
+
+window#waybar {
+  background-color: #1e1f1e;
 }
 
 button {

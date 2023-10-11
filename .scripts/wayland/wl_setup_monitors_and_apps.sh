@@ -30,7 +30,7 @@ elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 fi
 
 pidof hyprpaper && killall -9 hyprpaper
-pidof dunst && killall -9 dunst
+pidof dunst || dunst &
 pidof np-applet && killall -9 nm-applet
 # pidof mpdris2-rs && killall mpdris2-rs
 pidof copyq && killall -9 copyq
@@ -38,7 +38,6 @@ pidof flameshot && killall -9 flameshot
 
 bash ~/.config/waybar/scripts/run_waybar.sh &
 hyprpaper &
-dunst &
 nm-applet &
 mpd &
 xdg-portal.sh &
