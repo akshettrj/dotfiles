@@ -75,10 +75,7 @@ _MONITOR_CONF_DST="/usr/share/X11/xorg.conf.d/10-monitor.conf"
 # _INTEL_CONF_DST="/usr/share/X11/xorg.conf.d/20-intel.conf"
 
 if [[ "$(tty)" == "/dev/tty1" ]]; then
-    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
-    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
-    # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
-    pgrep awesome || startx "$HOME/.config/X11/Xinitrc_awesome"
+    pgrep Hyprland || Hyprland
 elif [[ "$(tty)" == "/dev/tty2" ]]; then
     diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
     diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
@@ -90,5 +87,8 @@ elif [[ "$(tty)" == "/dev/tty3" ]]; then
     # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
     pgrep awesome || startx "$HOME/.config/X11/Xinitrc_xfce4"
 elif [[ "$(tty)" == "/dev/tty5" ]]; then
-    pgrep Hyprland || Hyprland
+    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
+    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
+    # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
+    pgrep awesome || startx "$HOME/.config/X11/Xinitrc_awesome"
 fi

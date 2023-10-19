@@ -1,0 +1,5 @@
+_copy_output() {
+	_arguments ':command:_command_names'
+}
+
+compdef _copy_output copy_output
