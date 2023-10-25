@@ -13,6 +13,7 @@ atool
 autoconf
 automake
 awesome
+aws-cli-v2
 base
 base-devel
 bash-completion
@@ -99,6 +100,8 @@ haveged
 helix
 hyprland-git
 hyprpaper
+hyprpicker-git
+ibus
 imagemagick
 intel-ucode
 intltool
@@ -106,8 +109,10 @@ ipython
 joshuto-bin
 jupyterlab
 jupyterlab-widgets
+kdeconnect
 kernel-modules-hook
 kguiaddons5
+lf-git
 libappindicator-gtk2
 libatasmart
 libblockdev
@@ -173,6 +178,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 ntfs-3g
+numbat
 nvidia
 nvidia-settings
 nvm
@@ -248,6 +254,7 @@ rustup
 scrcpy
 sed
 shellcheck
+signal-desktop
 sioyek-git
 slack-desktop
 sndio
@@ -310,6 +317,7 @@ tumbler
 typescript-language-server
 udisks2
 ueberzugpp
+unarchiver
 unibilium
 unison
 unrar
@@ -399,6 +407,7 @@ xwallpaper
 yad
 yapf
 yarn
+yazi
 yt-dlp
 zaread-git
 zathura

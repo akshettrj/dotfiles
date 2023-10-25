@@ -101,7 +101,6 @@ work/
 .BurpSuite/
 .conda/
 .config/Beeper/
-.config/bluetuith/
 .config/easytag/
 .config/irust/
 .config/kickstart.nvim/
