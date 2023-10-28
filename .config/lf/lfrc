@@ -135,3 +135,5 @@ map gnv cd "~/work/vimwiki_notes"
 # Easy navigation ( college )
 map gcd cd "~/iiith/"
 map gcc cd "~/iiith/4.2"
+map gcr cd "~/iiith/research/subba"
+map gcs cd "~/iiith/research/subba"

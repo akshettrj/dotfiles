@@ -11,7 +11,7 @@ bufferline = "always"
 color-modes = true
 true-color = true
 completion-trigger-len = 1
-rulers = [80]
+rulers = [80, 120]
 
 [editor.cursor-shape]
 insert = "bar"
