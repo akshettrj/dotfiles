@@ -118,7 +118,7 @@ button:hover {
 #custom-separator {
   color: white;
   margin: 0 3px;
-  font-size: 18px;
+  font-size: $_WAYBAR_SEPARATOR_FONT_SIZE;
 }
 
 label:focus {
