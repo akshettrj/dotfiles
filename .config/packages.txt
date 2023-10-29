@@ -254,7 +254,6 @@ rnote
 ruff
 rustup
 scrcpy
-sdbus-cpp
 sed
 shellcheck
 signal-desktop
