@@ -122,6 +122,9 @@
   "hyprland/window": {
     "max-length": 200,
     "separate-outputs": false,
+    "format": "{title}",
+    "icon": true,
+    "icon-size": 20,
   },
   "tray": {
     "icon-size": 15,
@@ -248,37 +251,5 @@
     "interval": 5,
     "format": "  {}%",
     "max-length": 10
-  },
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "on-scroll-up": "brightnessctl -q --min-value=12000 set -- '+1%'",
-    "on-scroll-down": "brightnessctl -q --min-value=12000 set -- '-1%'",
-    "format-icons": [
-      "󰃚",
-      "󰃛",
-      "󰃜",
-      "󰃝",
-      "󰃞",
-      "󰃟",
-      "󰃠",
-    ]
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "interval": 10,
   },
 }

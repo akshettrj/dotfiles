@@ -186,6 +186,7 @@ oath-toolkit
 obs-studio
 obsidian
 odt2txt
+oomox-qt6-styleplugin-git
 openldap
 openssl-1.1
 openvpn
@@ -241,6 +242,7 @@ qemu-full
 qpwgraph
 qt5-styleplugins
 qt5ct
+qt6-tools
 qt6ct
 qt6gtk2
 ranger
@@ -252,6 +254,7 @@ rnote
 ruff
 rustup
 scrcpy
+sdbus-cpp
 sed
 shellcheck
 signal-desktop
@@ -347,7 +350,7 @@ wmname
 wofi
 x2x-git
 xclip
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-wlr
 xdotool
 xf86-input-wacom
 xf86-video-vesa
