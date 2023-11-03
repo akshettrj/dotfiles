@@ -1,19 +1,43 @@
+[language-server.pylsp.config.plugins]
+flake8 = {enabled = false}
+autopep8 = {enabled = false}
+mccabe = {enabled = false}
+pycodestyle = {enabled = false}
+pyflakes = {enabled = false}
+pylint = {enabled = true}
+yapf = {enabled = false}
+ruff = { enabled = true, ignore = ["F401"], lineLength = 120 }
+
+[language-server.lua-language-server.config.Lua.workspace]
+maxPreload = 10000
+preloadFileSize = 10000
+[language-server.lua-language-server.config.Lua.workspace.library]
+"/usr/share/nvim/runtime/lua" = true
+"/usr/share/nvim/runtime/lua/vim/lsp" = true
+
+[language-server.lua-language-server.config.Lua.diagnostics]
+enable = true
+globals = ["vim"]
+disable = ["lowercase-global"]
+
+[language-server.lua-language-server.config.Lua.format]
+enable = true
+[language-server.lua-language-server.config.Lua.format.defaultConfig]
+indent_style = "space"
+indent_size = "4" 
+
 [[language]]
 name = "python"
 
-auto-format = true
+auto-format = false
 [language.formatter]
 command = "black"
 args = [ "--quiet", "--line-length=120", "-" ]
 
 language-servers = ["pylsp"]
 
-[language-server.pylsp.plugins]
-flake8 = {enabled = false}
-autopep8 = {enabled = false}
-mccabe = {enabled = false}
-pycodestyle = {enabled = false}
-pyflakes = {enabled = true}
-pylint = {enabled = false}
-yapf = {enabled = true}
-ruff = { enabled = true, ignore = ["F401"], lineLength = 120 }
+
+[[language]]
+name = "lua"
+
+auto-format = true

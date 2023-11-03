@@ -17,13 +17,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
-fpath=($ZDOTDIR/my_fpath $fpath)
-for to_source in $ZDOTDIR/my_fpath/*
-do
-    [ -d "$to_source" ] || continue
-    autoload -U "$to_source"
-done
-
 # Files from ~/.config/shellconfig directory
 for to_source in $HOME/.config/shellconfig/*
 do
