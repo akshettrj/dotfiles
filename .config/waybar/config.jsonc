@@ -239,7 +239,7 @@
   },
   "custom/swaylock": {
     "exec": "echo 󰌾",
-    "on-click": "swaylock",
+    "on-click": "bash -c 'pidof swaylock || swaylock'",
     "interval": "once",
   },
   "custom/separator": {

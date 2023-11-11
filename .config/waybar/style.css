@@ -65,6 +65,7 @@ button:hover {
 #memory,
 #custom-rfkill_wlan,
 #custom-rfkill_bluetooth,
+#custom-swaylock,
 #custom-dunst {
   padding: 0 5px;
   color: #ffffff;
