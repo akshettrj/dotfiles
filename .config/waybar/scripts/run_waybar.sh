@@ -4,8 +4,8 @@ _HOSTNAME="$(hostnamectl --static)"
 
 if [ "${_HOSTNAME}" = "akkihp" ]; then
 
-  _WAYBAR_FONT_SIZE=14px
-  _WAYBAR_SEPARATOR_FONT_SIZE=28px
+  _WAYBAR_FONT_SIZE=12px
+  _WAYBAR_SEPARATOR_FONT_SIZE=26px
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 

@@ -183,7 +183,7 @@ noto-fonts-extra
 npm
 ntfs-3g
 numbat
-nvidia
+nvidia-dkms
 nvidia-settings
 nvm
 oath-toolkit

@@ -3,15 +3,15 @@
 _HOSTNAME="$(hostnamectl --static)"
 
 if [ "${_HOSTNAME}" = "akkihp" ]; then
-  hyprctl keyword monitor "eDP-1,1920x1080,0x0,1"
-  hyprctl keyword monitor "HDMI-A-2,1920x1080@60,1920x0,1"
+  hyprctl keyword monitor "HDMI-A-1,1366x768@60,0x0,1"
+  hyprctl keyword monitor "eDP-1,1920x1080,1366x0,1"
 
   for ws in {1..10}; do
     hyprctl keyword workspace "$ws,monitor:eDP-1"
   done
 
   for ws in {11..20}; do
-    hyprctl keyword workspace "$ws,monitor:HDMI-A-2"
+    hyprctl keyword workspace "$ws,monitor:HDMI-A-1"
   done
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
