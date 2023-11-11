@@ -22,6 +22,7 @@ bat
 bat-extras
 bc
 bdf-unifont
+beeper-latest-bin
 bemenu
 binutils
 bison
@@ -89,6 +90,7 @@ gnome-keyring
 go
 golangci-lint-langserver-bin
 google-chrome
+gopls
 goreleaser
 gperf
 gptfdisk
@@ -106,6 +108,8 @@ imagemagick
 intel-ucode
 intltool
 ipython
+jdtls
+jless
 joshuto-bin
 jupyterlab
 jupyterlab-widgets
@@ -269,10 +273,12 @@ systeroid
 tailscale
 taplo-cli
 teams
+telegram-desktop
 terminus-font
 tesseract
 tesseract-data-eng
 texinfo
+texlab
 texlive-basic
 texlive-bibtexextra
 texlive-fontsextra
@@ -317,6 +323,8 @@ ttf-signika
 ttf-ubuntu-font-family
 tumbler
 typescript-language-server
+typst
+typst-lsp-git
 udisks2
 ueberzugpp
 unarchiver
@@ -407,6 +415,7 @@ xplr
 xsecurelock
 xwallpaper
 yad
+yaml-language-server
 yapf
 yarn
 yazi
@@ -418,5 +427,6 @@ zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
 zip
+zls
 zoxide
 zsh
