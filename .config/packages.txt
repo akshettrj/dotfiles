@@ -100,7 +100,7 @@ grub
 gzip
 haveged
 helix
-hyprland-git
+hyprland-nvidia-git
 hyprpaper
 hyprpicker-git
 ibus
