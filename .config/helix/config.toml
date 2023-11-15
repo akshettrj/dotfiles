@@ -44,7 +44,7 @@ center = ["version-control"]
 right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-type", "file-line-ending"]
 
 [keys.normal]
-esc = ['collapse_selection', 'keep_primary_selection']
+# esc = ['collapse_selection', 'keep_primary_selection']
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
 A-l = "jump_view_right"

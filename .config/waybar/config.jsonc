@@ -11,6 +11,8 @@
   "modules-center": [],
   "modules-right": [
     "group/laptop",
+    "privacy",
+    "custom/separator",
     "group/pulseaudio",
     "custom/separator",
     "group/network",
@@ -251,5 +253,26 @@
     "interval": 5,
     "format": "  {}%",
     "max-length": 10
+  },
+  "privacy": {
+    "icon-size": 15,
+    "transition-duration": 100,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 15,
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 15,
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 15,
+      },
+    ],
   },
 }
