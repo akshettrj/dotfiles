@@ -1,0 +1,7 @@
+[manager]
+sort_by = "natural"          # 1.md < 2.md < 10.md
+sort_reverse = false         #
+sort_sensitive = false       # sort case-sensitively
+sort_dir_first = true
+show_hidden = true
+show_symlink = true

@@ -19,5 +19,5 @@ _WAYBAR_SEPARATOR_FONT_SIZE=${_WAYBAR_SEPARATOR_FONT_SIZE:-20px} \
    envsubst < ~/.config/waybar/style.css > /tmp/waybar_style.css
 
 pidof waybar && killall -9 waybar
-waybar -c ~/.config/waybar/config.jsonc -s "/tmp/waybar_style.css" &
-waybar -c ~/.config/waybar/config_2.jsonc -s "/tmp/waybar_style.css" &
+waybar -c ~/.config/waybar/config.jsonc -s "/tmp/waybar_style.css" > /tmp/waybar_main 2>&1 &
+waybar -c ~/.config/waybar/config_2.jsonc -s "/tmp/waybar_style.css" > /tmp/waybar_second 2>&1 &

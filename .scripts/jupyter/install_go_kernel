@@ -1,0 +1,17 @@
+#!/bin/bash
+
+KERNEL_PATH="$HOME/.local/share/jupyter/kernels/gophernotes"
+
+go install "github.com/gopherdata/gophernotes@v0.7.5"
+
+if [ ! -d "$KERNEL_PATH" ]; then
+  mkdir -p "$KERNEL_PATH"
+fi
+
+cd "$KERNEL_PATH" || (echo "failed to cd into $KERNEL_PATH"; exit)
+
+cp -f "$(go env GOPATH)"/pkg/mod/github.com/gopherdata/gophernotes@v0.7.5/kernel/* "."
+
+chmod +w ./kernel.json
+
+sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json
