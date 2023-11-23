@@ -1,0 +1,34 @@
+roles:
+  monospace:
+  - Iosevka Nerd Font
+  - JetBrainsMono Nerd Font Mono
+  - Noto Color Emoji
+  ui-monospace:
+  - Iosevka Nerd Font
+  - JetBrainsMono Nerd Font Mono
+  - Noto Color Emoji
+  serif:
+  # - Faustina
+  # - Andada Pro
+  - Iosevka Nerd Font
+  - JetBrainsMono Nerd Font Mono
+  - Noto Color Emoji
+  sans-serif:
+  # - Iosevka Quasi Proportional Custom MdEx
+  # - Convergence
+  # - Rambla
+  # - Barlow Medium
+  # - Baloo 2 Medium
+  - Iosevka Nerd Font
+  - JetBrainsMono Nerd Font Mono
+  - Noto Color Emoji
+  emoji:
+  - Iosevka Nerd Font
+  - JetBrainsMono Nerd Font Mono
+  - Noto Color Emoji
+options:
+  autohint: 'false'
+  hinting: 'false'
+  hintstyle: hintnone
+  lcdfilter: lcddefault
+  rgba: rgb
