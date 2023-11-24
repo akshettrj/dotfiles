@@ -206,7 +206,6 @@ picom
 pipewire-pulse
 pkgconf
 playerctl
-plex-desktop
 polkit
 polybar
 postgresql
@@ -261,7 +260,7 @@ scrcpy
 sed
 shellcheck
 signal-desktop
-sioyek-git
+sioyek
 slack-desktop
 sndio
 sshfs
@@ -273,7 +272,7 @@ systeroid
 tailscale
 taplo-cli
 teams
-telegram-desktop
+telegram-desktop-userfonts-bin
 terminus-font
 tesseract
 tesseract-data-eng
