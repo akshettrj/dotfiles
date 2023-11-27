@@ -71,6 +71,11 @@ button:hover {
   color: #ffffff;
 }
 
+#mpd,
+#mpris {
+  padding: 12px 5px;
+}
+
 #window,
 #workspaces {
   margin: 0 4px;

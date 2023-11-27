@@ -1,0 +1,21 @@
+#!/bin/sh
+
+_HOSTNAME="$(hostnamectl --static)"
+
+if [ "${_HOSTNAME}" = "alienrj" ]; then
+
+  _DUNST_FONT_SIZE=15
+
+elif  [ "${_HOSTNAME}" = "ltrcakki" ]; then
+
+  _DUNST_FONT_SIZE=8
+
+fi
+
+_DUNST_FONT_SIZE=${_DUNST_FONT_SIZE:-10} \
+  envsubst < ~/.config/dunst/dunstrc > /tmp/dunstrc
+
+pidof dunst && killall -9 dunst
+dunst -conf /tmp/dunstrc > /tmp/dunstlog 2>&1 &
+
+notify-send "Dunst" "Successfully started"

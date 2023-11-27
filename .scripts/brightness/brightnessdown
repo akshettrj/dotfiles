@@ -1,0 +1,9 @@
+#!/bin/sh
+
+_HOSTNAME="$(hostnamectl --static)"
+
+if [ "${_HOSTNAME}" = "alienrj" ]; then
+  brightnessctl -q --min-value=62 set -- '-10%'
+elif [ "${_HOSTNAME}" = "akkihp" ]; then
+  brightnessctl -q --min-value=1200 set -- '-10%'
+fi

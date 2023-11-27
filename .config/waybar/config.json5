@@ -126,10 +126,10 @@
     "separate-outputs": false,
     "format": "{title}",
     "icon": true,
-    "icon-size": 20,
+    "icon-size": $_WAYBAR_ICON_SIZE,
   },
   "tray": {
-    "icon-size": 15,
+    "icon-size": $_WAYBAR_ICON_SIZE,
     "spacing": 8
   },
   "cpu": {
@@ -138,8 +138,8 @@
   },
   "backlight": {
     "format": "{icon} {percent}%",
-    "on-scroll-up": "brightnessctl -q --min-value=12000 set -- '+1%'",
-    "on-scroll-down": "brightnessctl -q --min-value=12000 set -- '-1%'",
+    "on-scroll-up": "brightnessup",
+    "on-scroll-down": "brightnessdown",
     "format-icons": [
       "󰃚",
       "󰃛",
@@ -255,23 +255,23 @@
     "max-length": 10
   },
   "privacy": {
-    "icon-size": 15,
+    "icon-size": $_WAYBAR_ICON_SIZE,
     "transition-duration": 100,
     "modules": [
       {
         "type": "screenshare",
         "tooltip": true,
-        "tooltip-icon-size": 15,
+        "tooltip-icon-size": $_WAYBAR_ICON_SIZE,
       },
       {
         "type": "audio-out",
         "tooltip": true,
-        "tooltip-icon-size": 15,
+        "tooltip-icon-size": $_WAYBAR_ICON_SIZE,
       },
       {
         "type": "audio-in",
         "tooltip": true,
-        "tooltip-icon-size": 15,
+        "tooltip-icon-size": $_WAYBAR_ICON_SIZE,
       },
     ],
   },

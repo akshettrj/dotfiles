@@ -1,4 +1,5 @@
 local wezterm = require("wezterm");
+local HOSTNAME = wezterm.hostname()
 
 local config = {};
 
@@ -12,6 +13,10 @@ config.font = wezterm.font_with_fallback({
   "JetBrainsMono NF",
   "Lohit Hindi",
 })
+if HOSTNAME == "alienrj" then
+  config.font_size = 17
+end
+
 config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
