@@ -138,8 +138,8 @@
   },
   "backlight": {
     "format": "{icon} {percent}%",
-    "on-scroll-up": "brightnessup",
-    "on-scroll-down": "brightnessdown",
+    "on-scroll-up": "brightnessup 1",
+    "on-scroll-down": "brightnessdown 1",
     "format-icons": [
       "󰃚",
       "󰃛",
