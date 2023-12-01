@@ -100,7 +100,7 @@ grub
 gzip
 haveged
 helix
-hyprland-nvidia-git
+hyprland-git
 hyprpaper
 hyprpicker-git
 ibus
@@ -186,6 +186,7 @@ numbat
 nvidia-dkms
 nvidia-settings
 nvm
+nwg-look-bin
 oath-toolkit
 obs-studio
 obsidian
@@ -264,6 +265,7 @@ sioyek
 slack-desktop
 sndio
 sshfs
+starship
 sudo
 swaylock
 sxhkd
