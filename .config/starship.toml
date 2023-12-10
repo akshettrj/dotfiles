@@ -99,7 +99,7 @@ only_attached = false
 [git_commit]
 disabled = false
 commit_hash_length = 7
-only_detached = true
+only_detached = false
 tag_disabled = false
 
 [git_state]

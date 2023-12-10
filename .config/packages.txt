@@ -100,7 +100,7 @@ grub
 gzip
 haveged
 helix
-hyprland-git
+hyprland
 hyprpaper
 hyprpicker-git
 ibus
@@ -113,6 +113,7 @@ jless
 joshuto-bin
 jupyterlab
 jupyterlab-widgets
+just
 kdeconnect
 kernel-modules-hook
 kguiaddons5
@@ -198,6 +199,7 @@ openvpn
 os-prober
 p7zip
 pacman-contrib
+pandoc-cli
 papirus-icon-theme
 paru-bin
 patch
