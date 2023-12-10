@@ -209,6 +209,7 @@ picom
 pipewire-pulse
 pkgconf
 playerctl
+plex-desktop
 polkit
 polybar
 postgresql
@@ -233,6 +234,7 @@ python-lsp-server
 python-pastel
 python-pip
 python-pipenv
+python-pipx
 python-poetry
 python-pylint
 python-pynvim

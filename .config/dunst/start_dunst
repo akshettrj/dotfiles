@@ -8,7 +8,7 @@ if [ "${_HOSTNAME}" = "alienrj" ]; then
 
 elif  [ "${_HOSTNAME}" = "ltrcakki" ]; then
 
-  _DUNST_FONT_SIZE=8
+  _DUNST_FONT_SIZE=10
 
 fi
 
