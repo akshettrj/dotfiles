@@ -1,7 +1,8 @@
 .gitconfig
-.local/bin
+.local/*
 !.local/bin/lfub
-venv
+!.local/share/applications/*
+venv/
 .BurpSuite/
 .ICEauthority
 .Xauthority
@@ -87,10 +88,6 @@ venv
 .jupyter/
 .keras/
 .lldb/
-.local/etc/
-.local/lib/
-.local/share/
-.local/state/
 .mozilla/
 .npm/
 .nvidia-settings-rc
