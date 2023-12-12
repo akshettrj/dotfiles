@@ -1,5 +1,6 @@
 acpi
 alacritty
+alsa-firmware
 alsa-utils
 android-tools
 android-udev
@@ -194,6 +195,7 @@ obsidian
 odt2txt
 oomox-qt6-styleplugin-git
 openldap
+openssh
 openssl-1.1
 openvpn
 os-prober
@@ -268,6 +270,7 @@ signal-desktop
 sioyek
 slack-desktop
 sndio
+sof-firmware
 sshfs
 starship
 sudo

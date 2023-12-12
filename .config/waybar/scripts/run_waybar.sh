@@ -11,7 +11,7 @@ if [ "${_HOSTNAME}" = "akkihp" ]; then
 elif [ "${_HOSTNAME}" = "alienrj" ]; then
 
   _WAYBAR_FONT_SIZE=18px
-  _WAYBAR_ICON_SIZE=30
+  _WAYBAR_ICON_SIZE=28
   _WAYBAR_SEPARATOR_FONT_SIZE=34px
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
