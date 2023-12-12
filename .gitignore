@@ -119,3 +119,4 @@ strategy.txt
 tcp_open_ports.txt
 video_stickers.py
 work/
+.gtkrc-2.0
