@@ -120,7 +120,7 @@ stashed = "\\$"
 modified = "!"
 staged = "+"
 renamed = "»"
-deleted = "✘"
+deleted = "✘ "
 style = "red bold"
 ignore_submodules = false
 

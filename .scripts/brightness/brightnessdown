@@ -3,7 +3,7 @@
 _HOSTNAME="$(hostnamectl --static)"
 
 if [ "${_HOSTNAME}" = "alienrj" ]; then
-  brightnessctl -q --min-value=62 set -- '-'"${1:-10}%"
+  brightnessctl -q --min-value=50 set -- '-'"${1:-10}%"
 elif [ "${_HOSTNAME}" = "akkihp" ]; then
   brightnessctl -q --min-value=1200 set -- '-'"${1:-10}%"
 fi
