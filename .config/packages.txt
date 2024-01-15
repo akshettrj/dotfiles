@@ -51,6 +51,7 @@ devtools
 diffpdf
 discord
 dkms
+dmidecode
 dmraid
 dnsmasq
 docbook-xml
@@ -365,6 +366,7 @@ waybar-git
 waypipe
 wayshot-git
 wdisplays-git
+wev
 wezterm-git
 wget
 which

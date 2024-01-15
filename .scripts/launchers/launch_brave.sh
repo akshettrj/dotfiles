@@ -12,7 +12,7 @@ elif [ "${_HOSTNAME}" = "alienrj" ]; then
 
 elif [ "${_HOSTNAME}" = "ltrcakki" ]; then
 
-  BRAVE_SCALING_FACTOR="0.9"
+  BRAVE_SCALING_FACTOR="0.85"
 
 fi
 
