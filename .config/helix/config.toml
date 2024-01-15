@@ -1,6 +1,7 @@
 theme = "dark_plus_akki"
 
 [editor]
+auto-pairs = false
 line-number = "relative"
 mouse = true
 shell = ["zsh", "-c"]

@@ -1,0 +1,19 @@
+[[keyboard.bindings]]
+action = "Copy"
+key = "Y"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = 28
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = 13
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = 12
+mods = "Alt"
