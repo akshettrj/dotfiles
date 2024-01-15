@@ -131,12 +131,14 @@ libblockdev
 libbytesize
 libc++
 libcmis
+libgovirt
 libinih
 libldac
 libluv
 libmpack
 libnotify
 libreoffice-still
+librest
 libtermkey
 libtool
 libva-intel-driver
