@@ -1,4 +1,4 @@
-theme = "dark_plus_akki"
+theme = "gruvbox_dark_hard_akki"
 
 [editor]
 auto-pairs = false
