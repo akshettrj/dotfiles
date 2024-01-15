@@ -106,6 +106,7 @@ grub
 gzip
 haveged
 helix
+hostapd
 hyprland
 hyprpaper
 hyprpicker-git
@@ -124,6 +125,7 @@ just
 kdeconnect
 kernel-modules-hook
 kguiaddons5
+lazydocker-git
 lf-git
 libappindicator-gtk2
 libatasmart
@@ -147,6 +149,8 @@ libxft
 linux
 linux-firmware
 linux-headers
+linux-lts
+linux-lts-headers
 linux-wifi-hotspot
 lldb
 lohit-fonts
@@ -259,6 +263,7 @@ python-tqdm
 python-webcolors
 qemu-full
 qpwgraph
+qrencode
 qt5-styleplugins
 qt5ct
 qt6-tools
@@ -363,7 +368,6 @@ vscode-css-languageserver
 vscode-html-languageserver
 vscode-json-languageserver
 vulkan-intel
-watershot-git
 waybar-git
 waypipe
 wayshot-git
@@ -372,6 +376,7 @@ wev
 wezterm-git
 wget
 which
+wireless-regdb
 wireshark-qt
 wl-clipboard
 wmname
