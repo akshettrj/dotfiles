@@ -2,6 +2,7 @@
 [[ $- != *i* ]] && return
 
 autoload -U colors && colors
+autoload -Uz compinit && compinit
 
 # History file config
 export HISTFILE=$XDG_CACHE_HOME/zsh_history

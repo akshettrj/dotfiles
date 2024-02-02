@@ -241,7 +241,7 @@
   },
   "custom/swaylock": {
     "exec": "echo 󰌾",
-    "on-click": "pidof swaylock || swaylock -F --font='Iosevka Nerd Font'",
+    "on-click": "swaylock -F --font='Iosevka Nerd Font'",
     "interval": "once",
   },
   "custom/separator": {
