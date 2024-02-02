@@ -331,7 +331,6 @@ tldr
 tmux
 tofi
 transmission-cli
-tree-sitter
 ttf-fira-mono
 ttf-fira-sans
 ttf-inconsolata
@@ -381,6 +380,7 @@ wireshark-qt
 wl-clipboard
 wmname
 wofi
+wtype
 x2x-git
 xclip
 xdg-desktop-portal-wlr
@@ -445,6 +445,7 @@ yaml-language-server
 yapf
 yarn
 yazi
+ydotool
 yt-dlp
 zaread-git
 zathura
