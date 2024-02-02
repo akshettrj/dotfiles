@@ -90,6 +90,7 @@ gimp
 git
 git-delta
 git-filter-repo
+git-lfs
 github-cli
 gitui
 gnome-keyring
@@ -149,8 +150,6 @@ libxft
 linux
 linux-firmware
 linux-headers
-linux-lts
-linux-lts-headers
 linux-wifi-hotspot
 lldb
 lohit-fonts
@@ -277,6 +276,7 @@ ripmime
 rkvm
 rnote
 ruff
+ruff-lsp
 rustup
 scrcpy
 sed
