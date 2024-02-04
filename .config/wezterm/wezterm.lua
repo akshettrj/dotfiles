@@ -22,4 +22,6 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
 config.audible_bell = "Disabled"
 
+config.check_for_updates = false
+
 return config
