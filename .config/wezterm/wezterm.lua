@@ -17,6 +17,15 @@ if HOSTNAME == "alienrj" then
   config.font_size = 17
 end
 
+config.window_frame = {
+  font = wezterm.font_with_fallback({
+    { family = "Iosevka NF", weight = "Bold", },
+    { family = "JetBrainsMono NF", weight = "Bold", },
+    "Lohit Hindi",
+  }),
+  font_size = 12.0,
+}
+
 config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95

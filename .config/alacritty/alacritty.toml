@@ -1,4 +1,4 @@
-import = ["/home/akshettrj/.config/alacritty/colorschemes/Dracula.toml", "/home/akshettrj/.config/alacritty/keybindings.toml"]
+import = ["/home/akshettrj/.config/alacritty/colorschemes/Gruvbox.toml", "/home/akshettrj/.config/alacritty/keybindings.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -17,19 +17,19 @@ render_timer = false
 size = 13.0
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
 [font.offset]
