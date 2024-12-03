@@ -83,7 +83,6 @@ venv/
 .dosbox/
 .gnupg/
 .insightface/
-.ipython/
 .java/
 .jupyter/
 .keras/
