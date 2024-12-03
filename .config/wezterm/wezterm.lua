@@ -15,7 +15,10 @@ config.font = wezterm.font_with_fallback({
 })
 if HOSTNAME == "alienrj" then
   config.font_size = 17
+else
+  config.font_size = 18
 end
+
 
 config.window_frame = {
   font = wezterm.font_with_fallback({

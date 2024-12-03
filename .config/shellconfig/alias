@@ -22,8 +22,6 @@ alias cp='cp -rvi'
 alias rm='rm -vi'
 alias rsync='rsync -urvP'
 
-alias lf='lfub'
-
 alias rclone_copy='rclone --drive-server-side-across-configs -vv --transfers 3 --stats=15s --drive-chunk-size 128M copy'
 
 alias dotfiles="git --git-dir=$HOME/work/repos/dotfiles --work-tree=$HOME"

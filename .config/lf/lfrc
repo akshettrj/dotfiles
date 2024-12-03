@@ -10,8 +10,6 @@ set relativenumber true
 
 set icons true
 set preview true
-set cleaner '~/.config/lf/cleaner'
-set previewer '~/.config/lf/scope'
 set drawbox true
 set hidden true
 
