@@ -8,16 +8,23 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-export PATH=/opt/homebrew/opt/rustup/bin:$HOME/Library/Python/3.9/bin:$HOME/Applications/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS:$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$HOME/go/bin:$PATH
+export PATH=/Applications/PyCharm\ CE.app/Contents/MacOS:/opt/homebrew/opt/rustup/bin:$HOME/Library/Python/3.9/bin:$HOME/Applications/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS:$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$HOME/go/bin:$PATH
 
 for script_dir in $HOME/.scripts/*
 do
     [ -d "$script_dir" ] && export PATH="$script_dir":$PATH
 done
 
-export SUDO_EDITOR=nvim
-export VISUAL=nvim
-export EDITOR=nvim
+if [ -z "${SUDO_EDITOR}" ]; then
+    export SUDO_EDITOR=nvim
+fi
+if [ -z "${VISUAL}" ]; then
+    export VISUAL=nvim
+fi
+if [ -z "${EDITOR}" ]; then
+    export EDITOR=nvim
+fi
+
 export LS_COLORS='rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=38;5;12;42:st=37;44:ex=01;38;5;10:'
 
 # export TERMINAL=alacritty
