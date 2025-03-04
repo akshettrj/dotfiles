@@ -1,12 +1,5 @@
 #!/bin/sh
 
-open() {
-    for var in "$@"
-    do
-        xdg-open "$var" 2>/dev/null & disown
-    done
-}
-
 alias p3='python3'
 
 alias ls='eza --icons'
@@ -27,3 +20,5 @@ alias rclone_copy='rclone --drive-server-side-across-configs -vv --transfers 3 -
 alias dotfiles="git --git-dir=$HOME/work/repos/dotfiles --work-tree=$HOME"
 
 alias extend_kb_mouse="ssh -YC {hostname} x2x -east -to :0"
+
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
