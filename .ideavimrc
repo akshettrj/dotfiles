@@ -22,6 +22,8 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
+Plug "tpope/vim-surround"
+
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -43,5 +45,8 @@ nmap [d <Action>(GotoPreviousError)
 
 nmap ]q <Action>(NextOccurence)
 nmap [q <Action>(PreviousOccurence)
+
+nmap ]c <Action>(VcsShowNextChangeMarker)
+nmap [c <Action>(VcsShowPrevChangeMarker)
 
 nmap <space>a <A-CR>

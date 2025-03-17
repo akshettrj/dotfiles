@@ -8,7 +8,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-export PATH=/Applications/PyCharm\ CE.app/Contents/MacOS:/opt/homebrew/opt/rustup/bin:$HOME/Library/Python/3.9/bin:$HOME/Applications/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS:$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/Applications/RustRover.app/Contents/MacOS:/Applications/PyCharm\ CE.app/Contents/MacOS:/opt/homebrew/opt/rustup/bin:$HOME/Library/Python/3.9/bin:$HOME/Applications/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS:$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$HOME/go/bin:$PATH
 
 for script_dir in $HOME/.scripts/*
 do
