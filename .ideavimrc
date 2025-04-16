@@ -50,3 +50,16 @@ nmap ]c <Action>(VcsShowNextChangeMarker)
 nmap [c <Action>(VcsShowPrevChangeMarker)
 
 nmap <space>a <A-CR>
+
+
+"" A command which will copy the relative (to the root directory) path of the current
+"" file and the line number to the most recent vim register
+"" This command is useful for creating links to files in the IDE
+function! CopyRelativePath()
+    let l:filename = expand('%:p')
+    let l:line = line('.')
+    let l:relative_path = substitute(l:filename, getcwd() . '/', '', '')
+    let l:clipboard_text = l:relative_path . ':' . l:line
+    let @" = l:clipboard_text
+    let @0 = l:clipboard_text
+endfunction

@@ -12,6 +12,7 @@ format = "${custom.ps1_osc133_prefix}$all${custom.ps1_osc133_postfix}"
 [character] # The name of the module we are configuring is "character"
 success_symbol = "[󰁕](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
 error_symbol = "[󰁕](bold red)"     # The "error_symbol" segment is being set to "➜" with the color "bold red"
+format = "\n $symbol "
 
 [aws]
 disabled = true

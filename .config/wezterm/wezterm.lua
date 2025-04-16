@@ -36,4 +36,9 @@ config.audible_bell = "Disabled"
 
 config.check_for_updates = false
 
+config.keys = {
+  { key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(-1) },
+  { key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(1) },
+}
+
 return config
