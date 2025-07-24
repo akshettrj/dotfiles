@@ -3,13 +3,15 @@ function check_and_load_venv() {
     ## If venv folder is found then activate the vitualenv
       if [[ -d ./venv ]]; then
         source ./venv/bin/activate
+        export VIRTUAL_ENV_AUTO_LOADED=1
       elif [[ -d ./.venv ]]; then
         source ./.venv/bin/activate
       fi
-  else
+  elif [[ -z "VIRTUAL_ENV_AUTO_LOADED" ]]; then
       parentdir="$(dirname "$VIRTUAL_ENV")"
       if [[ "$PWD"/ != "$parentdir"/* ]] ; then
         deactivate
+        export VIRTUAL_ENV_AUTO_LOADED=""
       fi
   fi
 }

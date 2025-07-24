@@ -51,6 +51,10 @@ nmap [c <Action>(VcsShowPrevChangeMarker)
 
 nmap <space>a <A-CR>
 
+nmap L $
+nmap H 0
+vmap L $
+vmap H 0
 
 "" A command which will copy the relative (to the root directory) path of the current
 "" file and the line number to the most recent vim register
