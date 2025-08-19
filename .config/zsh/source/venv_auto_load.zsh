@@ -6,8 +6,9 @@ function check_and_load_venv() {
         export VIRTUAL_ENV_AUTO_LOADED=1
       elif [[ -d ./.venv ]]; then
         source ./.venv/bin/activate
+        export VIRTUAL_ENV_AUTO_LOADED=1
       fi
-  elif [[ -z "VIRTUAL_ENV_AUTO_LOADED" ]]; then
+  elif [[ "$VIRTUAL_ENV_AUTO_LOADED" == 1 ]]; then
       parentdir="$(dirname "$VIRTUAL_ENV")"
       if [[ "$PWD"/ != "$parentdir"/* ]] ; then
         deactivate

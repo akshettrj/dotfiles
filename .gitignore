@@ -147,4 +147,26 @@ work/
 .notmuch-config
 .psql_history
 .thunderbird/
+.stu/
 
+Library/*
+!Library
+!Library/LaunchAgents
+
+.CFUserTextEncoding
+.DS_Store
+.codex/
+.config/pip/
+.ipython/profile_default/history.sqlite
+.ipython/profile_default/startup/
+.lesshst
+.localized
+Applications/
+Desktop/
+Documents/
+Downloads/
+Movies/
+Music/
+Pictures/
+Public/
+nltk_data/

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.akshettrai.jindal.gitautocommit</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/akshettrai.jindal/work/vimwiki_notes/auto_push.sh</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>600</integer> <!-- every hour -->
+
+    <!-- Log output for debugging -->
+    <key>StandardOutPath</key>
+    <string>/tmp/git_auto_commit.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/git_auto_commit.err</string>
+</dict>
+</plist>
+
