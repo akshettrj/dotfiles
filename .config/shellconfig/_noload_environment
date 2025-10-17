@@ -31,7 +31,7 @@ export LS_COLORS='rs=0:di=01;38;5;12:ln=01;38;5;14:mh=00:pi=40;33:so=01;35:do=01
 
 # export TERMINAL=alacritty
 export TERMINAL=wezterm
-export BROWSER=brave
+export BROWSER=open
 export CHROME_EXECUTABLE=google-chrome
 
 # Xsecurelock

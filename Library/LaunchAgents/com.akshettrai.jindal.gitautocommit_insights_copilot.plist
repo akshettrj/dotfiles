@@ -4,22 +4,21 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.akshettrai.jindal.gitautocommit</string>
+    <string>com.akshettrai.jindal.insights_copilot_auto_push</string>
 
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/bash</string>
-        <string>/Users/akshettrai.jindal/work/vimwiki_notes/auto_push.sh</string>
+        <string>/Users/akshettrai.jindal/work/sprinklr/projects/auto_push_insights_copilot.sh</string>
     </array>
 
     <key>StartInterval</key>
-    <integer>600</integer> <!-- every hour -->
+    <integer>600</integer>
 
     <!-- Log output for debugging -->
     <key>StandardOutPath</key>
-    <string>/tmp/git_auto_commit.out</string>
+    <string>/tmp/git_auto_commit_ic.out</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/git_auto_commit.err</string>
+    <string>/tmp/git_auto_commit_ic.err</string>
 </dict>
 </plist>
 

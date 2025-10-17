@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.koekeishiya.yabai</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/yabai</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/akshettrai.jindal/work/go/bin:/Users/akshettrai.jindal/.scripts/xorg:/Users/akshettrai.jindal/.scripts/wayland:/Users/akshettrai.jindal/.scripts/utility:/Users/akshettrai.jindal/.scripts/usb_encryption:/Users/akshettrai.jindal/.scripts/telegram:/Users/akshettrai.jindal/.scripts/ssh:/Users/akshettrai.jindal/.scripts/sprinklr:/Users/akshettrai.jindal/.scripts/pulseaudio:/Users/akshettrai.jindal/.scripts/polybar:/Users/akshettrai.jindal/.scripts/launchers:/Users/akshettrai.jindal/.scripts/jupyterlab:/Users/akshettrai.jindal/.scripts/hotspot:/Users/akshettrai.jindal/.scripts/hardware:/Users/akshettrai.jindal/.scripts/dmenu:/Users/akshettrai.jindal/.scripts/bspwm:/Users/akshettrai.jindal/.scripts/brightness:/Users/akshettrai.jindal/Applications/RustRover.app/Contents/MacOS:/Applications/PyCharm CE.app/Contents/MacOS:/opt/homebrew/opt/rustup/bin:/Users/akshettrai.jindal/Library/Python/3.9/bin:/Users/akshettrai.jindal/Applications/WezTerm-macos-20240203-110809-5046fc22/WezTerm.app/Contents/MacOS:/Users/akshettrai.jindal/.local/bin:/Users/akshettrai.jindal/.local/share/cargo/bin:/Users/akshettrai.jindal/go/bin</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+ 	     <false/>
+ 	     <key>Crashed</key>
+ 	     <true/>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/yabai_akshettrai.jindal.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/yabai_akshettrai.jindal.err.log</string>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+    <key>Nice</key>
+    <integer>-20</integer>
+</dict>
+</plist>

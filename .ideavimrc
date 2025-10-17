@@ -12,6 +12,8 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
+set nu rnu
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -55,6 +57,9 @@ nmap L $
 nmap H 0
 vmap L $
 vmap H 0
+
+xmap p pgvy
+
 
 "" A command which will copy the relative (to the root directory) path of the current
 "" file and the line number to the most recent vim register

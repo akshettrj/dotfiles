@@ -1,0 +1,85 @@
+[completion]
+activate_on_typing = true
+copilot = false
+
+[snippets]
+include_default_snippets = true
+custom_paths = []
+
+[display]
+reference_highlighting = true
+cell_output = "above"
+code_editor_font_size = 22
+theme = "system"
+dataframes = "rich"
+default_width = "medium"
+default_table_page_size = 10
+default_table_max_columns = 50
+
+[package_management]
+manager = "uv"
+
+[runtime]
+std_stream_max_bytes = 1000000
+on_cell_change = "lazy"
+default_auto_download = ["html"]
+reactive_tests = true
+output_max_bytes = 8000000
+auto_instantiate = false
+default_sql_output = "auto"
+watcher_on_save = "lazy"
+auto_reload = "lazy"
+
+[experimental]
+sql_linter = true
+inline_ai_tooltip = false
+rtc_v2 = false
+performant_table_charts = true
+
+[save]
+format_on_save = true
+autosave_delay = 1000
+autosave = "after_delay"
+
+[language_servers.basedpyright]
+enabled = false
+
+[language_servers.ty]
+enabled = true
+
+[language_servers.pylsp]
+enable_pydocstyle = false
+enable_ruff = true
+enable_flake8 = false
+enabled = true
+enable_mypy = true
+enable_pylint = false
+enable_pyflakes = false
+
+[formatting]
+line_length = 80
+
+[keymap]
+destructive_delete = true
+preset = "vim"
+
+[keymap.overrides]
+"cell.viewAsMarkdown" = "Alt-Shift-̨"
+
+[diagnostics]
+enabled = true
+
+[ai]
+mode = "manual"
+rules = "Always use type hints for variables whenever possible"
+
+[ai.models]
+custom_models = []
+edit_model = "ollama/gpt-oss:20b"
+displayed_models = []
+chat_model = "ollama/gpt-oss:20b"
+autocomplete_model = "ollama/gpt-oss:20b"
+
+[server]
+browser = "default"
+follow_symlink = false
