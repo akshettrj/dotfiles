@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.akshettrai.jindal.simple-bar-server</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/akshettrai.jindal/work/personal/simple-bar-server</string>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/node</string>
+        <string>index.js</string>
+    </array>
+
+    <!-- Log output for debugging -->
+    <key>StandardOutPath</key>
+    <string>/tmp/simple-bar-server.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/simple-bar-server.err</string>
+</dict>
+</plist>
+
