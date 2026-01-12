@@ -1,1 +1,0 @@
-(which diesel >/dev/null 2>&1) && eval "$(diesel completions zsh)"

@@ -1,6 +1,13 @@
 # Return if non-interactive session
 [[ $- != *i* ]] && return
 
+# if (( ${+NO_FISH} )); then
+    # echo "Skipping fish jump because NO_FISH is set"
+# else
+#     exec /opt/homebrew/bin/fish
+# fi
+
+
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
@@ -21,6 +28,7 @@ setopt SHARE_HISTORY
 # Files from ~/.config/shellconfig directory
 for to_source in $HOME/.config/shellconfig/*
 do
+    # echo "Sourcing $to_source"
     [ -f "$to_source" ] || continue
     to_source_bn="$(basename "$to_source")"
     [[ "$to_source_bn" == _noload_* ]] && continue
@@ -30,6 +38,7 @@ done
 # Files from ./source directory
 for to_source in $ZDOTDIR/source/*
 do
+    # echo "Sourcing $to_source"
     [ -f "$to_source" ] || continue
     to_source_bn="$(basename "$to_source")"
     [[ "$to_source_bn" == _noload_* ]] && continue
@@ -39,11 +48,15 @@ done
 # Plugins from ./plugins directory
 for to_source in $ZDOTDIR/plugins/*
 do
+    # echo "Loading plugin fom $to_source"
     [ -d "$to_source" ] || continue
     to_source_bn="$(basename "$to_source")"
     [[ "$to_source_bn" == _noload_* ]] && continue
     source "$to_source/main.zsh"
 done
+
+export PS1=$'%{\e]133;P;k=i\a%}'$PS1$'%{\e]133;B\a\e]122;> \a%}'
+export PS2=$'%{\e]133;P;k=s\a%}'$PS2$'%{\e]133;B\a%}'
 
 # Misc
 setopt COMPLETE_ALIASES
@@ -55,34 +68,3 @@ bindkey -s '^f' "^u fzf\n"
 bindkey -s '^o' "^u lfcd\n"
 
 WORDCHARS=''
-
-
-# Xorg Server
-
-_NVIDIA_CONF_SRC="$HOME/.config/X11/10-nvidia-drm-outputclass.conf"
-_NVIDIA_CONF_DST="/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
-
-_MONITOR_CONF_SRC="$HOME/.config/X11/10-monitor.conf"
-_MONITOR_CONF_DST="/usr/share/X11/xorg.conf.d/10-monitor.conf"
-
-# _INTEL_CONF_SRC="$HOME/.config/X11/20-intel.conf"
-# _INTEL_CONF_DST="/usr/share/X11/xorg.conf.d/20-intel.conf"
-
-if [[ "$(tty)" == "/dev/tty1" ]]; then
-    pgrep Hyprland || Hyprland
-elif [[ "$(tty)" == "/dev/tty2" ]]; then
-    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
-    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
-    # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
-    pgrep bspwm || startx "$HOME/.config/X11/Xinitrc_bspwm"
-elif [[ "$(tty)" == "/dev/tty3" ]]; then
-    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
-    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
-    # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
-    pgrep awesome || startx "$HOME/.config/X11/Xinitrc_xfce4"
-elif [[ "$(tty)" == "/dev/tty4" ]]; then
-    diff "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}" >/dev/null || sudo cp -f "${_NVIDIA_CONF_SRC}" "${_NVIDIA_CONF_DST}"
-    diff "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}" >/dev/null || sudo cp -f "${_MONITOR_CONF_SRC}" "${_MONITOR_CONF_DST}"
-    # diff "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}" >/dev/null || sudo cp -f "${_INTEL_CONF_SRC}" "${_INTEL_CONF_DST}"
-    pgrep awesome || startx "$HOME/.config/X11/Xinitrc_awesome"
-fi

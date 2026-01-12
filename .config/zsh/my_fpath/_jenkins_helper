@@ -1,0 +1,206 @@
+#compdef jenkins_helper
+
+autoload -U is-at-least
+
+_jenkins_helper() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" : \
+'-c+[Config file path (defaults to searching for jenkins_helper.toml)]:CONFIG:_default' \
+'--config=[Config file path (defaults to searching for jenkins_helper.toml)]:CONFIG:_default' \
+'-a+[Auth config file path (defaults to searching for auth.toml in OS config directory)]:AUTH_CONFIG:_default' \
+'--auth-config=[Auth config file path (defaults to searching for auth.toml in OS config directory)]:AUTH_CONFIG:_default' \
+'-e+[Environment (optional)]:ENVIRONMENT:_default' \
+'--environment=[Environment (optional)]:ENVIRONMENT:_default' \
+'-h[Print help]' \
+'--help[Print help]' \
+":: :_jenkins_helper_commands" \
+"*::: :->jenkins_helper" \
+&& ret=0
+    case $state in
+    (jenkins_helper)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:jenkins_helper-command-$line[1]:"
+        case $line[1] in
+            (build)
+_arguments "${_arguments_options[@]}" : \
+'*--id=[Build config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
+'--all[Select all build configs (overrides --id flags)]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(deploy)
+_arguments "${_arguments_options[@]}" : \
+'*--id=[Deploy config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
+'--all[Select all deploy configs (overrides --id flags)]' \
+'-h[Print help]' \
+'--help[Print help]' \
+':component_name -- Component name:_default' \
+':docker_tag -- Docker image tag to deploy:_default' \
+&& ret=0
+;;
+(build-deploy)
+_arguments "${_arguments_options[@]}" : \
+'*--build-id=[Build config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
+'*--deploy-id=[Deploy config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
+'--all[Select all build and deploy configs (overrides --build-id and --deploy-id flags)]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(delete)
+_arguments "${_arguments_options[@]}" : \
+'*--id=[Delete config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
+'--all[Select all delete configs (overrides --id flags)]' \
+'-h[Print help]' \
+'--help[Print help]' \
+&& ret=0
+;;
+(completions)
+_arguments "${_arguments_options[@]}" : \
+'-h[Print help]' \
+'--help[Print help]' \
+':shell -- Shell to generate completions for:(bash elvish fish powershell zsh)' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+":: :_jenkins_helper__help_commands" \
+"*::: :->help" \
+&& ret=0
+
+    case $state in
+    (help)
+        words=($line[1] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:jenkins_helper-help-command-$line[1]:"
+        case $line[1] in
+            (build)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(deploy)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(build-deploy)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(delete)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(completions)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" : \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_jenkins_helper_commands] )) ||
+_jenkins_helper_commands() {
+    local commands; commands=(
+'build:Builds a docker image' \
+'deploy:Deploys a release' \
+'build-deploy:Builds a docker image and deploys a release' \
+'delete:Deletes helm releases' \
+'completions:Generate shell completions' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'jenkins_helper commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__build_commands] )) ||
+_jenkins_helper__build_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper build commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__build-deploy_commands] )) ||
+_jenkins_helper__build-deploy_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper build-deploy commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__completions_commands] )) ||
+_jenkins_helper__completions_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper completions commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__delete_commands] )) ||
+_jenkins_helper__delete_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper delete commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__deploy_commands] )) ||
+_jenkins_helper__deploy_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper deploy commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help_commands] )) ||
+_jenkins_helper__help_commands() {
+    local commands; commands=(
+'build:Builds a docker image' \
+'deploy:Deploys a release' \
+'build-deploy:Builds a docker image and deploys a release' \
+'delete:Deletes helm releases' \
+'completions:Generate shell completions' \
+'help:Print this message or the help of the given subcommand(s)' \
+    )
+    _describe -t commands 'jenkins_helper help commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__build_commands] )) ||
+_jenkins_helper__help__build_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help build commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__build-deploy_commands] )) ||
+_jenkins_helper__help__build-deploy_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help build-deploy commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__completions_commands] )) ||
+_jenkins_helper__help__completions_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help completions commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__delete_commands] )) ||
+_jenkins_helper__help__delete_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help delete commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__deploy_commands] )) ||
+_jenkins_helper__help__deploy_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help deploy commands' commands "$@"
+}
+(( $+functions[_jenkins_helper__help__help_commands] )) ||
+_jenkins_helper__help__help_commands() {
+    local commands; commands=()
+    _describe -t commands 'jenkins_helper help help commands' commands "$@"
+}
+
+if [ "$funcstack[1]" = "_jenkins_helper" ]; then
+    _jenkins_helper "$@"
+else
+    compdef _jenkins_helper jenkins_helper
+fi

@@ -288,13 +288,13 @@ disabled = true
 command = 'echo $LF_LEVEL'
 when = ''' test "$LF_LEVEL" -gt 0 '''
 format = '\(lf_level:[$output]($style)\) '
-shell = ["bash", "--noprofile", "--norc"]
+shell = ["sh"]
 
 [custom.shell]
 command = 'echo $STARSHIP_SHELL'
 when = ''' test "$STARSHIP_SHELL" != "zsh" '''
 format = '\([$output]($style)\) '
-shell = ["bash", "--noprofile", "--norc"]
+shell = ["sh"]
 
 [custom.ps1_osc133_prefix]
 command = 'printf "\033]133;A\007"'

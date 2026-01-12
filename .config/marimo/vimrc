@@ -1,0 +1,7 @@
+nnoremap H 0
+nnoremap L $
+
+vnoremap H :norm 0
+vnoremap L :norm $
+
+inoremap <S-BS> <BS>
