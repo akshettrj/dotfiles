@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.akshettrai.jindal.llm_router_proxy</string>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/akshettrai.jindal/work/sprinklr/side_projects/golang_reverse_proxy/reverse_proxy</string>
+        <string>-port</string>
+        <string>9999</string>
+    </array>
+
+    <!-- Log output for debugging -->
+    <key>StandardOutPath</key>
+    <string>/tmp/llm_router_proxy.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/llm_router_proxy.err</string>
+</dict>
+</plist>
+

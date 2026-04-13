@@ -1,18 +1,3 @@
-[server]
-browser = "default"
-follow_symlink = false
-
-[diagnostics]
-sql_linter = true
-enabled = true
-
-[datasources]
-
-[save]
-autosave_delay = 15000
-autosave = "after_delay"
-format_on_save = true
-
 [keymap]
 preset = "vim"
 vimrc = "/Users/akshettrai.jindal/.config/marimo/vimrc"
@@ -21,76 +6,91 @@ destructive_delete = true
 [keymap.overrides]
 "cell.viewAsMarkdown" = "Alt-Shift-̨"
 
-[ai]
-rules = "Always use type hints for variables whenever possible"
-inline_tooltip = false
-mode = "manual"
+[display]
+code_editor_font_size = 17
+default_table_page_size = 10
+default_table_max_columns = 50
+reference_highlighting = true
+cell_output = "above"
+dataframes = "rich"
+default_width = "full"
+theme = "system"
 
-[ai.models]
-autocomplete_model = "ollama/gpt-oss:20b"
-chat_model = "ollama/gpt-oss:20b"
-displayed_models = []
-custom_models = []
-edit_model = "ollama/gpt-oss:20b"
+[package_management]
+manager = "uv"
 
 [snippets]
 include_default_snippets = true
 custom_paths = []
 
-[language_servers.ty]
-enabled = true
-
 [language_servers.basedpyright]
 enabled = false
 
-[language_servers.pylsp]
-enable_mypy = true
-enable_pydocstyle = false
-enable_pylint = false
-enable_pyflakes = false
-enable_ruff = true
+[language_servers.ty]
 enabled = true
+
+[language_servers.pylsp]
+enabled = true
+enable_pyflakes = false
+enable_pydocstyle = false
+enable_ruff = true
+enable_mypy = true
 enable_flake8 = false
+enable_pylint = false
 
-[display]
-theme = "system"
-reference_highlighting = true
-dataframes = "rich"
-default_width = "full"
-code_editor_font_size = 17
-default_table_max_columns = 50
-cell_output = "above"
-default_table_page_size = 10
-
-[package_management]
-manager = "uv"
-
-[formatting]
-line_length = 80
-
-[experimental]
-inline_ai_tooltip = false
-chat_modes = true
-sql_linter = true
-performant_table_charts = true
-rtc_v2 = false
+[datasources]
 
 [runtime]
-auto_instantiate = true
-auto_reload = "lazy"
 default_sql_output = "auto"
-reactive_tests = true
-output_max_bytes = 8000000
+default_auto_download = ["html"]
 std_stream_max_bytes = 1000000
 watcher_on_save = "lazy"
+auto_instantiate = false
+output_max_bytes = 8000000
+reactive_tests = true
 on_cell_change = "lazy"
-default_auto_download = ["html"]
+auto_reload = "lazy"
+
+[completion]
+activate_on_typing = true
+copilot = false
+
+[save]
+autosave_delay = 15000
+autosave = "after_delay"
+format_on_save = true
+
+[server]
+browser = "default"
+follow_symlink = false
+
+[diagnostics]
+enabled = true
+sql_linter = true
+
+[ai]
+rules = "Always use type hints for variables whenever possible"
+mode = "manual"
+inline_tooltip = false
+
+[ai.models]
+displayed_models = []
+autocomplete_model = "ollama/gpt-oss:20b"
+edit_model = "ollama/gpt-oss:20b"
+custom_models = []
+chat_model = "ollama/gpt-oss:20b"
 
 [mcp]
 presets = []
 
 [mcp.mcpServers]
 
-[completion]
-activate_on_typing = true
-copilot = false
+[formatting]
+line_length = 80
+
+[experimental]
+rtc_v2 = false
+inline_ai_tooltip = false
+sql_linter = true
+chat_modes = true
+performant_table_charts = true

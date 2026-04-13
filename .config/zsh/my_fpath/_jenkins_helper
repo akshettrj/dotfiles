@@ -36,6 +36,7 @@ _jenkins_helper() {
 _arguments "${_arguments_options[@]}" : \
 '*--id=[Build config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
 '--all[Select all build configs (overrides --id flags)]' \
+'--parallel[Run all builds in parallel (prefixes logs with \[build_id\])]' \
 '-h[Print help]' \
 '--help[Print help]' \
 && ret=0
@@ -44,6 +45,7 @@ _arguments "${_arguments_options[@]}" : \
 _arguments "${_arguments_options[@]}" : \
 '*--id=[Deploy config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
 '--all[Select all deploy configs (overrides --id flags)]' \
+'--parallel[Run all deploys in parallel (prefixes logs with \[deploy_id\])]' \
 '-h[Print help]' \
 '--help[Print help]' \
 ':component_name -- Component name:_default' \
@@ -55,6 +57,7 @@ _arguments "${_arguments_options[@]}" : \
 '*--build-id=[Build config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
 '*--deploy-id=[Deploy config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
 '--all[Select all build and deploy configs (overrides --build-id and --deploy-id flags)]' \
+'--parallel[Run builds and deploys in parallel (builds first, then deploys, prefixes logs with \[build_id\]/\[deploy_id\])]' \
 '-h[Print help]' \
 '--help[Print help]' \
 && ret=0
@@ -63,6 +66,7 @@ _arguments "${_arguments_options[@]}" : \
 _arguments "${_arguments_options[@]}" : \
 '*--id=[Delete config IDs (can be specified multiple times, uses first config if not specified)]:ID:_default' \
 '--all[Select all delete configs (overrides --id flags)]' \
+'--parallel[Run all deletes in parallel (prefixes logs with \[cluster_name\])]' \
 '-h[Print help]' \
 '--help[Print help]' \
 && ret=0

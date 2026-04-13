@@ -65,11 +65,6 @@ export HEROKU_AC_COMMANDS_PATH=$XDG_CACHE_HOME/heroku/autocomplete/commands
 # Unison
 export UNISON="$XDG_DATA_HOME"/unison
 
-# Sprinklr
-export SPR_VIRTUAL_ENVS_DIR=$HOME/work/sprinklr/virtualvenvs
-export SPR_INTUITION_WORKTREES=$HOME/work/sprinklr/repos/intuitionx_worktrees
-export SPR_HELM_WORKTREES=$HOME/work/sprinklr/repos/intuition-helm-charts_worktrees
-
 # Colored Man Pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'

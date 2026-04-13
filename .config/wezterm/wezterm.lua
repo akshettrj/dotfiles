@@ -19,7 +19,6 @@ else
   config.font_size = 18
 end
 
-
 config.window_frame = {
   font = wezterm.font_with_fallback({
     { family = "Iosevka NF", weight = "Bold", },
@@ -39,6 +38,7 @@ config.check_for_updates = false
 config.keys = {
   { key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(-1) },
   { key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(1) },
+  { key = "Space", mods = "CTRL | SHIFT", action = wezterm.action.QuickSelect },
 }
 
 return config
